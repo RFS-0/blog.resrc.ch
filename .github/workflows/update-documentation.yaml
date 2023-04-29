@@ -27,7 +27,8 @@ jobs:
         with:
           node-version: '20'
       - run: cd docs
-      - run: npm ci
+      - run: ls -a
+      - run: npm install
       - run: npm build
       - name: Commit updated static files for documentation page
         run: |
