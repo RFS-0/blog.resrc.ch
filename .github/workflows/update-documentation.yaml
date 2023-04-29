@@ -31,8 +31,8 @@ jobs:
         with:
           node-version: '20'
       - run: ls -a
-      - run: npm install
-      - run: npm build
+      - run: npm run install
+      - run: npm run build
       - name: Commit updated static files for documentation page
         run: |
           git config user.name github-actions
