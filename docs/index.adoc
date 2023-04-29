@@ -10,11 +10,8 @@ include::guidelines.adoc[]
 include::processes.adoc[]
 include::development.adoc[]
 
-
 == Tools
 
 tdb
 
 == Backlog
-
-* [ ] Setup a CI/CD pipeline
