@@ -5,6 +5,10 @@ on:
       - 'main'
 jobs:
   update-documentation:
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./docs
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -26,7 +30,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-        working-directory: ./docs
       - run: ls -a
       - run: npm install
       - run: npm build
