@@ -15,7 +15,7 @@ jobs:
       - name: Checkout github-pages
         uses: actions/checkout@v2.4.0
         with:
-          ref: github-pages
+          ref: documentation-page
           fetch-depth: 0
       - name: Merge main into documentation page
         run: |
