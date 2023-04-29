@@ -1,0 +1,7 @@
+= About This Blog
+
+In this blog to make some of my thoughts and work public.
+You can access the blog at https://blog.resrc.ch[https://blog.resrc.ch].
+This document describes all the guidelines, processes and tools I used to create this blog.
+The documentation is accessible as a GitHub page at https://rfs-0.github.io/blog.resrc.ch/[here].
+The source code of the documentation is located at xref:docs/index.adoc[./docs/index.adoc]
