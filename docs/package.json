@@ -1,0 +1,26 @@
+{
+  "name": "documentation.blog.resrc.ch",
+  "version": "0.0.1",
+  "watch": {
+    "build": {
+      "patterns": [
+        "./*"
+      ],
+      "extensions": "js,adoc,puml"
+    }
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "node build-documentation.js",
+    "serve": "npm run watch & npx http-server ./dist -p 9001 -o",
+    "dev": "concurrently --kill-others \"npm:watch\" \"npm:serve\""
+  },
+  "dependencies": {
+    "asciidoctor": "^2.2.6",
+    "@asciidoctor/core": "^2.2.6",
+    "asciidoctor-kroki": "^0.17.0",
+    "fs-extra": "^11.1.1",
+    "npm-watch": "^0.11.0",
+    "concurrently": "^8.0.1"
+  }
+}
