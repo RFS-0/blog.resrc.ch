@@ -1,12 +1,16 @@
-const fs = require('fs-extra')
-const asciidoctor = require('@asciidoctor/core')()
-const kroki = require('asciidoctor-kroki')
+const { program } = require('commander');
+const fs = require('fs-extra');
+const asciidoctor = require('@asciidoctor/core')();
+const kroki = require('asciidoctor-kroki');
 
+program
+    .option('-o, --outputDir <char>', 'output directory', ',')
+program.parse();
+const options = program.opts();
 
 async function execute() {
   await fs.emptyDir('./dist')
   await fs.mkdirs('./dist/assets')
-
 
   try {
     fs.copySync('./assets', './dist/assets', { overwrite: true })
@@ -20,7 +24,7 @@ async function execute() {
     doctype: 'book',
     standalone: true,
     to_file: 'index.html',
-    to_dir: 'dist',
+    to_dir: options.outputDir,
     attributes: {
       "toc": 'left',
       "toclevels": 6,
