@@ -1,0 +1,44 @@
+=== Development Guideline
+
+This document describes how I develop a new feature for my blog.
+The development process is described in the following steps:
+
+plantuml::./diagrams/development_process.puml[format=svg]
+
+== Commits
+
+Commit messages should follow the specification for
+https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits].
+Thus, commits should have the following structure
+
+....
+<<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+....
+
+where:
+
+* `type` must be one of:
+** `task`,
+** `system`,
+** `build`,
+** `chore`,
+** `ci`,
+** `docs`,
+** `feat`,
+** `fix`,
+** `perf`,
+** `refactor`,
+** `revert`,
+** `style`,
+** `test`
+* `scope` is optional but must be one of:
+** tbd
+
+Examples can be found https://www.conventionalcommits.org/en/v1.0.0/#examples[here]
+
+== Build
+
+tbd

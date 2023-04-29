@@ -1,0 +1,20 @@
+= Documentation of https://www.blog.resrc.ch[`blog.resrc.ch`]
+
+:doctype: book
+:toc: left
+:toclevels: 6
+:setanchors:
+:imagesdir: ./assets/images/
+
+include::guidelines.adoc[]
+include::processes.adoc[]
+include::development.adoc[]
+
+
+== Tools
+
+tdb
+
+== Backlog
+
+* [ ] Setup a CI/CD pipeline

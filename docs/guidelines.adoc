@@ -1,0 +1,12 @@
+== Guidelines
+
+To build this blog I decided to use the following guidelines:
+
+* Try to follow best practices for documentation, development and deployment
+* Document the reasoning behind decisions
+* Document the process of creating the blog
+* Focus on the content and the design
+* Use state-of-the-art tools and technologies
+* Start with the simplest solution and improve it over time
+
+The following chapters describe how I try to follow these guidelines.

@@ -1,0 +1,13 @@
+@startuml
+
+start
+
+:Understand the goal, requirements and output of the task;
+
+:Implement the task using the guidelines described in this chapter;
+
+:Test the task;
+
+:Review the task;
+
+@enduml

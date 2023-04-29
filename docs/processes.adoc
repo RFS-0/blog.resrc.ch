@@ -1,0 +1,3 @@
+== Processes
+
+This section describes the processes I use to create and maintain this blog.
