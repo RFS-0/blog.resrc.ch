@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run build
+      - run: npm run build-for-gh-page
       - name: Commit updated static files for documentation page
         run: |
           git add .
