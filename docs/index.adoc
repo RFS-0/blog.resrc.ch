@@ -17,4 +17,4 @@ tdb
 
 == Backlog
 
-* [ ] Setup a CI/CD pipeline
+* [x] Setup a CI/CD pipeline for documentation page
