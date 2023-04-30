@@ -15,3 +15,5 @@ include::development.adoc[]
 tdb
 
 == Backlog
+
+* [ ] Setup turbo repo with pnpm
