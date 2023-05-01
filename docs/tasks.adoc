@@ -28,6 +28,15 @@ Thus, the following can be used as a template for a task:
 
 ==== Implement navigation functionality
 
+[#tasks-with-open-questions]
+=== Tasks With Open Questions
+
+* Implement welcome page
+* Implement placeholder for upcoming content
+
+=== Completed Tasks
+
+. Basic Navigation Functionality
 * Goal
 ** Implement basic navigation functionality for the blog-like web app, allowing users to easily navigate through the site and access different sections as described in the provided sitemap.
 This will enhance user experience and help them find relevant content efficiently.
@@ -40,15 +49,8 @@ Hints
 ** Consider using popular front-end libraries and frameworks, such as Bootstrap or Tailwind CSS, to create a responsive and accessible navigation bar.
 ** You may use the <nav> HTML element to create a semantic and accessible navigation bar.
 ** Utilize CSS media queries to adapt the navigation bar or menu to different screen sizes.
-
-plantuml::./diagrams/sitemap.puml[format=svg]
-
 * Result
 ** The implemented basic navigation functionality will allow users to easily access and navigate between different sections of the website, as described in the sitemap.
 The navigation bar or menu will be responsive and accessible, ensuring a smooth user experience across various devices and for users with disabilities.
 
-[#tasks-with-open-questions]
-=== Tasks With Open Questions
-
-* Implement welcome page
-* Implement placeholder for upcoming content
+plantuml::./diagrams/sitemap.puml[format=svg]
