@@ -11,9 +11,10 @@ import {
   Meta,
   Routes,
   Scripts,
-  Title,
-} from "solid-start";
+  Title, Link,
+} from 'solid-start';
 import "./root.css";
+import { TopAppBar } from '~/components/TopAppBar';
 
 export default function Root() {
   const location = useLocation();
@@ -24,23 +25,32 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
+        <Title>ReSrc Blog</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+            crossorigin='anonymous' />
+        <Link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin='anonymous' />
+        <Link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+            rel="stylesheet"
+            crossorigin='anonymous' />
+        <Link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <Link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+        <Link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
       </Head>
       <Body>
         <Suspense>
           <ErrorBoundary>
-            <nav class="bg-sky-800">
-              <ul class="container flex items-center p-3 text-gray-200">
-                <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
-                  <A href="/">Home</A>
-                </li>
-                <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-                  <A href="/about">About</A>
-                </li>
-              </ul>
-            </nav>
+            <TopAppBar />
             <Routes>
               <FileRoutes />
             </Routes>
