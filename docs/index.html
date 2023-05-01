@@ -443,11 +443,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_guidelines">Guidelines</a></li>
+<li><a href="#_guidelines">Guidelines</a>
+<ul class="sectlevel2">
+<li><a href="#_development_process">Development Process</a></li>
+</ul>
+</li>
+<li><a href="#_architecture">Architecture</a>
+<ul class="sectlevel2">
+<li><a href="#_navigation">Navigation</a></li>
+</ul>
+</li>
 <li><a href="#_commits">Commits</a></li>
-<li><a href="#_build">Build</a></li>
+<li><a href="#_build">Build</a>
+<ul class="sectlevel2">
+<li><a href="#_tasks_in_progress">Tasks In Progress</a></li>
+<li><a href="#_backlog">Backlog</a>
+<ul class="sectlevel3">
+<li><a href="#_implement_navigation_functionality">Implement navigation functionality</a></li>
+</ul>
+</li>
+<li><a href="#tasks-with-open-questions">Tasks With Open Questions</a></li>
+<li><a href="#_completed_tasks">Completed Tasks</a></li>
+</ul>
+</li>
 <li><a href="#_tools">Tools</a></li>
-<li><a href="#_backlog">Backlog</a></li>
 </ul>
 </div>
 </div>
@@ -485,7 +504,70 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 == Processes</p>
 </div>
 <div class="paragraph">
-<p>This section describes the processes I use to create and maintain this blog.
+<p>This section describes the processes I use to create and maintain this blog.</p>
+</div>
+<div class="sect2">
+<h3 id="_development_process">Development Process</h3>
+<div class="paragraph">
+<p>The diagram below describes my current development process:</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNpdjjEOwjAQBPu84h5gPgAFDQ0tBb2TrKMTTs74zon4PQ5RpIh6d2a3UfPZmuZ8Q-AJZF5fdKJBfHSU8S6cMWIyJT_1JMVSsUut38cUf8FOBIlRFhoK94jVtAFFQS3UKGXfGXfQFX4ic_js5HHFHQTujzw8uK6WB2bGslt4TFnm7VISVW4jau0LcyVPDQ==" alt="Diagram">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture">Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the architecture of my blog.
+The term is used in a very broad sense.
+Things that are considered architecture are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information Architecture</p>
+</li>
+<li>
+<p>UI/UX Design</p>
+</li>
+<li>
+<p>Navigation</p>
+</li>
+<li>
+<p>Responsiveness</p>
+</li>
+<li>
+<p>Technical Infrastructure</p>
+</li>
+<li>
+<p>SEO</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following chapters describe each of these aspects in detail.</p>
+</div>
+<div class="sect2">
+<h3 id="_navigation">Navigation</h3>
+<div class="paragraph">
+<p>I try to design the navigation as simple and intuitive as possible.
+It should eventually be possible to see the content of the blog visualized as a graph.
+The graph should be queryable and navigable.
+For now it is just a list of links.
+A simplified version of the navigation is shown below:</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqlkM8KgkAQxu8-xdCpIl8hCC0SgoKCzptOtaU7sjNWj5-t6dZRvCzs9-fH8AWiJUc44om1IOzrp1BlEIynEwjDOaypwO4z2qCyBpTJYPkqc7I4AsXg1IXJvpqP7yzdMBWewYEoZ1dcWVXgk-ydXbeNuID3PCPGx7asCYk5W8Viq1Qqiw4V5VRljtKE_iPO9ZzEsL5cpTki1pxWzJpMc0Vr_uhdMyIjKpXgs0SfFXx-wAweMnAHD-o9RFdtl3gDpTW-kw==" alt="Diagram">
+</div>
+</div>
+<div class="paragraph">
+<p>It is simplified because lower nodes might have links back to higher nodes which are not shown here.
 === Development Guideline</p>
 </div>
 <div class="paragraph">
@@ -494,7 +576,8 @@ The development process is described in the following steps:</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/plantuml/svg/eNpVjMERwjAMBP-uQgVQQaiAL0MKMPGRaHBkI8nQPk6YYeB5d3sbzKN6CMMoCdqDJPIFNJeYD6R4NFasEDfaptK8Nqdy2yGPdj_272mteYe-LTVjmT-mxgmZBUYJNilfkYilb2w0LbE6dJNcYP5nPePJeP1Ub6K-PEQ=" alt="Diagram">
+<img src="https://kroki.io/plantuml/svg/eNpdjjEOwjAQBPu84h5gPgAFDQ0tBb2TrKMTTs74zon4PQ5RpIh6d2a3UfPZmuZ8Q-AJZF5fdKJBfHSU8S6cMWIyJT_1JMVSsUut38cUf8FOBIlRFhoK94jVtAFFQS3UKGXfGXfQFX4ic_js5HHFHQTujzw8uK6WB2bGslt4TFnm7VISVW4jau0LcyVPDQ==" alt="Diagram">
+</div>
 </div>
 </div>
 </div>
@@ -563,6 +646,9 @@ Thus, commits should have the following structure</p>
 <li>
 <p><code>test</code></p>
 </li>
+<li>
+<p><code>dev-config</code></p>
+</li>
 </ul>
 </div>
 </li>
@@ -587,7 +673,173 @@ Thus, commits should have the following structure</p>
 <h2 id="_build">Build</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>tbd</p>
+<p>tbd
+== Tasks</p>
+</div>
+<div class="paragraph">
+<p>In this chapter all tasks to be done are described.
+Each task must describe a clear expected result.
+Task with open questions are described in <a href="#tasks-with-open-questions">tasks with open questions</a>.</p>
+</div>
+<div class="paragraph">
+<p>All tasks should contain at least the following information:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Goal - why is this task necessary?</p>
+</li>
+<li>
+<p>Requirements - what is the expected result and its constraints?</p>
+</li>
+<li>
+<p>Hints - which information we know already can be used to implement this task?</p>
+</li>
+<li>
+<p>Result - must be verifiable</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Thus, the following can be used as a template for a task:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Goal</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;goal and the reason why it makes sense to achieve it&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Requirements</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;list of requirements and their constrains&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hints</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;hints which can be used to implement the task&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Result</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;description of the expected result&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_tasks_in_progress">Tasks In Progress</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_backlog">Backlog</h3>
+<div class="sect3">
+<h4 id="_implement_navigation_functionality">Implement navigation functionality</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="tasks-with-open-questions">Tasks With Open Questions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Implement welcome page</p>
+</li>
+<li>
+<p>Implement placeholder for upcoming content</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_completed_tasks">Completed Tasks</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Basic Navigation Functionality</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Goal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implement basic navigation functionality for the blog-like web app, allowing users to easily navigate through the site and access different sections as described in the provided sitemap.
+This will enhance user experience and help them find relevant content efficiently.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Requirements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure the navigation bar or menu is easily accessible and visible on all pages of the website.</p>
+</li>
+<li>
+<p>Ensure the navigation bar or menu is responsive and adapts well to different screen sizes, such as mobile, tablet, and desktop.</p>
+</li>
+<li>
+<p>Create a navigation bar or menu containing links to each section of the website as described in the sitemap depicted below.</p>
+</li>
+<li>
+<p>The navigation functionality should follow web accessibility guidelines to support users with disabilities.
+Hints</p>
+</li>
+<li>
+<p>Consider using popular front-end libraries and frameworks, such as Bootstrap or Tailwind CSS, to create a responsive and accessible navigation bar.</p>
+</li>
+<li>
+<p>You may use the &lt;nav&gt; HTML element to create a semantic and accessible navigation bar.</p>
+</li>
+<li>
+<p>Utilize CSS media queries to adapt the navigation bar or menu to different screen sizes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Result</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The implemented basic navigation functionality will allow users to easily access and navigate between different sections of the website, as described in the sitemap.
+The navigation bar or menu will be responsive and accessible, ensuring a smooth user experience across various devices and for users with disabilities.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNqlkM8KgkAQxu8-xdCpIl8hCC0SgoKCzptOtaU7sjNWj5-t6dZRvCzs9-fH8AWiJUc44om1IOzrp1BlEIynEwjDOaypwO4z2qCyBpTJYPkqc7I4AsXg1IXJvpqP7yzdMBWewYEoZ1dcWVXgk-ydXbeNuID3PCPGx7asCYk5W8Viq1Qqiw4V5VRljtKE_iPO9ZzEsL5cpTki1pxWzJpMc0Vr_uhdMyIjKpXgs0SfFXx-wAweMnAHD-o9RFdtl3gDpTW-kw==" alt="Diagram">
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -599,31 +851,10 @@ Thus, commits should have the following structure</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_backlog">Backlog</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Map domain to blog.resrc.ch</p>
-</li>
-<li>
-<p>Implement navigation functionlity to blog</p>
-</li>
-<li>
-<p>Implement welcome page</p>
-</li>
-<li>
-<p>Implement placeholder for upcoming content</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-01 12:12:01 UTC
+Last updated 2023-05-01 15:07:53 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
