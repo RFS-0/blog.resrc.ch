@@ -16,7 +16,6 @@ tdb
 
 == Backlog
 
-* Map domain to blog.resrc.ch
 * Implement navigation functionlity to blog
 * Implement welcome page
 * Implement placeholder for upcoming content
