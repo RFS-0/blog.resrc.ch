@@ -1,0 +1,3 @@
+{
+  "ignoreCommand": "ls && bash check-branch.sh"
+}
