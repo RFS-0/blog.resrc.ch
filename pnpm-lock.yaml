@@ -31,9 +31,12 @@ importers:
 
   blog:
     specifiers:
+      '@solid-primitives/context': ^0.2.1
+      '@solid-primitives/event-bus': ^1.0.5
       '@solidjs/meta': ^0.28.2
       '@solidjs/router': ^0.8.2
       autoprefixer: ^10.4.13
+      common-config: workspace:*
       postcss: ^8.4.21
       solid-js: ^1.7.2
       solid-start: ^0.2.26
@@ -44,8 +47,11 @@ importers:
       undici: ^5.15.1
       vite: ^4.1.4
     dependencies:
+      '@solid-primitives/context': 0.2.1_solid-js@1.7.3
+      '@solid-primitives/event-bus': 1.0.5_solid-js@1.7.3
       '@solidjs/meta': 0.28.4_solid-js@1.7.3
       '@solidjs/router': 0.8.2_solid-js@1.7.3
+      common-config: link:../common-config
       solid-js: 1.7.3
       solid-start: 0.2.26_z3ffk5j3zhiz2k7qebxjk42gfi
       solid-start-vercel: 0.2.26_sqz3tnbgiqyjstyl465zp6m6oq
@@ -57,6 +63,9 @@ importers:
       tailwindcss: 3.3.2
       typescript: 4.9.5
       vite: 4.3.3
+
+  common-config:
+    specifiers: {}
 
   docs:
     specifiers:
@@ -1823,6 +1832,31 @@ packages:
     dependencies:
       '@sinonjs/commons': 2.0.0
     dev: true
+
+  /@solid-primitives/context/0.2.1_solid-js@1.7.3:
+    resolution: {integrity: sha512-XIIwCOWpRKDersgkR9LNFXaJHIV8QlCFo/tq5bV0cAOZklcwOFcqi2bN+uWgEIQSWGjWXU2kc1H1/TzgYzVDlg==}
+    peerDependencies:
+      solid-js: ^1.6.12
+    dependencies:
+      solid-js: 1.7.3
+    dev: false
+
+  /@solid-primitives/event-bus/1.0.5_solid-js@1.7.3:
+    resolution: {integrity: sha512-oHJEILaSSQdTkpUjlRO95tFYTpf2HBUER3MzssuwUM6PTgoFVbwfobakaGk1TGeRBW5r/BRaJugZlVFiQcAQ+w==}
+    peerDependencies:
+      solid-js: ^1.6.12
+    dependencies:
+      '@solid-primitives/utils': 6.1.0_solid-js@1.7.3
+      solid-js: 1.7.3
+    dev: false
+
+  /@solid-primitives/utils/6.1.0_solid-js@1.7.3:
+    resolution: {integrity: sha512-uTikKFrq33UO+MnKt2WzZr9WYbQe5YX58ytGkL+29DL6o0pZs1wrICbd4ymzSm8azqzMcQqEQOL3HLWjuv9tLw==}
+    peerDependencies:
+      solid-js: ^1.6.12
+    dependencies:
+      solid-js: 1.7.3
+    dev: false
 
   /@solidjs/meta/0.28.4_solid-js@1.7.3:
     resolution: {integrity: sha512-1USElsQuGVcJnmZ6CxPfUVmKvCsVdBQoGrUyMxLtFw36Ytt90dPs/qLyXLvPR/ZPD16/qauWqg6APEkbrDOLcA==}

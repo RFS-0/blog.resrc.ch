@@ -8,15 +8,10 @@
 
 include::guidelines.adoc[]
 include::processes.adoc[]
+include::architecture.adoc[]
 include::development.adoc[]
+include::tasks.adoc[]
 
 == Tools
 
 tdb
-
-== Backlog
-
-* Map domain to blog.resrc.ch
-* Implement navigation functionlity to blog
-* Implement welcome page
-* Implement placeholder for upcoming content

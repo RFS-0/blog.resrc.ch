@@ -1,0 +1,26 @@
+== Architecture
+
+This chapter describes the architecture of my blog.
+The term is used in a very broad sense.
+Things that are considered architecture are:
+
+* Information Architecture
+* UI/UX Design
+* Navigation
+* Responsiveness
+* Technical Infrastructure
+* SEO
+
+The following chapters describe each of these aspects in detail.
+
+=== Navigation
+
+I try to design the navigation as simple and intuitive as possible.
+It should eventually be possible to see the content of the blog visualized as a graph.
+The graph should be queryable and navigable.
+For now it is just a list of links.
+A simplified version of the navigation is shown below:
+
+plantuml::./diagrams/sitemap.puml[format=svg]
+
+It is simplified because lower nodes might have links back to higher nodes which are not shown here.
