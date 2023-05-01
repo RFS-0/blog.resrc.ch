@@ -16,4 +16,7 @@ tdb
 
 == Backlog
 
-* [ ] Setup turbo repo with pnpm
+* Map domain to blog.resrc.ch
+* Implement navigation functionlity to blog
+* Implement welcome page
+* Implement placeholder for upcoming content
