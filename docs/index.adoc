@@ -9,13 +9,8 @@
 include::guidelines.adoc[]
 include::processes.adoc[]
 include::development.adoc[]
+include::tasks.adoc[]
 
 == Tools
 
 tdb
-
-== Backlog
-
-* Implement navigation functionlity to blog
-* Implement welcome page
-* Implement placeholder for upcoming content

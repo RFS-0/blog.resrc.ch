@@ -1,0 +1,12 @@
+@startuml
+
+title Website Sitemap
+
+(*) --> Home
+Home --> "Learn and Explore" as LearnAndExplore
+Home --> "Projects, Tools and Frameworks" as ProjectsToolsFrameworks
+Home --> "DevOps, Infrastructure and Cloud" as DevOpsInfrastructureCloud
+Home --> "Insights and Discussions" as InsightsDiscussions
+Home --> Contact
+
+@enduml

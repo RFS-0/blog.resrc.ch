@@ -1,0 +1,54 @@
+== Tasks
+
+In this chapter all tasks to be done are described.
+Each task must describe a clear expected result.
+Task with open questions are described in link:#tasks-with-open-questions[tasks with open questions].
+
+All tasks should contain at least the following information:
+
+. Goal - why is this task necessary?
+. Requirements - what is the expected result and its constraints?
+. Hints - which information we know already can be used to implement this task?
+. Result - must be verifiable
+
+Thus, the following can be used as a template for a task:
+
+* Goal
+** `<goal and the reason why it makes sense to achieve it>`
+* Requirements
+** `<list of requirements and their constrains>`
+* Hints
+** `<hints which can be used to implement the task>`
+* Result
+** `<description of the expected result>`
+
+=== Tasks In Progress
+
+=== Backlog
+
+==== Implement navigation functionality
+
+* Goal
+** Implement basic navigation functionality for the blog-like web app, allowing users to easily navigate through the site and access different sections as described in the provided sitemap.
+This will enhance user experience and help them find relevant content efficiently.
+* Requirements
+** Ensure the navigation bar or menu is easily accessible and visible on all pages of the website.
+** Ensure the navigation bar or menu is responsive and adapts well to different screen sizes, such as mobile, tablet, and desktop.
+** Create a navigation bar or menu containing links to each section of the website as described in the sitemap depicted below.
+** The navigation functionality should follow web accessibility guidelines to support users with disabilities.
+Hints
+** Consider using popular front-end libraries and frameworks, such as Bootstrap or Tailwind CSS, to create a responsive and accessible navigation bar.
+** You may use the <nav> HTML element to create a semantic and accessible navigation bar.
+** Utilize CSS media queries to adapt the navigation bar or menu to different screen sizes.
+
+plantuml::./diagrams/sitemap.puml[format=svg]
+
+* Result
+** The implemented basic navigation functionality will allow users to easily access and navigate between different sections of the website, as described in the sitemap.
+The navigation bar or menu will be responsive and accessible, ensuring a smooth user experience across various devices and for users with disabilities.
+
+[#tasks-with-open-questions]
+=== Tasks With Open Questions
+
+* Implement welcome page
+* Implement placeholder for upcoming content

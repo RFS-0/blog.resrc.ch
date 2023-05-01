@@ -2,12 +2,12 @@
 
 start
 
-:Understand the goal, requirements and output of the task;
+:Define task - goal, requirements and output;
 
-:Implement the task using the guidelines described in this chapter;
+:Implement task - follow guidelines and use best practices;
 
-:Test the task;
+:Verify task - requirements, guidelines, best practices and output?;
 
-:Review the task;
+:Review task - improvement possible?;
 
 @enduml
