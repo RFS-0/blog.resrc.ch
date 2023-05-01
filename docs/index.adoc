@@ -8,6 +8,7 @@
 
 include::guidelines.adoc[]
 include::processes.adoc[]
+include::architecture.adoc[]
 include::development.adoc[]
 include::tasks.adoc[]
 

@@ -1,0 +1,12 @@
+== Architecture
+
+This chapter describes the architecture of my blog.
+The term is used in a very broad sense.
+Things that are considered architecture are:
+
+* Information Architecture
+* UI/UX Design
+* Navigation
+* Responsiveness
+* Technical Infrastructure
+* SEO
