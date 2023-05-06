@@ -24,19 +24,19 @@ Thus, the following can be used as a template for a task:
 
 === Tasks In Progress
 
+. Implement root page according to mockup
+* Goal
+** Implement root page according to mockup in Figma
+* Requirements
+** Root page looks like mockup
+* Hints
+** Reuse/Extend existing components for Material Design 3
+
 === Backlog
 
 ==== Implement navigation functionality
 
-[#tasks-with-open-questions]
-=== Tasks With Open Questions
-
-* Implement welcome page
-* Implement placeholder for upcoming content
-
-=== Completed Tasks
-
-. Basic Navigation Functionality
+. Navigation Functionality
 * Goal
 ** Implement basic navigation functionality for the blog-like web app, allowing users to easily navigate through the site and access different sections as described in the provided sitemap.
 This will enhance user experience and help them find relevant content efficiently.
@@ -54,3 +54,11 @@ Hints
 The navigation bar or menu will be responsive and accessible, ensuring a smooth user experience across various devices and for users with disabilities.
 
 plantuml::./diagrams/sitemap.puml[format=svg]
+
+
+[#tasks-with-open-questions]
+=== Tasks With Open Questions
+
+
+=== Completed Tasks
+
