@@ -7,7 +7,7 @@
   --_pressed-state-layer-color: var(--md-ripple-pressed-state-layer-color, black);
   --_pressed-state-layer-opacity: var(--md-ripple-pressed-state-layer-opacity, 0.12);
   --_dragged-state-layer-opacity: var(--md-ripple-dragged-state-layer-opacity, 0.16);
-  --_dragged-state-layer-color: var(--md-ripple-dragged-state-layer-color, black)
+  --_dragged-state-layer-color: var(--md-ripple-dragged-state-layer-color, black);
   --_state-layer-shape: var(--md-ripple-state-layer-shape, 9999px);
 }
 

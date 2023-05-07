@@ -1,0 +1,38 @@
+@import "../styles/baseline.css";
+
+.top-app-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--fib-10);
+    background-color: var(--sys-primary);
+    padding: 0;
+    color: var(--sys-on-primary);
+}
+
+/* Modifier for left fixed width section */
+.top-app-bar__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    height: 100%;
+}
+
+/* Modifier for middle growing section */
+.top-app-bar__middle {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+}
+
+/* Modifier for right fixed width section */
+.top-app-bar__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    height: 100%;
+}

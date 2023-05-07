@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from "solid-js";
+import { Suspense } from 'solid-js';
 import {
   useLocation,
   A,
@@ -13,8 +13,8 @@ import {
   Scripts,
   Title, Link,
 } from 'solid-start';
-import "./root.css";
-import { TopAppBar } from '~/components/TopAppBar';
+import './root.css';
+import { TopAppBar } from '~/design-system/top-app-bar/TopAppBar';
 
 export default function Root() {
   return (
@@ -43,7 +43,11 @@ export default function Root() {
         <Body>
           <Suspense>
             <ErrorBoundary>
-              <TopAppBar/>
+              <TopAppBar
+                  middle={
+                    <div>resrc</div>
+                  }
+              />
               <Routes>
                 <FileRoutes/>
               </Routes>
