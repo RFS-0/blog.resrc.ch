@@ -1,12 +1,14 @@
-import { Component, ParentProps, } from 'solid-js';
+import { Component, JSX, ParentProps } from 'solid-js';
+import './page-styles.css';
 
 export type PageProps = {
+  children: JSX.Element;
 } & ParentProps
 
 export const Page: Component<PageProps> = (props) => {
   return (
-    <div class='flex flex-row flex-wrap items-center justify-center gap-f10 pt-f11'>
-      {props.children}
-    </div>
+      <main class="page">
+        {props.children}
+      </main>
   );
-}
+};

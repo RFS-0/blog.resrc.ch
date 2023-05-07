@@ -5,12 +5,11 @@
     justify-content: space-between;
     align-items: center;
     height: var(--fib-10);
-    background-color: var(--sys-primary);
+    background-color: var(--sys-surface-container);
     padding: 0;
-    color: var(--sys-on-primary);
+    color: var(--sys-on-surface);
 }
 
-/* Modifier for left fixed width section */
 .top-app-bar__left {
     display: flex;
     align-items: center;
@@ -19,7 +18,6 @@
     height: 100%;
 }
 
-/* Modifier for middle growing section */
 .top-app-bar__middle {
     display: flex;
     align-items: center;
@@ -28,7 +26,6 @@
     height: 100%;
 }
 
-/* Modifier for right fixed width section */
 .top-app-bar__right {
     display: flex;
     align-items: center;

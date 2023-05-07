@@ -1,0 +1,25 @@
+.page-item {
+    min-height: var(--fib-12);
+    min-width: var(--fib-12);
+}
+
+@media (min-width: 233px) {
+    .page-item {
+        min-height: var(--fib-13);
+        min-width: var(--fib-13);
+    }
+}
+
+@media (min-width: 411px) {
+    .page-item {
+        min-height: var(--fib-13);
+        min-width: var(--fib-13);
+    }
+}
+
+@media (min-width: 788px) {
+    .page-item {
+        min-height: var(--fib-14);
+        min-width: var(--fib-14);
+    }
+}
