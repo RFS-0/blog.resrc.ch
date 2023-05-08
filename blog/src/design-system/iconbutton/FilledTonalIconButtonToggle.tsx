@@ -42,6 +42,9 @@ export const FilledTonalIconToggleButton: Component<FilledTonalIconToggleButtonP
           onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
           onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
           class={'icon-button-shared tonal-icon-button icon-button icon-button--toggle-filled-tonal'}
+          classList={{
+            'icon-button--selected': selected(),
+          }}
       >
         <FocusRing visible={focus()}></FocusRing>
         <Ripple listen={listen} unbounded={true}></Ripple>
