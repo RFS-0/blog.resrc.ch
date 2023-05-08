@@ -331,20 +331,20 @@
 }
 
 .md3-switch--selected .md3-switch__ripple {
-    --md-ripple-hover-state-layer-color: var(--_selected-hover-state-layer-color);
-    --md-ripple-focus-state-layer-color: var(--_selected-focus-state-layer-color);
-    --md-ripple-pressed-state-layer-color: var(--_selected-pressed-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_selected-hover-state-layer-opacity);
-    --md-ripple-focus-state-layer-opacity: var(--_selected-focus-state-layer-opacity);
+    --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
+    --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
+    --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
+    --md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
+    --md-ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
     --md-ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity)
 }
 
 .md3-switch--unselected .md3-switch__ripple {
-    --md-ripple-hover-state-layer-color: var(--_unselected-hover-state-layer-color);
-    --md-ripple-focus-state-layer-color: var(--_unselected-focus-state-layer-color);
-    --md-ripple-pressed-state-layer-color: var(--_unselected-pressed-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_unselected-hover-state-layer-opacity);
-    --md-ripple-focus-state-layer-opacity: var(--_unselected-focus-state-layer-opacity);
+    --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
+    --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
+    --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
+    --md-ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
+    --md-ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
     --md-ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity)
 }
 

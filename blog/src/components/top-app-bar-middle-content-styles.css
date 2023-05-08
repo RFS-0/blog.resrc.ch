@@ -1,0 +1,24 @@
+.app-bar-middle-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+    padding: 0 var(--fib-7);
+    height: 100%;
+}
+
+.app-bar-middle-content__title {
+    display: flex;
+    align-items: center;
+    width: var(--fib-11);
+    height: 100%;
+}
+
+.app-bar-middle-content__search {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}

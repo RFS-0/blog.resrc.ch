@@ -1,33 +1,44 @@
-import { Component, createSignal, JSX, Show } from "solid-js"
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/tonal-styles.css'
+import { Component, createSignal, JSX, splitProps } from 'solid-js';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+import './styles/filled-icon-button-styles.css';
 
 export type FilledIconButtonProps = {
   icon?: JSX.Element
-} & JSX.IntrinsicElements['button']
+} & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const FilledIconButton: Component<FilledIconButtonProps> = (props) => {
-  const [focus, setFocus] = createSignal(false)
-  const [ripleListen, rippleEmit] = createRippleEventEmitter()
+  const [filledIconButtonProps, buttonProps] = splitProps(props, [
+    'icon',
+  ]);
+  const [focus, setFocus] = createSignal(false);
+  const {listen, emit} = createRippleEventEmitter();
+
+  const rippleHandlers = createHandlers(emit);
+
+  const activateFocus= () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
 
   return (
-    <button
-      {...createHandlers(rippleEmit)}
-      class={`base-icon-button filled-base md3-icon-button md3-icon-button--filled ${props.disabled ? 'md3-button--disabled' : ''}`}
-      onFocus={() => setFocus(true)}
-      onBlur={() => setFocus(false)}
-      onPointerDown={(ev) => {
-        rippleEmit({ type: 'pointerdown', pointerEvent: (ev) });
-        setFocus(false)
-      }}
-    >
-      <FocusRing visible={focus()}></FocusRing>
-      <Ripple listen={ripleListen} unbounded={true}></Ripple>
-      <span class="md3-icon-button__touch"></span>
-      <span class="md3-icon-button__icon">
-        {props.icon}
+      <button
+          {...buttonProps}
+          {...rippleHandlers}
+          onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick])}
+          onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
+          class={'icon-button-shared icon-button icon-button--filled'}
+      >
+        <FocusRing visible={focus()}></FocusRing>
+        <Ripple listen={listen} unbounded={true}></Ripple>
+        <span class="icon-button__touch"></span>
+        <span class="icon-button__icon">
+        {filledIconButtonProps.icon}
       </span>
-    </button>
-  )
-}
+      </button>
+  );
+};

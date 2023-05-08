@@ -1,0 +1,39 @@
+@import "../styles/baseline.css";
+
+.top-app-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--fib-10);
+    background-color: var(--sys-surface-container);
+    padding: 0;
+    color: var(--sys-on-surface);
+}
+
+.top-app-bar__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    height: 100%;
+}
+
+.top-app-bar__middle {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.top-app-bar__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    height: 100%;
+}

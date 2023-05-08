@@ -35,6 +35,7 @@ where:
 ** `style`,
 ** `test`
 ** `dev-config`
+** `deps`
 * `scope` is optional but must be one of:
 ** tbd
 

@@ -1,44 +1,46 @@
-import { Component, createSignal, JSX, Show } from "solid-js"
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/standard-styles.css'
+import { Component, createSignal, JSX, splitProps } from 'solid-js';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+import './styles/standard-icon-button-styles.css';
 
 export type StandardIconButtonProps = {
   icon?: JSX.Element
-  onClick?: (ev: MouseEvent) => void
-} & JSX.IntrinsicElements['button']
+} & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const StandardIconButton: Component<StandardIconButtonProps> = (props) => {
-  const [focus, setFocus] = createSignal(false)
-  const { listen, emit } = createRippleEventEmitter()
+  const [standardIconButtonProps, buttonProps] = splitProps(props, [
+    'icon',
+  ]);
+  const [focus, setFocus] = createSignal(false);
+  const {listen, emit} = createRippleEventEmitter();
 
+  const rippleHandlers = createHandlers(emit);
 
-  const handleClick = (e: MouseEvent) => {
-    emit({ type: 'click', pointerEvent: (e) });
-    props.onClick && props.onClick(e)
-  }
+  const activateFocus = () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
 
   return (
-    <button
-      {...props}
-      {...createHandlers(emit)}
-      class={`base-icon-button md3-icon-button md3-icon-button--standard ${props.disabled ? 'md3-button--disabled' : ''}`}
-      onFocus={() => setFocus(true)}
-      onBlur={() => setFocus(false)}
-      onPointerDown={(ev) => {
-        emit({ type: 'pointerdown', pointerEvent: (ev) });
-        setFocus(false)
-      }}
-      onClick={handleClick}
-    >
-      <FocusRing visible={focus()}></FocusRing>
-      <Ripple
-        listen={listen}
-        unbounded={true} />
-      <span class="md3-icon-button__touch"></span>
-      <span class="md3-icon-button__icon">
-        {props.icon}
+      <button
+          {...buttonProps}
+          {...rippleHandlers}
+          onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick])}
+          onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
+          class={'icon-button-shared icon-button icon-button--standard'}
+      >
+        <FocusRing visible={focus()}></FocusRing>
+        <Ripple
+            listen={listen}
+            unbounded={true}/>
+        <span class="icon-button__touch"></span>
+        <span class="icon-button__icon">
+        {standardIconButtonProps.icon}
       </span>
-    </button>
-  )
-}
+      </button>
+  );
+};

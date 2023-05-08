@@ -1,5 +1,5 @@
 import { Component, ParentProps } from "solid-js"
-import './styles/base-styles.css'
+import './base-styles.css'
 
 export type CardProps = {
   size: 'small' | 'large';

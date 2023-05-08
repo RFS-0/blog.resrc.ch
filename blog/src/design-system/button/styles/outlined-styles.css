@@ -1,4 +1,4 @@
-@import './base-styles.css';
+@import 'shared-button-styles.css';
 
 .base-outlined-button {
     --_container-height: var(--md-outlined-button-container-height, 40px);
@@ -49,11 +49,11 @@
     border-radius: var(--_container-shape)
 }
 
-.md3-button:active .md3-button__outline {
+.button:active .md3-button__outline {
     border-color: var(--_pressed-outline-color)
 }
 
-.md3-button:disabled .md3-button__outline {
+.button:disabled .md3-button__outline {
     border-color: var(--_disabled-outline-color)
 }
 

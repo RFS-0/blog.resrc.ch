@@ -1,0 +1,42 @@
+.page-container {
+    display: flex;
+    width: 100%;
+}
+.page {
+    width: var(--fib-16);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: var(--fib-7);
+    margin: var(--fib-7);
+    max-height: 100%;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+
+@media (min-width: 233px) {
+    /* sm */
+    .page {
+        gap: var(--fib-7);
+        margin: var(--fib-7);
+    }
+}
+
+@media (min-width: 411px) {
+    /* md */
+    .page {
+        gap: var(--fib-8);
+        margin: var(--fib-8);
+    }
+}
+
+@media (min-width: 788px) {
+    /* lg */
+    .page {
+        gap: var(--fib-9);
+        margin: var(--fib-9);
+    }
+}

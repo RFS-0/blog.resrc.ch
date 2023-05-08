@@ -1,4 +1,4 @@
-@import './base-styles.css';
+@import 'shared-button-styles.css';
 
 .base-tonal-button {
     --_container-elevation: var(--md-tonal-button-container-elevation, 0);

@@ -18,4 +18,3 @@ export * from './radio'
 export * from './ripple'
 export * from './switch'
 export * from './textfield'
-export * from './typography';
