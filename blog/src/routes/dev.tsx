@@ -3,7 +3,7 @@ import { PageItem } from '~/components/page/PageItem';
 import {
   FilledIconButton,
   FilledIconToggleButton,
-  FilledTonalIconButton,
+  FilledLinkIconButton,
   StandardIconButton,
   StandardIconToggleButton,
   StandardLinkIconButton,
@@ -33,7 +33,7 @@ export default function Dev() {
                 target={'_blank'}
                 icon={<span class="material-symbols-outlined">link</span>}
             />
-            StandardIconToggleButton
+            StandardLinkIconButton
           </PageItem>
           <PageItem>
             <FilledIconButton
@@ -43,18 +43,19 @@ export default function Dev() {
             FilledIconButton
           </PageItem>
           <PageItem>
-            <FilledTonalIconButton
-                disabled={false}
-                icon={<span class="material-symbols-outlined">add</span>}
-            />
-            FilledTonalIconButton
-          </PageItem>
-          <PageItem>
             <FilledIconToggleButton
                 onIcon={<span class="material-symbols-outlined">add</span>}
                 offIcon={<span class="material-symbols-outlined">remove</span>}
             />
             FilledIconToggleButton
+          </PageItem>
+          <PageItem>
+            <FilledLinkIconButton
+                href={'#'}
+                target={'_blank'}
+                icon={<span class="material-symbols-outlined">link</span>}
+            />
+            FilledLinkIconButton
           </PageItem>
         </Page>
       </main>

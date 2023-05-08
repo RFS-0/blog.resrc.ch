@@ -1,6 +1,6 @@
 import { Component, createSignal, JSX, splitProps } from 'solid-js';
 import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
-import './styles/tonal-icon-button-styles.css';
+import './styles/filled-tonal-icon-button-styles.css';
 
 export type FilledTonalIconButtonProps = {
   icon?: JSX.Element

@@ -9,7 +9,7 @@ export type FilledIconToggleButtonProps = {
 } & JSX.HTMLAttributes<HTMLButtonElement>
 
 export const FilledIconToggleButton: Component<FilledIconToggleButtonProps> = (props) => {
-  const [filledIconButtonToggleProps, buttonProps] = splitProps(props, [
+  const [toggleProps, buttonProps] = splitProps(props, [
     'selected',
     'onIcon',
     'offIcon',
@@ -31,7 +31,6 @@ export const FilledIconToggleButton: Component<FilledIconToggleButtonProps> = (p
 
   const handleClick = () => {
     setSelected(!selected());
-    console.log('selected', selected());
   };
 
   return (
@@ -52,9 +51,9 @@ export const FilledIconToggleButton: Component<FilledIconToggleButtonProps> = (p
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
         <Show when={selected()}
-              fallback={filledIconButtonToggleProps.offIcon}
+              fallback={toggleProps.offIcon}
         >
-          {filledIconButtonToggleProps.onIcon}
+          {toggleProps.onIcon}
         </Show>
       </span>
       </button>

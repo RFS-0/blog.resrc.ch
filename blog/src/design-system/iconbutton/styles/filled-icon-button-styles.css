@@ -1,6 +1,6 @@
 @import "shared-icon-button-styles.css";
 
-.icon-button-shared .icon-button--filled {
+.icon-button-shared.icon-button--filled {
     --_container-color: var(--sys-primary);
     --_container-shape: 9999px;
     --_container-size: 40px;
@@ -38,9 +38,6 @@
     --_container-shape-start-end: var(--_container-shape);
     --_container-shape-end-end: var(--_container-shape);
     --_container-shape-end-start: var(--_container-shape);
-}
-
-.icon-button-shared {
 }
 
 .icon-button {
@@ -94,25 +91,25 @@
     color: var(--_toggle-unselected-pressed-icon-color)
 }
 
-.icon-button--selected {
+.icon-button--filled.icon-button--selected {
     --md-ripple-focus-color: var(--_toggle-selected-focus-state-layer-color);
     --md-ripple-hover-color: var(--_toggle-selected-hover-state-layer-color);
     --md-ripple-pressed-color: var(--_toggle-selected-pressed-state-layer-color)
 }
 
-.icon-button--selected:not(:disabled) {
+.icon-button--filled.icon-button--selected:not(:disabled) {
     background-color: var(--_selected-container-color);
     color: var(--_toggle-selected-icon-color)
 }
 
-.icon-button--selected:not(:disabled):hover {
+.icon-button--filled.icon-button--selected:not(:disabled):hover {
     color: var(--_toggle-selected-hover-icon-color)
 }
 
-.icon-button--selected:not(:disabled):focus {
+.icon-button--filled.icon-button--selected:not(:disabled):focus {
     color: var(--_toggle-selected-focus-icon-color)
 }
 
-.icon-button--selected:not(:disabled):active {
+.icon-button--filled.icon-button--selected:not(:disabled):active {
     color: var(--_toggle-selected-pressed-icon-color)
 }

@@ -1,7 +1,7 @@
 import { Component, createSignal, JSX } from 'solid-js';
 import { FocusRing } from '../focus/FocusRing';
 import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
-import './styles/tonal-icon-button-styles.css';
+import './styles/filled-tonal-icon-button-styles.css';
 
 export type FilledTonalLinkIconButtonProps = {
   icon: JSX.Element

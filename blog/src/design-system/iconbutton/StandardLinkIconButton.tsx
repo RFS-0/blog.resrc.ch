@@ -26,10 +26,10 @@ export const StandardLinkIconButton: Component<StandardLinkIconButtonProps> = (p
   return (
       <div
           {...rippleHandlers}
-          class={`icon-button-shared icon-button icon-button--standard`}
           onFocus={composeEventHandlers([linkProps?.onfocus, activateFocus])}
           onBlur={composeEventHandlers([linkProps?.onblur, deactivateFocus])}
           onPointerDown={composeEventHandlers([linkProps?.onPointerDown, deactivateFocus])}
+          class={`icon-button-shared icon-button icon-button--standard`}
       >
         <FocusRing visible={focus()}></FocusRing>
         <Ripple listen={listen} unbounded={true}></Ripple>
