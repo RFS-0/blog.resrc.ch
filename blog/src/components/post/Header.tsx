@@ -1,12 +1,14 @@
 import { Component, Signal } from 'solid-js';
-import { Icon, StandardIconButton } from '~/design-system';
+import { Icon, StandardIconToggleButton } from '~/design-system';
 
 export type HeaderProps = {
+  post: HTMLDivElement | undefined;
   display: Signal<'preview-small' | 'preview-large' | 'full'>;
   title: string
 }
 
 export const Header: Component<HeaderProps> = (props) => {
+  const post = props.post;
   const [display, setDisplay] = props.display;
 
   const switchDisplay = () => {
@@ -21,12 +23,21 @@ export const Header: Component<HeaderProps> = (props) => {
       default:
         break;
     }
+    if (post) {
+      setTimeout(() => {
+        const yPositionRelativeToViewport = post.getBoundingClientRect().y;
+        const scroll = yPositionRelativeToViewport > 0 ? yPositionRelativeToViewport - 34 : yPositionRelativeToViewport + 34;
+        window.scroll({
+              top: scroll,
+              behavior: 'smooth',
+            },
+        );
+      }, 300);
+    }
   };
 
   return (
       <div class="flex flex-row items-center p-f4 sm:p-f5 md:p-f6 lg:p-f7 sm:gap-f5 md:gap-f6 lg:gap-f7">
-        <Icon>
-        </Icon>
         <div
             class="flex-auto"
             classList={{
@@ -38,11 +49,11 @@ export const Header: Component<HeaderProps> = (props) => {
           {props.title}
         </div>
         <div>
-          <StandardIconButton
-              color="primary"
+          <StandardIconToggleButton
               onClick={switchDisplay}
-              icon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
-          ></StandardIconButton>
+              offIcon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
+              onIcon={<Icon><span class="material-symbols-outlined">zoom_out</span></Icon>}
+          ></StandardIconToggleButton>
         </div>
       </div>
   );

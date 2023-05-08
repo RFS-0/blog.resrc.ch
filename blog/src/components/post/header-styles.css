@@ -1,0 +1,28 @@
+.header {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--fib-4);
+}
+
+@media (min-width: 233px) {
+    /* sm */
+    .header {
+        padding: var(--fib-4);
+    }
+}
+
+@media (min-width: 411px) {
+    /* md */
+    .header {
+        padding: var(--fib-5);
+    }
+}
+
+@media (min-width: 788px) {
+    /* lg */
+    .header {
+        padding: var(--fib-6);
+    }
+}

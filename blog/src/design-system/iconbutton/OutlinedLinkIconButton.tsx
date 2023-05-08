@@ -1,46 +1,47 @@
-import { Component, createSignal, JSX } from 'solid-js';
-import { FocusRing } from '../focus/FocusRing';
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import { Component, createSignal, JSX, splitProps } from 'solid-js';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
 import './styles/outlined-icon-button-styles.css';
 
 export type OutlinedLinkIconButtonProps = {
-  linkHref: string
-  linkTarget: string
   icon?: JSX.Element
-} & JSX.IntrinsicElements['div']
+} & JSX.AnchorHTMLAttributes<HTMLAnchorElement>
 
 export const OutlinedLinkIconButton: Component<OutlinedLinkIconButtonProps> = (props) => {
-  const [focus, setFocus] = createSignal(false)
-  const [ripleListen, rippleEmit] = createRippleEventEmitter()
+  const [iconProps, linkProps] = splitProps(props, [
+    'icon',
+  ]);
+  const [focus, setFocus] = createSignal(false);
+  const {listen, emit} = createRippleEventEmitter();
+
+  const rippleHandlers = createHandlers(emit);
+
+  const activateFocus = () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
 
   return (
-    <div
-      {...createHandlers(rippleEmit)}
-      class={`icon-button-shared icon-button icon-button--outlined`}
-      onFocus={() => setFocus(true)}
-      onBlur={() => setFocus(false)}
-      onPointerDown={(ev) => {
-        rippleEmit({ type: 'pointerdown', pointerEvent: (ev) });
-        setFocus(false)
-      }}
-    >
-      <FocusRing visible={focus()}></FocusRing>
-      <Ripple listen={ripleListen} unbounded={true}></Ripple>
-      <span class="icon-button__touch"></span>
-      <span class="icon-button__icon">
-        {props.icon}
-      </span>
-      <a class="icon-button__link"
-        href="https://www.google.ch"
-        target="_blank"
-        onFocus={() => setFocus(true)}
-        onBlur={() => setFocus(false)}
-        onPointerDown={(ev) => {
-          rippleEmit({ type: 'pointerdown', pointerEvent: (ev) });
-          setFocus(false)
-        }}
+      <div
+          {...rippleHandlers}
+          onFocus={composeEventHandlers([linkProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([linkProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([linkProps?.onPointerDown, deactivateFocus])}
+          class={`icon-button-shared icon-button icon-button--outlined`}
       >
-      </a>
-    </div >
-  )
-}
+        <FocusRing visible={focus()}></FocusRing>
+        <Ripple listen={listen} unbounded={true}></Ripple>
+        <span class="icon-button__touch"></span>
+        <span class="icon-button__icon">
+        {iconProps.icon}
+      </span>
+        <a
+            {...linkProps}
+            class="icon-button__link"
+        >
+        </a>
+      </div>
+  );
+};

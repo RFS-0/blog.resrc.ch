@@ -1,7 +1,5 @@
 import { createSignal, JSX, Show, VoidProps } from 'solid-js';
-import { Elevation } from '../elevation/Elevation';
-import { FocusRing } from '../focus/FocusRing';
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import { createHandlers, createRippleEventEmitter, Elevation, FocusRing, Ripple } from '~/design-system';
 import './styles/shared-button-styles.css';
 
 export type LinkButtonProps = {

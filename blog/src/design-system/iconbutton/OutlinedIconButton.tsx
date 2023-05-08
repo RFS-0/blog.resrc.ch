@@ -1,29 +1,37 @@
-import { Component, createSignal, JSX } from 'solid-js';
-import { FocusRing } from '../focus/FocusRing';
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import { Component, createSignal, JSX, splitProps } from 'solid-js';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
 import './styles/outlined-icon-button-styles.css';
 
 export type OutlinedIconButtonProps = {
-  icon?: JSX.Element
-} & JSX.IntrinsicElements['button']
+  icon: JSX.Element
+} & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const OutlinedIconButton: Component<OutlinedIconButtonProps> = (props) => {
+  const [iconProps, buttonProps] = splitProps(props, [
+    'icon',
+  ]);
   const [focus, setFocus] = createSignal(false);
   const {listen, emit} = createRippleEventEmitter();
 
+  const rippleHandlers = createHandlers(emit);
+
+  const activateFocus = () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
+
   return (
       <button
-          {...createHandlers(emit)}
+          {...buttonProps}
+          {...rippleHandlers}
+          onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick])}
+          onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
           class={'icon-button-shared icon-button icon-button--outlined'}
-          classList={{
-            'md3-button--disabled': props.disabled,
-          }}
-          onFocus={() => setFocus(true)}
-          onBlur={() => setFocus(false)}
-          onPointerDown={(ev) => {
-            emit({type: 'pointerdown', pointerEvent: (ev)});
-            setFocus(false);
-          }}
       >
         <FocusRing
             visible={focus()}
@@ -34,7 +42,7 @@ export const OutlinedIconButton: Component<OutlinedIconButtonProps> = (props) =>
         />
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
-        {props?.children} {props.icon}
+        {props?.children} {iconProps.icon}
       </span>
       </button>
   );

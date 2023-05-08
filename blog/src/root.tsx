@@ -37,9 +37,16 @@ export default function Root() {
                     <AppBarMiddleContent/>
                   }
               />
-              <Routes>
-                <FileRoutes/>
-              </Routes>
+              <div class={'root-container'}>
+                <div class={'left-nav-bar'}>
+                </div>
+                <div class={'main-container'}>
+                  <Routes>
+                    <FileRoutes/>
+                  </Routes>
+                </div>
+                <div class={'right-nav-bar'}></div>
+              </div>
             </ErrorBoundary>
           </Suspense>
           <Scripts/>

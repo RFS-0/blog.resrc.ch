@@ -7,7 +7,7 @@ export type FilledTonalIconButtonProps = {
 } & JSX.ButtonHTMLAttributes<HTMLButtonElement>
 
 export const FilledTonalIconButton: Component<FilledTonalIconButtonProps> = (props) => {
-  const [filledTonalIconButtonProps, buttonProps] = splitProps(props, [
+  const [iconProps, buttonProps] = splitProps(props, [
     'icon',
   ]);
   const [focus, setFocus] = createSignal(false);
@@ -37,7 +37,7 @@ export const FilledTonalIconButton: Component<FilledTonalIconButtonProps> = (pro
         <Ripple listen={listen} unbounded={true}></Ripple>
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
-        {filledTonalIconButtonProps.icon}
+        {iconProps.icon}
       </span>
       </button>
   );

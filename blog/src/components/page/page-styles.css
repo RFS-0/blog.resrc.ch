@@ -1,11 +1,21 @@
-.page {
+.page-container {
     display: flex;
+    width: 100%;
+}
+.page {
+    width: var(--fib-16);
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
     gap: var(--fib-7);
     margin: var(--fib-7);
+    max-height: 100%;
 }
+
+.spacer {
+    flex-grow: 1;
+}
+
 
 @media (min-width: 233px) {
     /* sm */

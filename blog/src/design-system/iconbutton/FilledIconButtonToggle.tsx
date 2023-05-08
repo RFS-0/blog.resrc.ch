@@ -1,5 +1,6 @@
 import { Component, createSignal, JSX, Show, splitProps } from 'solid-js';
 import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+
 import './styles/filled-icon-button-styles.css';
 
 export type FilledIconToggleButtonProps = {

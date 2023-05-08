@@ -6,6 +6,9 @@ import {
   FilledLinkIconButton,
   FilledTonalIconButton,
   FilledTonalLinkIconButton,
+  OutlinedIconButton,
+  OutlinedIconToggleButton,
+  OutlinedLinkIconButton,
   StandardIconButton,
   StandardIconToggleButton,
   StandardLinkIconButton,
@@ -81,6 +84,28 @@ export default function Dev() {
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             FilledTonalLinkIconButton
+          </PageItem>
+          <PageItem>
+            <OutlinedIconButton
+                disabled={false}
+                icon={<span class="material-symbols-outlined">add</span>}
+            />
+            OutlinedIconButton
+          </PageItem>
+          <PageItem>
+            <OutlinedIconToggleButton
+                onIcon={<span class="material-symbols-outlined">add</span>}
+                offIcon={<span class="material-symbols-outlined">remove</span>}
+            />
+            OutlinedIconToggleButton
+          </PageItem>
+          <PageItem>
+            <OutlinedLinkIconButton
+                href={'#'}
+                target={'_blank'}
+                icon={<span class="material-symbols-outlined">link</span>}
+            />
+            OutlinedLinkIconButton
           </PageItem>
         </Page>
       </main>
