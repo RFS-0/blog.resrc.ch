@@ -1,5 +1,4 @@
 import { Page } from '~/components/page/Page';
-import { PageItem } from '~/components/page/PageItem';
 import {
   FilledIconButton,
   FilledIconToggleButton,
@@ -19,94 +18,94 @@ export default function Dev() {
   return (
       <main>
         <Page>
-          <PageItem>
+          <div>
             <StandardIconButton
                 disabled={false}
                 icon={<span class="material-symbols-outlined">add</span>}
             />
             StandardIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <StandardIconToggleButton
                 onIcon={<span class="material-symbols-outlined">add</span>}
                 offIcon={<span class="material-symbols-outlined">remove</span>}
             />
             StandardIconToggleButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <StandardLinkIconButton
                 href={'#'}
                 target={'_blank'}
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             StandardLinkIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledIconButton
                 disabled={false}
                 icon={<span class="material-symbols-outlined">add</span>}
             />
             FilledIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledIconToggleButton
                 onIcon={<span class="material-symbols-outlined">add</span>}
                 offIcon={<span class="material-symbols-outlined">remove</span>}
             />
             FilledIconToggleButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledLinkIconButton
                 href={'#'}
                 target={'_blank'}
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             FilledLinkIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledTonalIconButton
                 disabled={false}
                 icon={<span class="material-symbols-outlined">add</span>}
             />
             FillledTonalIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledTonalIconToggleButton
                 onIcon={<span class="material-symbols-outlined">add</span>}
                 offIcon={<span class="material-symbols-outlined">remove</span>}
             />
             FilledTonalIconToggleButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <FilledTonalLinkIconButton
                 href={'#'}
                 target={'_blank'}
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             FilledTonalLinkIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <OutlinedIconButton
                 disabled={false}
                 icon={<span class="material-symbols-outlined">add</span>}
             />
             OutlinedIconButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <OutlinedIconToggleButton
                 onIcon={<span class="material-symbols-outlined">add</span>}
                 offIcon={<span class="material-symbols-outlined">remove</span>}
             />
             OutlinedIconToggleButton
-          </PageItem>
-          <PageItem>
+          </div>
+          <div>
             <OutlinedLinkIconButton
                 href={'#'}
                 target={'_blank'}
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             OutlinedLinkIconButton
-          </PageItem>
+          </div>
         </Page>
       </main>
   );
