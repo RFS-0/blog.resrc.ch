@@ -1,7 +1,6 @@
-import './styles/base-styles.css'
-import './styles/elevated-styles.css'
-import { Button, ButtonProps } from "./Button";
-
+import './styles/shared-button-styles.css';
+import './styles/elevated-styles.css';
+import { Button, ButtonProps } from './Button';
 
 export const ElevatedButton = (props: ButtonProps) => {
   return (

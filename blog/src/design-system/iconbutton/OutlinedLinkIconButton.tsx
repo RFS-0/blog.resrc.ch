@@ -1,7 +1,7 @@
-import { Component, createSignal, JSX } from "solid-js"
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/outlined-styles.css'
+import { Component, createSignal, JSX } from 'solid-js';
+import { FocusRing } from '../focus/FocusRing';
+import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import './styles/outlined-icon-button-styles.css';
 
 export type OutlinedLinkIconButtonProps = {
   linkHref: string
@@ -16,7 +16,7 @@ export const OutlinedLinkIconButton: Component<OutlinedLinkIconButtonProps> = (p
   return (
     <div
       {...createHandlers(rippleEmit)}
-      class={`base-icon-button md3-icon-button md3-icon-button--outlined`}
+      class={`icon-button-shared icon-button icon-button--outlined`}
       onFocus={() => setFocus(true)}
       onBlur={() => setFocus(false)}
       onPointerDown={(ev) => {
@@ -26,11 +26,11 @@ export const OutlinedLinkIconButton: Component<OutlinedLinkIconButtonProps> = (p
     >
       <FocusRing visible={focus()}></FocusRing>
       <Ripple listen={ripleListen} unbounded={true}></Ripple>
-      <span class="md3-icon-button__touch"></span>
-      <span class="md3-icon-button__icon">
+      <span class="icon-button__touch"></span>
+      <span class="icon-button__icon">
         {props.icon}
       </span>
-      <a class="md3-icon-button__link"
+      <a class="icon-button__link"
         href="https://www.google.ch"
         target="_blank"
         onFocus={() => setFocus(true)}

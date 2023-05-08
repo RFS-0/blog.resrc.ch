@@ -1,4 +1,4 @@
-import { JSX } from "solid-js";
+import { JSX } from 'solid-js';
 
 /**
  * Re-dispatches an event from the provided element.
@@ -147,7 +147,7 @@ export function callHandler<T, E extends Event>(
   return event?.defaultPrevented;
 }
 export function composeEventHandlers<T>(
-  handlers: Array<JSX.EventHandlerUnion<T, any> | undefined>
+  handlers: Array<JSX.EventHandlerUnion<T, any> | null | undefined>
 ) {
   return (event: any) => {
     for (const handler of handlers) {

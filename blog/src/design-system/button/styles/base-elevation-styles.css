@@ -10,18 +10,18 @@
     --md-elevation-surface-tint-color: var(--_container-surface-tint-layer-color)
 }
 
-.md3-button:hover {
+.button:hover {
     --md-elevation-level: var(--_hover-container-elevation)
 }
 
-.md3-button:focus {
+.button:focus {
     --md-elevation-level: var(--_focus-container-elevation)
 }
 
-.md3-button:active {
+.button:active {
     --md-elevation-level: var(--_pressed-container-elevation)
 }
 
-.md3-button:disabled {
+.button:disabled {
     --md-elevation-level: var(--_disabled-container-elevation)
 }

@@ -1,43 +1,62 @@
-import { Component, createSignal, JSX, Show } from "solid-js"
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/filled-styles.css'
+import { Component, createSignal, JSX, Show, splitProps } from 'solid-js';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+import './styles/filled-icon-button-styles.css';
 
 export type FilledIconToggleButtonProps = {
   selected?: boolean
   onIcon: JSX.Element
   offIcon: JSX.Element
-} & JSX.IntrinsicElements['button']
+} & JSX.HTMLAttributes<HTMLButtonElement>
 
 export const FilledIconToggleButton: Component<FilledIconToggleButtonProps> = (props) => {
-  const [focus, setFocus] = createSignal(false)
-  const [ripleListen, rippleEmit] = createRippleEventEmitter()
+  const [filledIconButtonToggleProps, buttonProps] = splitProps(props, [
+    'selected',
+    'onIcon',
+    'offIcon',
+  ]);
+  const [focus, setFocus] = createSignal(false);
+  const {listen, emit} = createRippleEventEmitter();
 
-  const [selected, setSelected] = createSignal(props?.selected || false)
+  const rippleHandlers = createHandlers(emit);
+
+  const [selected, setSelected] = createSignal(props?.selected || false);
+
+  const activateFocus = () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
+
+  const handleClick = () => {
+    setSelected(!selected());
+    console.log('selected', selected());
+  };
 
   return (
-    <button
-      {...createHandlers(rippleEmit)}
-      class={`base-icon-button filled-base md3-icon-button md3-icon-button--filled ${props.disabled ? 'md3-button--disabled' : ''}`}
-      onFocus={() => setFocus(true)}
-      onBlur={() => setFocus(false)}
-      onPointerDown={(e) => {
-        rippleEmit({ type: 'pointerdown', pointerEvent: (e) });
-        setFocus(false)
-      }}
-      onClick={(e) => {
-        rippleEmit({ type: 'click', pointerEvent: (e) });
-        setSelected(!selected())
-      }}
-    >
-      <FocusRing visible={focus()}></FocusRing>
-      <Ripple listen={ripleListen} unbounded={true}></Ripple>
-      <span class="md3-icon-button__touch"></span>
-      <span class="md3-icon-button__icon">
-        <Show when={selected()} fallback={props.offIcon}>
-          {props.onIcon}
+      <button
+          {...buttonProps}
+          {...rippleHandlers}
+          onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick, handleClick])}
+          onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
+          class={'icon-button-shared icon-button icon-button--filled icon-button--toggle-filled'}
+          classList={{
+            'icon-button--selected': selected(),
+          }}
+      >
+        <FocusRing visible={focus()}></FocusRing>
+        <Ripple listen={listen} unbounded={true}></Ripple>
+        <span class="icon-button__touch"></span>
+        <span class="icon-button__icon">
+        <Show when={selected()}
+              fallback={filledIconButtonToggleProps.offIcon}
+        >
+          {filledIconButtonToggleProps.onIcon}
         </Show>
       </span>
-    </button>
-  )
-}
+      </button>
+  );
+};

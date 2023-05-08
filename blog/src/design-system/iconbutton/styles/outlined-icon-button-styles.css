@@ -1,11 +1,11 @@
-@import 'base-styles.css';
+@import 'shared-icon-button-styles.css';
 
-.md3-icon-button--outlined {
+.icon-button--outlined {
   background-color:rgba(0, 0, 0, 0);
   color: var(--_unselected-icon-color);
 }
 
-.md3-icon-button--outlined::before {
+.icon-button--outlined::before {
   border-color: var(--_unselected-outline-color);
   border-width: var(--_unselected-outline-width);
   block-size: 100%;
@@ -20,30 +20,30 @@
 
 }
 
-.md3-icon-button--outlined:hover {
+.icon-button--outlined:hover {
   color: var(--_unselected-hover-icon-color)
 }
 
-.md3-icon-button--outlined:focus {
+.icon-button--outlined:focus {
   color: var(--_unselected-focus-icon-color)
 }
 
-.md3-icon-button--outlined:active {
+.icon-button--outlined:active {
   color: var(--_unselected-pressed-icon-color)
 }
 
-.md3-icon-button--outlined:disabled {
+.icon-button--outlined:disabled {
   color: var(--_disabled-icon-color)
 }
 
-.md3-icon-button--outlined:disabled::before {
+.icon-button--outlined:disabled::before {
   border-color: var(--_disabled-outline-color)
 }
 
-.md3-icon-button--outlined .md3-icon-button--on::before {
+.icon-button--outlined .icon-button--selected::before {
   border-width: 0
 }
 
-.md3-icon-button--outlined .md3-icon-button--on::before {
+.icon-button--outlined .icon-button--selected::before {
   border-width: 0
 }

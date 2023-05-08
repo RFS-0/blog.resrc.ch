@@ -3,7 +3,7 @@ import { Suspense } from 'solid-js';
 import { Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts, Title } from 'solid-start';
 import './root.css';
 import { TopAppBar } from '~/design-system/top-app-bar/TopAppBar';
-import { AppBarMiddleContent } from '~/components/AppBarMiddleContent';
+import { AppBarMiddleContent } from '~/components/navigation/AppBarMiddleContent';
 
 export default function Root() {
   return (

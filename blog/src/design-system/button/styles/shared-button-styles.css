@@ -1,36 +1,25 @@
-.base-button {
+.button {
+    --md-ripple-hover-color: var(--_hover-state-layer-color);
+    --md-ripple-focus-color: var(--_focus-state-layer-color);
+    --md-ripple-pressed-color: var(--_pressed-state-layer-color);
+    --md-ripple-hover-opacity: var(--_hover-state-layer-opacity);
+    --md-ripple-focus-opacity: var(--_focus-state-layer-opacity);
+    --md-ripple-pressed-state-layer-opacity: var(--_pressed-state-layer-opacity)
+
     display: inline-flex;
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     vertical-align: top;
-    --md-ripple-hover-state-layer-color: var(--_hover-state-layer-color);
-    --md-ripple-focus-state-layer-color: var(--_focus-state-layer-color);
-    --md-ripple-pressed-state-layer-color: var(--_pressed-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_hover-state-layer-opacity);
-    --md-ripple-focus-state-layer-opacity: var(--_focus-state-layer-opacity);
-    --md-ripple-pressed-state-layer-opacity: var(--_pressed-state-layer-opacity)
-}
 
-.base-button[disabled] {
-    cursor: default;
-    pointer-events: none;
-    border-start-start-radius: var(--_container-shape, var(--md-comp-button-shape))
-}
-
-.md3-button {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     min-inline-size: 64px;
     border: none;
-    outline: none;
     line-height: inherit;
     user-select: none;
     appearance: none;
     -webkit-appearance: none;
-    vertical-align: middle;
-    background: rgba(0, 0, 0, 0);
     text-decoration: none;
     /* inline-size: 100%; */
     position: relative;
@@ -46,7 +35,14 @@
     padding-inline-end: var(--_spacing-trailing)
 }
 
-.md3-button.md3-button--primary {
+.button[disabled] {
+    cursor: default;
+    pointer-events: none;
+    border-start-start-radius: var(--_container-shape, var(--md-comp-button-shape))
+}
+
+
+.button.md3-button--primary {
   --_container-color: var(--md-sys-color-primary, red);
 
   --_label-text-color: var(--md-sys-color-on-primary, red);
@@ -61,40 +57,40 @@
   --_with-icon-icon-color: var(--md-sys-color-on-primary, red);
   --_with-icon-pressed-icon-color: var(--md-sys-color-on-primary, red);
 
-  --md-ripple-hover-state-layer-color: var(--md-sys-color-on-primary, red);
-  --md-ripple-hover-state-layer-opacity: 0.08;
-  --md-ripple-pressed-state-layer-color: var(--md-sys-color-on-primary, red);
+  --md-ripple-hover-color: var(--md-sys-color-on-primary, red);
+  --md-ripple-hover-opacity: 0.08;
+  --md-ripple-pressed-color: var(--md-sys-color-on-primary, red);
   --md-ripple-pressed-state-layer-opacity: 0.12;
   --md-ripple-dragged-state-layer-color: var(--md-sys-color-on-primary, red);
   --md-ripple-dragged-state-layer-opacity: 0.16;
 }
 
-.md3-button::-moz-focus-inner {
+.button::-moz-focus-inner {
     padding: 0;
     border: 0
 }
 
-.md3-button:hover {
+.button:hover {
     color: var(--_hover-label-text-color);
     cursor: pointer
 }
 
-.md3-button:focus {
+.button:focus {
     color: var(--_focus-label-text-color)
 }
 
-.md3-button:active {
+.button:active {
     color: var(--_pressed-label-text-color);
     outline: none
 }
 
-.md3-button:disabled {
+.button:disabled {
     background-color: var(--_disabled-container-color);
     color: var(--_container-shape)
 }
 
 @media(forced-colors: active) {
-    .md3-button::before {
+    .button::before {
         position: absolute;
         box-sizing: border-box;
         width: 100%;
@@ -108,7 +104,7 @@
     }
 }
 
-.md3-button,
+.button,
 .md3-button__ripple {
     border-radius: var(--_container-shape)
 }
@@ -147,23 +143,23 @@
     block-size: var(--_with-icon-icon-size)
 }
 
-.md3-button:hover .md3-button__icon-slot-container span,
-.md3-button:hover .md3-button__icon-slot-container .md3-button__icon {
+.button:hover .md3-button__icon-slot-container span,
+.button:hover .md3-button__icon-slot-container .md3-button__icon {
     color: var(--_with-icon-hover-icon-color)
 }
 
-.md3-button:focus .md3-button__icon-slot-container span,
-.md3-button:focus .md3-button__icon-slot-container .md3-button__icon {
+.button:focus .md3-button__icon-slot-container span,
+.button:focus .md3-button__icon-slot-container .md3-button__icon {
     color: var(--_with-icon-focus-icon-color)
 }
 
-.md3-button:active .md3-button__icon-slot-container span,
-.md3-button:active .md3-button__icon-slot-container .md3-button__icon {
+.button:active .md3-button__icon-slot-container span,
+.button:active .md3-button__icon-slot-container .md3-button__icon {
     color: var(--_with-icon-pressed-icon-color)
 }
 
-.md3-button:disabled .md3-button__icon-slot-container span,
-.md3-button:disabled .md3-button__icon-slot-container .md3-button__icon {
+.button:disabled .md3-button__icon-slot-container span,
+.button:disabled .md3-button__icon-slot-container .md3-button__icon {
     color: var(--_with-icon-disabled-icon-color)
 }
 

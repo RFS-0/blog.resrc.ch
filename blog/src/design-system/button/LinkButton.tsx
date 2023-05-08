@@ -1,9 +1,8 @@
-import { createSignal, JSX, Show, VoidProps } from "solid-js";
-import { Elevation } from "../elevation/Elevation";
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/base-styles.css'
-
+import { createSignal, JSX, Show, VoidProps } from 'solid-js';
+import { Elevation } from '../elevation/Elevation';
+import { FocusRing } from '../focus/FocusRing';
+import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import './styles/shared-button-styles.css';
 
 export type LinkButtonProps = {
   variant?: 'filled' | 'outlined' | 'elevated' | 'tonal'
@@ -44,7 +43,7 @@ export const LinkButton = (props: LinkButtonProps) => {
       <a
         class={
           `
-        ${'base-button md3-button'} 
+        ${'button button'} 
         ${!!props?.leadingIcon ? 'md3-button--icon-leading' : ''} 
         ${!!props?.trailingIcon ? 'md3-button--icon-trailing' : ''} 
         ${props?.variant === 'elevated' ? 'base-elevated-button  md3-button--elevated' : ''}

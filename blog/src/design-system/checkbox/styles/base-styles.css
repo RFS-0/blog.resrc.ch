@@ -129,28 +129,28 @@
 .base-checkbox .base-ripple {
     height: var(--_state-layer-size);
     width: var(--_state-layer-size);
-    --md-ripple-focus-state-layer-color: var(--_unselected-focus-state-layer-color);
-    --md-ripple-focus-state-layer-opacity: var(--_unselected-focus-state-layer-opacity);
-    --md-ripple-hover-state-layer-color: var(--_unselected-hover-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_unselected-hover-state-layer-opacity);
-    --md-ripple-pressed-state-layer-color: var(--_unselected-pressed-state-layer-color);
+    --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
+    --md-ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
+    --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
+    --md-ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
+    --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
     --md-ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity);
 }
 
 .base-checkbox .selected .base-ripple {
-    --md-ripple-focus-state-layer-color: var(--_selected-focus-state-layer-color);
-    --md-ripple-focus-state-layer-opacity: var(--_selected-focus-state-layer-opacity);
-    --md-ripple-hover-state-layer-color: var(--_selected-hover-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_selected-hover-state-layer-opacity);
-    --md-ripple-pressed-state-layer-color: var(--_selected-pressed-state-layer-color);
+    --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
+    --md-ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
+    --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
+    --md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
+    --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
     --md-ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity);
 }
 
 .base-checkbox .error .base-ripple {
-    --md-ripple-focus-state-layer-color: var(--_error-focus-state-layer-color);
-    --md-ripple-hover-state-layer-color: var(--_error-hover-state-layer-color);
-    --md-ripple-hover-state-layer-opacity: var(--_error-hover-state-layer-opacity);
-    --md-ripple-pressed-state-layer-color: var(--_error-pressed-state-layer-color);
+    --md-ripple-focus-color: var(--_error-focus-state-layer-color);
+    --md-ripple-hover-color: var(--_error-hover-state-layer-color);
+    --md-ripple-hover-opacity: var(--_error-hover-state-layer-opacity);
+    --md-ripple-pressed-color: var(--_error-pressed-state-layer-color);
     --md-ripple-pressed-state-layer-opacity: var(--_error-pressed-state-layer-opacity);
 }
 

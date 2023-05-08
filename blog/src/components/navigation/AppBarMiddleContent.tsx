@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import './top-app-bar-middle-content-styles.css';
+import '../top-app-bar-middle-content-styles.css';
 
 export type AppBarMiddleContentProps = {
 }

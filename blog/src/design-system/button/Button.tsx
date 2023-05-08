@@ -1,9 +1,8 @@
-import { createSignal, JSX, Show, VoidProps } from "solid-js";
-import { Elevation } from "../elevation/Elevation";
-import { FocusRing } from "../focus/FocusRing"
-import { createHandlers, createRippleEventEmitter, Ripple } from "../ripple/Ripple"
-import './styles/base-styles.css'
-
+import { createSignal, JSX, Show, VoidProps } from 'solid-js';
+import { Elevation } from '../elevation/Elevation';
+import { FocusRing } from '../focus/FocusRing';
+import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import './styles/shared-button-styles.css';
 
 export type ButtonProps = {
   variant?: 'filled' | 'outlined' | 'elevated' | 'tonal'

@@ -1,25 +1,23 @@
-import { Page } from '~/components/Page';
-import { PageItem } from '~/components/PageItem';
+import { Page } from '~/components/page/Page';
+import { PageItem } from '~/components/page/PageItem';
+import { Post } from '~/components/post/Post';
 
 export default function Home() {
   return (
       <main >
         <Page>
           <PageItem>
-            1
+            <Post display={'preview-small'} />
           </PageItem>
           <PageItem>
-            2
+            <Post display={'preview-small'} />
           </PageItem>
-
+          <PageItem >
+            <Post display={'preview-large'} />
+          </PageItem>
           <PageItem>
-            3
+            <Post display={'full'} />
           </PageItem>
-
-          <PageItem>
-            3
-          </PageItem>
-
         </Page>
       </main>
 
