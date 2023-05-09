@@ -108,7 +108,6 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   let touchTimer: number | null = null;
   let clickTimer: number | null = null;
 
-  // arrow fucntion for dimension calculation
   const getDimensions = () => {
     return (rippler.parentElement ?? rippler).getBoundingClientRect();
   }
