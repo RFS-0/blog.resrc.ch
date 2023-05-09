@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     height: var(--fib-10);
-    background-color: var(--sys-surface-container);
+    background-color: var(--sys-surface-container-low);
     padding: 0;
     color: var(--sys-on-surface);
 }

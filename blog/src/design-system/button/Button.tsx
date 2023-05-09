@@ -21,6 +21,7 @@ export type ButtonProps = {
   selected?: boolean
   onClick?: (ev: MouseEvent) => void
   label?: string;
+  labelElement?: JSX.Element;
   leadingIcon?: JSX.Element;
   trailingIcon?: JSX.Element;
   preventClickDefault?: boolean;
@@ -101,6 +102,11 @@ export const Button = (props: ButtonProps) => {
         <Show when={!!props?.label}>
         <span class="button__label">
           {props.label}
+        </span>
+        </Show>
+        <Show when={!!props?.labelElement}>
+        <span class="button__label">
+          {props.labelElement}
         </span>
         </Show>
         <Show when={!!props?.trailingIcon}>
