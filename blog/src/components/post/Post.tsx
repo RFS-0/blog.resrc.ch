@@ -17,7 +17,7 @@ export type PostProps = {
 
 export const Post: Component<PostProps> = (props) => {
   const displaySignal = createSignal(props.display);
-  const [display, ] = displaySignal;
+  const [display] = displaySignal;
 
   let post: HTMLDivElement;
 
@@ -80,7 +80,13 @@ export const Post: Component<PostProps> = (props) => {
             <div class={'flex flex-row'}>
               <Button
                   variant={'filled'}
-                  label={'Focus'}
+                  labelElement={
+                    <span classList={{
+                      'label-small': display() === 'preview-small',
+                      'label-medium': display() === 'preview-large',
+                      'label-large': display() === 'full',
+                    }}>Focus</span>
+                  }
                   leadingIcon={
                     <Icon>
                       <span class="material-symbols-rounded">

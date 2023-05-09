@@ -44,8 +44,8 @@ export const Header: Component<HeaderProps> = (props) => {
             class="header__title"
             classList={{
               'title-large': display() === 'preview-small',
-              'display-large': display() === 'preview-large',
-              'display-medium': display() === 'full',
+              'display-medium': display() === 'preview-large',
+              'display-large': display() === 'full',
             }}
         >
           {props.title}
