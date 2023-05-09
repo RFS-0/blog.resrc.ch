@@ -8,7 +8,10 @@
 }
 
 .header__title {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 
     transition: font-size 0.5s linear
 }

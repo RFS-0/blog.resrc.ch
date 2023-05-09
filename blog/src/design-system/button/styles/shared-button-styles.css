@@ -24,7 +24,7 @@
 
 .button-shared[disabled] {
     cursor: default;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .button {
@@ -48,7 +48,7 @@
     color: var(--_label-text-color);
     padding-inline-start: var(--_spacing-leading);
     padding-inline-end: var(--_spacing-trailing);
-    gap: 8px
+    gap: 8px;
 }
 
 .button::before {
@@ -56,21 +56,21 @@
     border-radius: inherit;
     content: "";
     inset: 0;
-    position: absolute
+    position: absolute;
 }
 
 .button::-moz-focus-inner {
     padding: 0;
-    border: 0
+    border: 0;
 }
 
 .button:hover {
     color: var(--_hover-label-text-color);
-    cursor: pointer
+    cursor: pointer;
 }
 
 .button:focus {
-    color: var(--_focus-label-text-color)
+    color: var(--_focus-label-text-color);
 }
 
 .button:active {
@@ -78,14 +78,18 @@
     outline: none
 }
 
+.button__label {
+    display: inline-flex;
+}
+
 .button:disabled .button__label {
     color: var(--_disabled-label-text-color);
-    opacity: var(--_disabled-label-text-opacity)
+    opacity: var(--_disabled-label-text-opacity);
 }
 
 .button:disabled::before {
     background-color: var(--_disabled-container-color);
-    opacity: var(--_disabled-container-opacity)
+    opacity: var(--_disabled-container-opacity);
 }
 
 @media (forced-colors: active) {
@@ -99,7 +103,7 @@
         border: 1px solid rgba(0, 0, 0, 0);
         border-radius: inherit;
         content: "";
-        pointer-events: none
+        pointer-events: none;
     }
 }
 
@@ -107,29 +111,29 @@
     border-start-start-radius: var(--_container-shape-start-start);
     border-start-end-radius: var(--_container-shape-start-end);
     border-end-start-radius: var(--_container-shape-end-start);
-    border-end-end-radius: var(--_container-shape-end-end)
+    border-end-end-radius: var(--_container-shape-end-end);
 }
 
 .button::after, .button::before, .elevation, .button__ripple {
-    z-index: -1
+    z-index: -1;
 }
 
 .button__icon-container {
-    display: inline-flex
+    display: inline-flex;
 }
 
 .button--icon-leading {
     padding-inline-start: var(--_with-icon-spacing-leading);
-    padding-inline-end: var(--_with-icon-spacing-trailing)
+    padding-inline-end: var(--_with-icon-spacing-trailing);
 }
 
 .button--icon-trailing {
     padding-inline-start: var(--_with-trailing-icon-spacing-leading);
-    padding-inline-end: var(--_with-trailing-icon-spacing-trailing)
+    padding-inline-end: var(--_with-trailing-icon-spacing-trailing);
 }
 
 .link-button-wrapper {
-    inline-size: 100%
+    inline-size: 100%;
 }
 
 .button ::slotted([slot=icon]) {
@@ -140,31 +144,31 @@
     color: var(--_with-icon-icon-color);
     font-size: var(--_with-icon-icon-size);
     inline-size: var(--_with-icon-icon-size);
-    block-size: var(--_with-icon-icon-size)
+    block-size: var(--_with-icon-icon-size);
 }
 
 .button:hover ::slotted([slot=icon]) {
-    color: var(--_with-icon-hover-icon-color)
+    color: var(--_with-icon-hover-icon-color);
 }
 
 .button:focus ::slotted([slot=icon]) {
-    color: var(--_with-icon-focus-icon-color)
+    color: var(--_with-icon-focus-icon-color);
 }
 
 .button:active ::slotted([slot=icon]) {
-    color: var(--_with-icon-pressed-icon-color)
+    color: var(--_with-icon-pressed-icon-color);
 }
 
 .button:disabled ::slotted([slot=icon]) {
     color: var(--_with-icon-disabled-icon-color);
-    opacity: var(--_with-icon-disabled-icon-opacity)
+    opacity: var(--_with-icon-disabled-icon-opacity);
 }
 
 .button__touch {
     position: absolute;
     top: 50%;
-    height: 48px;
+    height: 100%;
     left: 0;
     right: 0;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
 }

@@ -35,3 +35,25 @@
     --_container-shape-end-end: var(--_container-shape);
     --_container-shape-end-start: var(--_container-shape);
 }
+
+
+@media (min-width: 233px) {
+    .button-shared.button--text {
+        --_with-icon-icon-size: 13px;
+        --_container-height: 21px;
+    }
+}
+
+@media (min-width: 411px) {
+    .button-shared.button--text {
+        --_with-icon-icon-size: 21px;
+        --_container-height: 34px;
+    }
+}
+
+@media (min-width: 788px) {
+    .button-shared.button--text {
+        --_with-icon-icon-size: 24px;
+        --_container-height: 48px;
+    }
+}
