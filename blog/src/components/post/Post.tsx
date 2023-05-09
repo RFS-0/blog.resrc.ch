@@ -1,4 +1,4 @@
-import { Component, createSignal, Show } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 import { Header } from '~/components/post/Header';
 
 import './post-styles.css';
@@ -7,6 +7,7 @@ import { MetaData } from '~/components/post/MetaData';
 import { Abstract } from '~/components/post/Abstract';
 import { SectionTitle } from '~/components/post/SectionTitle';
 import { Section } from '~/components/post/Section';
+import { Body } from '~/components/post/Body';
 
 export type DisplayVariant = 'preview-small' | 'preview-large' | 'full';
 
@@ -47,7 +48,7 @@ export const Post: Component<PostProps> = (props) => {
               aliquet, libero quis aliquam ultricies, diam nisl ultricies
               lorem, quis aliquet nisl nunc eget nunc.
             </Abstract>
-            <Show when={display() === 'preview-large' || display() === 'full'}>
+            <Body display={display}>
               <SectionTitle display={display}>
                 Section 1
               </SectionTitle>
@@ -74,7 +75,8 @@ export const Post: Component<PostProps> = (props) => {
                 Doneca aliquet, libero quis aliquam ultricies, diam nisl ultricies
                 lorem, quis aliquet nisl nunc eget nunc.
               </Section>
-            </Show>
+            </Body>
+
             <div class={'flex flex-row'}>
               <Button
                   variant={'filled'}
