@@ -1,9 +1,23 @@
 .header {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
     align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--fib-4);
     padding: var(--fib-4);
+
+}
+
+.header__title {
+    flex: 1 0 auto;
+
+    transition: font-size 0.5s linear
+}
+
+.header__title.display-large {
+}
+
+.header__menu {
+    flex: 0 0 auto;
 }
 
 @media (min-width: 233px) {

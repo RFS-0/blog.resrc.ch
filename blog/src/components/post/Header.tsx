@@ -1,6 +1,8 @@
 import { Component, Signal } from 'solid-js';
 import { Icon, StandardIconToggleButton } from '~/design-system';
 
+import './header-styles.css';
+
 export type HeaderProps = {
   post: HTMLDivElement | undefined;
   display: Signal<'preview-small' | 'preview-large' | 'full'>;
@@ -37,9 +39,9 @@ export const Header: Component<HeaderProps> = (props) => {
   };
 
   return (
-      <div class="flex flex-row items-center p-f4 sm:p-f5 md:p-f6 lg:p-f7 sm:gap-f5 md:gap-f6 lg:gap-f7">
+      <div class="header">
         <div
-            class="flex-auto"
+            class="header__title"
             classList={{
               'title-large': display() === 'preview-small',
               'display-large': display() === 'preview-large',
@@ -48,7 +50,7 @@ export const Header: Component<HeaderProps> = (props) => {
         >
           {props.title}
         </div>
-        <div>
+        <div class={'header__menu'}>
           <StandardIconToggleButton
               onClick={switchDisplay}
               offIcon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
