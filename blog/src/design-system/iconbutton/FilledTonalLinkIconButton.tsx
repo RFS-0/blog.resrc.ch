@@ -1,8 +1,7 @@
 import { Component, createSignal, JSX, splitProps } from 'solid-js';
-import { FocusRing } from '../focus/FocusRing';
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+
 import './styles/filled-tonal-icon-button-styles.css';
-import { composeEventHandlers } from '~/design-system';
 
 export type FilledTonalLinkIconButtonProps = {
   icon: JSX.Element
@@ -37,7 +36,7 @@ export const FilledTonalLinkIconButton: Component<FilledTonalLinkIconButtonProps
         <Ripple listen={listen} unbounded={true}></Ripple>
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
-        {props.icon}
+        {iconButtonProps.icon}
       </span>
         <a
             {...linkProps}

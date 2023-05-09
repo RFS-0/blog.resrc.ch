@@ -18,7 +18,7 @@
     pointer-events: none;
 }
 
-.base-ripple {
+.icon-button-shared .ripple {
     z-index: -1
 }
 

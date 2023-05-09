@@ -30,7 +30,7 @@ export const FilledIconButton: Component<FilledIconButtonProps> = (props) => {
           onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick])}
           onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
           onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
-          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus, rippleHandlers.onPointerDown])}
           class={'icon-button-shared icon-button icon-button--filled'}
       >
         <FocusRing visible={focus()}></FocusRing>

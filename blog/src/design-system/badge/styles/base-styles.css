@@ -1,16 +1,16 @@
 .base-badge {
-    --_color: var(--md-badge-color, var(--md-sys-color-error, #b3261e));
-    --_large-color: var(--md-badge-large-color, var(--md-sys-color-error, #b3261e));
-    --_large-label-text-color: var(--md-badge-large-label-text-color, var(--md-sys-color-on-error, #fff));
-    --_large-label-text-font: var(--md-badge-large-label-text-font, Roboto);
-    --_large-label-text-line-height: var(--md-badge-large-label-text-line-height, 1rem);
-    --_large-label-text-size: var(--md-badge-large-label-text-size, 0.688rem);
-    --_large-label-text-tracking: var(--md-badge-large-label-text-tracking, 0.031rem);
-    --_large-label-text-weight: var(--md-badge-large-label-text-weight, 500);
-    --_large-shape: var(--md-badge-large-shape, 9999px);
-    --_large-size: var(--md-badge-large-size, 16px);
-    --_shape: var(--md-badge-shape, 9999px);
-    --_size: var(--md-badge-size, 6px);
+    --_color: var(--sys-error);
+    --_large-color: var(--sys-error);
+    --_large-label-text-color: var(--sys-on-error);
+    --_large-label-text-font: Roboto;
+    --_large-label-text-line-height:  1rem;
+    --_large-label-text-size:  0.688rem;
+    --_large-label-text-tracking: 0.031rem;
+    --_large-label-text-weight: 500;
+    --_large-shape:  9999px;
+    --_large-size:  16px;
+    --_ripple_shape:  9999px;
+    --_size: 6px;
 }
 
 .md3-badge {
@@ -18,9 +18,9 @@
     margin-inline-start: 6px;
     margin-block-start: 4px;
     position: absolute;
-    inset-block-start: 0px;
+    inset-block-start: 0;
     background-color: var(--_color);
-    border-radius: var(--_shape);
+    border-radius: var(--_ripple_shape);
     height: var(--_size);
 }
 
@@ -43,7 +43,7 @@
 }
 
 .md3-badge.md3-badge--large .md3-badge__value {
-    padding: 0px 4px
+    padding: 0 4px
 }
 
 .md3-badge__value {

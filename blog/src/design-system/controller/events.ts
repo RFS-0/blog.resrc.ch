@@ -151,6 +151,7 @@ export function composeEventHandlers<T>(
 ) {
   return (event: any) => {
     for (const handler of handlers) {
+      if (!handler) continue;
       callHandler(event, handler);
     }
   };

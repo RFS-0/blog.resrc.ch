@@ -1,7 +1,7 @@
-import { createEventBus, Emit, EventBus, Listen } from '@solid-primitives/event-bus'
-import { ParentComponent, ParentProps, JSX, createSignal, } from 'solid-js'
-import { createAnimationSignal, Easing } from '~/design-system'
-import './ripple-styles.css'
+import { createEventBus, Emit, EventBus, Listen } from '@solid-primitives/event-bus';
+import { createSignal, JSX, ParentComponent, ParentProps } from 'solid-js';
+import { createAnimationSignal, Easing } from '~/design-system';
+import './ripple-styles.css';
 
 enum State {
   /**
@@ -59,7 +59,7 @@ type RippleHandlers = {
 
 export function createHandlers(emit: Emit<RippleEvent>): RippleHandlers {
   return {
-    onClick: () => emit({ type: 'click' }),
+    onClick: (ev) => emit({ type: 'click', pointerEvent: (ev) }),
     onContextMenu: (ev) => emit({ type: 'contextmenu', pointerEvent: (ev) }),
     onPointerCancel: (ev) => emit({ type: 'pointercancel', pointerEvent: (ev) }),
     onPointerDown: (ev) => emit({ type: 'pointerdown', pointerEvent: (ev) }),
@@ -77,7 +77,7 @@ export type RippleProps = ParentProps & JSX.IntrinsicElements['div'] & {
 
 
 export const Ripple: ParentComponent<RippleProps> = (props) => {
-  let rippler!: HTMLDivElement;
+  let rippler!: HTMLDivElement | null;
 
   const PRESS_GROW_MS = 450;
   const MINIMUM_PRESS_MS = 225;
@@ -92,7 +92,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   const [unbounded, _] = createSignal(props?.unbounded || false);
   const [disabled, __] = createSignal(props?.disabled || false);
   const [hovered, setHovered] = createSignal(false);
-  const [focused, setFocused] = createSignal(false);
+  const [focused, ] = createSignal(false);
   const [pressed, setPressed] = createSignal(false);
 
   let rippleSize = '';
@@ -120,7 +120,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       Math.max(SOFT_EDGE_CONTAINER_RATIO * maxDim, SOFT_EDGE_MINIMUM_SIZE);
 
 
-    let maxRadius = maxDim;
+    let maxRadius: number;
     let _initialSize = Math.floor(maxDim * INITIAL_ORIGIN_SCALE);
 
     const hypotenuse = Math.sqrt(width ** 2 + height ** 2);
@@ -221,15 +221,6 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   const endHover = () => {
     setHovered(false);
   }
-
-  const beginFocus = () => {
-    setFocused(true);
-  }
-
-  const endFocus = () => {
-    setFocused(false);
-  }
-
   const beginPress = (positionEvent?: Event | null) => {
     setPressed(true);
     if (delayedEndPressHandle !== null) {
@@ -274,7 +265,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       (isTouch(ev) || isPrimaryButton || hovering);
   }
 
-  const click = () => {
+  const click = (ev: PointerEvent) => {
     // Click is a MouseEvent in Firefox and Safari, so we cannot use
     // `shouldReactToEvent`
     if (disabled()) {
@@ -284,7 +275,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       endPress();
     } else if (state === State.INACTIVE) {
       // keyboard synthesized click event
-      beginPress();
+      beginPress(ev);
       endPress();
     }
   }
@@ -307,8 +298,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     }
     state = State.TOUCH_DELAY;
     touchTimer = window.setTimeout(async () => {
-      const ripple = rippler;
-      if (ripple === null || state !== State.TOUCH_DELAY) {
+      if (rippler === null || state !== State.TOUCH_DELAY) {
         return;
       }
       state = State.HOLDING;
@@ -373,13 +363,14 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   props.listen(rippleEvent => {
     switch (rippleEvent.type) {
       case 'click':
-        click();
+        click(rippleEvent.pointerEvent as PointerEvent);
         break;
       case 'contextmenu':
         contextMenu();
         break;
       case 'pointercancel':
         pointerCancel(rippleEvent.pointerEvent as PointerEvent);
+        break;
       case 'pointerdown':
         pointerDown(rippleEvent.pointerEvent as PointerEvent);
         break;
@@ -398,17 +389,18 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     }
   })
 
+  // noinspection JSUnusedAssignment
   return (
     <div
-      ref={rippler}
+      ref={rippler!}
       {...props}
       class={
-        `base-ripple 
-         md3-ripple-surface 
-         ${hovered() ? 'md3-ripple--hovered' : ''} 
-         ${focused() ? 'md3-ripple--focused' : ''} 
-         ${pressed() ? 'md3-ripple--pressed' : ''} 
-         ${unbounded() ? 'md3-ripple--unbounded' : ''} 
+        `ripple 
+         ripple-surface 
+         ${hovered() ? 'ripple--hovered' : ''} 
+         ${focused() ? 'ripple--focused' : ''} 
+         ${pressed() ? 'ripple--pressed' : ''} 
+         ${unbounded() ? 'ripple--unbounded' : ''} 
          `
       }
     >

@@ -1,5 +1,6 @@
 import { Component, createSignal, JSX, splitProps } from 'solid-js';
 import { composeEventHandlers, createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+
 import './styles/filled-icon-button-styles.css';
 
 export type FilledLinkIconButtonProps = {
@@ -36,7 +37,7 @@ export const FilledLinkIconButton: Component<FilledLinkIconButtonProps> = (props
         <Ripple listen={listen} unbounded={true}></Ripple>
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
-        {props.icon}
+        {iconButtonProps.icon}
       </span>
         <a
             {...linkProps}

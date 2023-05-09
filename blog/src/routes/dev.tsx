@@ -1,13 +1,18 @@
 import { Page } from '~/components/page/Page';
 import {
+  Button,
+  createHandlers,
+  createRippleEventEmitter,
   FilledIconButton,
   FilledIconToggleButton,
   FilledLinkIconButton,
   FilledTonalIconButton,
   FilledTonalLinkIconButton,
+  Icon,
   OutlinedIconButton,
   OutlinedIconToggleButton,
   OutlinedLinkIconButton,
+  Ripple,
   StandardIconButton,
   StandardIconToggleButton,
   StandardLinkIconButton,
@@ -15,6 +20,10 @@ import {
 import { FilledTonalIconToggleButton } from '~/design-system/iconbutton/FilledTonalIconButtonToggle';
 
 export default function Dev() {
+
+  const {listen, emit} = createRippleEventEmitter();
+  const rippleHandlers = createHandlers(emit);
+
   return (
       <main>
         <Page>
@@ -105,6 +114,50 @@ export default function Dev() {
                 icon={<span class="material-symbols-outlined">link</span>}
             />
             OutlinedLinkIconButton
+          </div>
+          <div>
+            <Button
+                leadingIcon={
+                  <Icon>
+                    <span class="material-symbols-outlined">link</span>
+                  </Icon>
+                }
+                variant={'filled'}
+                label={'Filled Button'}
+            />
+          </div>
+          <div>
+            <Button
+                variant={'outlined'}
+                label={'Outlined Button'}
+            />
+          </div>
+          <div>
+            <Button
+                variant={'elevated'}
+                label={'Elevated Button'}
+            />
+          </div>
+          <div>
+            <Button
+                variant={'tonal'}
+                label={'Tonal Button'}
+            />
+          </div>
+          <div>
+            <Button
+                variant={'text'}
+                label={'Text Button'}
+            />
+          </div>
+          <div
+              {...rippleHandlers}
+              class={'bg-amber-600 w-f11'}>
+            <Ripple
+                listen={listen}
+            />
+            Hello
+
           </div>
         </Page>
       </main>

@@ -1,64 +1,64 @@
 .base-checkbox {
-    --_container-height: var(--md-checkbox-container-height, 18px);
-    --_container-shape: var(--md-checkbox-container-shape, 2px);
-    --_container-width: var(--md-checkbox-container-width, 18px);
-    --_error-focus-state-layer-color: var(--md-checkbox-error-focus-state-layer-color, var(--md-sys-color-error, #b3261e));
-    --_error-hover-state-layer-color: var(--md-checkbox-error-hover-state-layer-color, var(--md-sys-color-error, #b3261e));
-    --_error-hover-state-layer-opacity: var(--md-checkbox-error-hover-state-layer-opacity, 0.08);
-    --_error-pressed-state-layer-color: var(--md-checkbox-error-pressed-state-layer-color, var(--md-sys-color-error, #b3261e));
-    --_error-pressed-state-layer-opacity: var(--md-checkbox-error-pressed-state-layer-opacity, 0.12);
-    --_icon-size: var(--md-checkbox-icon-size, 18px);
-    --_selected-container-color: var(--md-checkbox-selected-container-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-disabled-container-color: var(--md-checkbox-selected-disabled-container-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_selected-disabled-container-opacity: var(--md-checkbox-selected-disabled-container-opacity, 0.38);
-    --_selected-disabled-icon-color: var(--md-checkbox-selected-disabled-icon-color, var(--md-sys-color-surface, #fffbfe));
-    --_selected-error-container-color: var(--md-checkbox-selected-error-container-color, var(--md-sys-color-error, #b3261e));
-    --_selected-error-focus-container-color: var(--md-checkbox-selected-error-focus-container-color, var(--md-sys-color-error, #b3261e));
-    --_selected-error-focus-icon-color: var(--md-checkbox-selected-error-focus-icon-color, var(--md-sys-color-on-error, #fff));
-    --_selected-error-hover-container-color: var(--md-checkbox-selected-error-hover-container-color, var(--md-sys-color-error, #b3261e));
-    --_selected-error-hover-icon-color: var(--md-checkbox-selected-error-hover-icon-color, var(--md-sys-color-on-error, #fff));
-    --_selected-error-icon-color: var(--md-checkbox-selected-error-icon-color, var(--md-sys-color-on-error, #fff));
-    --_selected-error-pressed-container-color: var(--md-checkbox-selected-error-pressed-container-color, var(--md-sys-color-error, #b3261e));
-    --_selected-error-pressed-icon-color: var(--md-checkbox-selected-error-pressed-icon-color, var(--md-sys-color-on-error, #fff));
-    --_selected-focus-container-color: var(--md-checkbox-selected-focus-container-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-focus-icon-color: var(--md-checkbox-selected-focus-icon-color, var(--md-sys-color-on-primary, #fff));
-    --_selected-focus-state-layer-color: var(--md-checkbox-selected-focus-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-focus-state-layer-opacity: var(--md-checkbox-selected-focus-state-layer-opacity, 0.12);
-    --_selected-hover-container-color: var(--md-checkbox-selected-hover-container-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-hover-icon-color: var(--md-checkbox-selected-hover-icon-color, var(--md-sys-color-on-primary, #fff));
-    --_selected-hover-state-layer-color: var(--md-checkbox-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-hover-state-layer-opacity: var(--md-checkbox-selected-hover-state-layer-opacity, 0.08);
-    --_selected-icon-color: var(--md-checkbox-selected-icon-color, var(--md-sys-color-on-primary, #fff));
-    --_selected-pressed-container-color: var(--md-checkbox-selected-pressed-container-color, var(--md-sys-color-primary, #6750a4));
-    --_selected-pressed-icon-color: var(--md-checkbox-selected-pressed-icon-color, var(--md-sys-color-on-primary, #fff));
-    --_selected-pressed-state-layer-color: var(--md-checkbox-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_selected-pressed-state-layer-opacity: var(--md-checkbox-selected-pressed-state-layer-opacity, 0.12);
-    --_state-layer-shape: var(--md-checkbox-state-layer-shape, 9999px);
-    --_state-layer-size: var(--md-checkbox-state-layer-size, 40px);
-    --_unselected-disabled-container-opacity: var(--md-checkbox-unselected-disabled-container-opacity, 0.38);
-    --_unselected-disabled-outline-color: var(--md-checkbox-unselected-disabled-outline-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-disabled-outline-width: var(--md-checkbox-unselected-disabled-outline-width, 2px);
-    --_unselected-error-focus-outline-color: var(--md-checkbox-unselected-error-focus-outline-color, var(--md-sys-color-error, #b3261e));
-    --_unselected-error-focus-outline-width: var(--md-checkbox-unselected-error-focus-outline-width, 2px);
-    --_unselected-error-hover-outline-color: var(--md-checkbox-unselected-error-hover-outline-color, var(--md-sys-color-error, #b3261e));
-    --_unselected-error-hover-outline-width: var(--md-checkbox-unselected-error-hover-outline-width, 2px);
-    --_unselected-error-outline-color: var(--md-checkbox-unselected-error-outline-color, var(--md-sys-color-error, #b3261e));
-    --_unselected-error-pressed-outline-color: var(--md-checkbox-unselected-error-pressed-outline-color, var(--md-sys-color-error, #b3261e));
-    --_unselected-error-pressed-outline-width: var(--md-checkbox-unselected-error-pressed-outline-width, 2px);
-    --_unselected-focus-outline-color: var(--md-checkbox-unselected-focus-outline-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-focus-outline-width: var(--md-checkbox-unselected-focus-outline-width, 2px);
-    --_unselected-focus-state-layer-color: var(--md-checkbox-unselected-focus-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-focus-state-layer-opacity: var(--md-checkbox-unselected-focus-state-layer-opacity, 0.12);
-    --_unselected-hover-outline-color: var(--md-checkbox-unselected-hover-outline-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-hover-outline-width: var(--md-checkbox-unselected-hover-outline-width, 2px);
-    --_unselected-hover-state-layer-color: var(--md-checkbox-unselected-hover-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-hover-state-layer-opacity: var(--md-checkbox-unselected-hover-state-layer-opacity, 0.08);
-    --_unselected-outline-color: var(--md-checkbox-unselected-outline-color, var(--md-sys-color-on-surface-variant, #49454f));
-    --_unselected-outline-width: var(--md-checkbox-unselected-outline-width, 2px);
-    --_unselected-pressed-outline-color: var(--md-checkbox-unselected-pressed-outline-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_unselected-pressed-outline-width: var(--md-checkbox-unselected-pressed-outline-width, 2px);
-    --_unselected-pressed-state-layer-color: var(--md-checkbox-unselected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --_unselected-pressed-state-layer-opacity: var(--md-checkbox-unselected-pressed-state-layer-opacity, 0.12);
+    --_container-height: 18px;
+    --_container-shape: 2px;
+    --_container-width: 18px;
+    --_error-focus-state-layer-color: var(--sys-error);
+    --_error-hover-state-layer-color: var(--sys-error);
+    --_error-hover-state-layer-opacity: 0.08;
+    --_error-pressed-state-layer-color: var(--sys-error);
+    --_error-pressed-state-layer-opacity: 0.12;
+    --_icon-size: 18px;
+    --_selected-container-color: var(--sys-primary);
+    --_selected-disabled-container-color: var(--sys-on-surface);
+    --_selected-disabled-container-opacity: 0.38;
+    --_selected-disabled-icon-color: var(--sys-surface);
+    --_selected-error-container-color: var(--sys-error);
+    --_selected-error-focus-container-color: var(--sys-error);
+    --_selected-error-focus-icon-color: var(--sys-on-error);
+    --_selected-error-hover-container-color: var(--sys-error);
+    --_selected-error-hover-icon-color: var(--sys-on-error);
+    --_selected-error-icon-color: var(--sys-on-error);
+    --_selected-error-pressed-container-color: var(--sys-error);
+    --_selected-error-pressed-icon-color: var(--sys-on-error);
+    --_selected-focus-container-color: var(--sys-primary);
+    --_selected-focus-icon-color: var(--sys-on-primary);
+    --_selected-focus-state-layer-color: var(--sys-primary);
+    --_selected-focus-state-layer-opacity: 0.12;
+    --_selected-hover-container-color: var(--sys-primary);
+    --_selected-hover-icon-color: var(--sys-on-primary);
+    --_selected-hover-state-layer-color: var(--sys-primary);
+    --_selected-hover-state-layer-opacity: 0.08;
+    --_selected-icon-color: var(--sys-on-primary);
+    --_selected-pressed-container-color: var(--sys-primary);
+    --_selected-pressed-icon-color: var(--sys-on-primary);
+    --_selected-pressed-state-layer-color: var(--sys-on-surface);
+    --_selected-pressed-state-layer-opacity: 0.12;
+    --_state-layer-shape: 9999px;
+    --_state-layer-size: 40px;
+    --_unselected-disabled-container-opacity: 0.38;
+    --_unselected-disabled-outline-color: var(--sys-on-surface);
+    --_unselected-disabled-outline-width: 2px;
+    --_unselected-error-focus-outline-color: var(--sys-error);
+    --_unselected-error-focus-outline-width: 2px;
+    --_unselected-error-hover-outline-color: var(--sys-error);
+    --_unselected-error-hover-outline-width: 2px;
+    --_unselected-error-outline-color: var(--sys-error);
+    --_unselected-error-pressed-outline-color: var(--sys-error);
+    --_unselected-error-pressed-outline-width: 2px;
+    --_unselected-focus-outline-color: var(--sys-on-surface);
+    --_unselected-focus-outline-width: 2px;
+    --_unselected-focus-state-layer-color: var(--sys-on-surface);
+    --_unselected-focus-state-layer-opacity: 0.12;
+    --_unselected-hover-outline-color: var(--sys-on-surface);
+    --_unselected-hover-outline-width: 2px;
+    --_unselected-hover-state-layer-color: var(--sys-on-surface);
+    --_unselected-hover-state-layer-opacity: 0.08;
+    --_unselected-outline-color: var(--sys-on-surface-variant);
+    --_unselected-outline-width: 2px;
+    --_unselected-pressed-outline-color: var(--sys-on-surface);
+    --_unselected-pressed-outline-width: 2px;
+    --_unselected-pressed-state-layer-color: var(--sys-primary);
+    --_unselected-pressed-state-layer-opacity: 0.12;
     border-radius: var(--_container-shape);
     display: inline-flex;
     height: 48px;
@@ -84,7 +84,7 @@
 
 .base-checkbox .outline,
 .base-checkbox .background,
-.base-checkbox .base-ripple,
+.base-checkbox .ripple,
 .base-checkbox .icon {
     inset: 0;
     margin: auto;
@@ -126,32 +126,32 @@
     transform: scale(1);
 }
 
-.base-checkbox .base-ripple {
+.base-checkbox .ripple {
     height: var(--_state-layer-size);
     width: var(--_state-layer-size);
-    --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity);
+    --ripple-focus-color: var(--_unselected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_unselected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity);
 }
 
-.base-checkbox .selected .base-ripple {
-    --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity);
+.base-checkbox .selected .ripple {
+    --ripple-focus-color: var(--_selected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_selected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_selected-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity);
 }
 
-.base-checkbox .error .base-ripple {
-    --md-ripple-focus-color: var(--_error-focus-state-layer-color);
-    --md-ripple-hover-color: var(--_error-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_error-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_error-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_error-pressed-state-layer-opacity);
+.base-checkbox .error .ripple {
+    --ripple-focus-color: var(--_error-focus-state-layer-color);
+    --ripple-hover-color: var(--_error-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_error-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_error-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_error-pressed-state-layer-opacity);
 }
 
 .base-checkbox .icon {
@@ -193,12 +193,12 @@
 
 .base-checkbox .checked .mark.short,
 .base-checkbox .prev-checked.unselected .mark.short {
-    height: 5.6568542495px;
+    height: 6px;
 }
 
 .base-checkbox .checked .mark.long,
 .base-checkbox .prev-checked.unselected .mark.long {
-    width: 11.313708499px;
+    width: 11px;
 }
 
 .base-checkbox .indeterminate .mark,

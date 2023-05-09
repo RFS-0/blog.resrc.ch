@@ -1,81 +1,74 @@
-.base-ripple,
-.md3-ripple-surface {
-  --_focus-state-layer-color: var(--md-ripple-focus-color, black);
-  --_focus-state-layer-opacity: var(--md-ripple-focus-opacity, 0.12);
-  --_hover-state-layer-color: var(--md-ripple-hover-color, black);
-  --_hover-state-layer-opacity: var(--md-ripple-hover-opacity, 0.08);
-  --_pressed-state-layer-color: var(--md-ripple-pressed-color, black);
-  --_pressed-state-layer-opacity: var(--md-ripple-pressed-state-layer-opacity, 0.12);
-  --_dragged-state-layer-opacity: var(--md-ripple-dragged-state-layer-opacity, 0.16);
-  --_dragged-state-layer-color: var(--md-ripple-dragged-state-layer-color, black);
-  --_state-layer-shape: var(--md-ripple-state-layer-shape, 9999px);
+.ripple {
+    --_focus-color: var(--ripple-focus-color, --sys-on-surface);
+    --_focus-opacity: var(--ripple-focus-opacity, 0.12);
+    --_hover-color: var(--ripple-hover-color, --sys-on-surface);
+    --_hover-opacity: var(--ripple-hover-opacity, 0.08);
+    --_pressed-color: var(--ripple-pressed-color, --sys-on-surface);
+    --_pressed-opacity: var(--ripple-pressed-opacity, 0.12);
+    --_ripple_shape: var(--ripple-shape, 9999px);
 }
 
-.base-ripple {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inset: 0
+.ripple {
+    position: absolute;
+    inset: 0
 }
 
-.base-ripple[disabled] {
-  opacity: 0
+.ripple[disabled] {
+    opacity: 0
 }
 
-.base-ripple,
-.md3-ripple-surface {
-  pointer-events:none;
-  overflow:hidden;
-  transform:scale(1);
+.ripple,
+.ripple-surface {
+    pointer-events: none;
+    overflow: hidden;
 }
 
-.md3-ripple-surface {  
-  position: absolute;
-  border-radius: var(--_state-layer-shape);
-  outline:none;
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
+.ripple-surface {
+    position: absolute;
+    border-radius: var(--_ripple_shape);
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.md3-ripple-surface::before,.md3-ripple-surface::after {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  content:"";
+.ripple-surface::before, .ripple-surface::after {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
 }
 
-.md3-ripple-surface::before {
-  background-color: var(--_hover-state-layer-color);
-  transition:opacity 15ms linear,background-color 15ms linear;
-  inset:0;
+.ripple-surface::before {
+    background-color: var(--_hover-color);
+    transition: opacity 15ms linear, background-color 15ms linear;
+    inset: 0;
 }
 
-.md3-ripple-surface::after {
-  background: radial-gradient(closest-side, var(--_pressed-state-layer-color) max(100% - 70px, 65%), transparent 100%);
-  transition: opacity 375ms linear;
-  transform-origin: center center
+.ripple-surface::after {
+    background: radial-gradient(closest-side, var(--_pressed-color) max(100% - 70px, 65%), transparent 100%);
+    transition: opacity 375ms linear;
+    transform-origin: center center
 }
 
-.md3-ripple--hovered::before {
-  background-color: var(--_hover-state-layer-color);
-  opacity: var(--_hover-state-layer-opacity)
+.ripple--hovered::before {
+    background-color: var(--_hover-color);
+    opacity: var(--_hover-opacity)
 }
 
-.md3-ripple--focused::before {
-  background-color: var(--_focus-state-layer-color);
-  opacity: var(--_focus-state-layer-opacity);
-  transition-duration: 75ms
+.ripple--focused::before {
+    background-color: var(--_focus-color);
+    opacity: var(--_focus-opacity);
+    transition-duration: 75ms
 }
 
-.md3-ripple--pressed::after {
-  opacity: var(--_pressed-state-layer-opacity);
-  transition-duration: 105ms
+.ripple--pressed::after {
+    opacity: var(--_pressed-opacity);
+    transition-duration: 105ms
 }
 
-.md3-ripple--unbounded[unbounded] {
-  --_state-layer-shape: var(--md-ripple-state-layer-shape, 9999px)
+.ripple--unbounded[unbounded] {
+    --_state-layer-shape: var(--_ripple_shape)
 }
 
-.base-ripple[unbounded] {
+.ripple[unbounded] {
     border-radius: var(--_state-layer-shape);
 }

@@ -33,13 +33,13 @@
 .icon-button--standard {
     background-color: rgba(0, 0, 0, 0);
     color: var(--_unselected-icon-color);
-    --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
-    --md-ripple-pressed-opacity: var(--_unselected-pressed-state-layer-opacity);
-    --md-ripple-shape: var(--_state-layer-shape)
+    --ripple-focus-color: var(--_unselected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_unselected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
+    --ripple-pressed-opacity: var(--_unselected-pressed-state-layer-opacity);
+    --ripple-shape: var(--_state-layer-shape)
 }
 
 .icon-button--standard:hover {
@@ -59,12 +59,12 @@
 }
 
 .icon-button--selected {
-    --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
-    --md-ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)
+    --ripple-focus-color: var(--_selected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_selected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_selected-pressed-state-layer-color);
+    --ripple-pressed-opacity: var(--_selected-pressed-state-layer-opacity)
 }
 
 .icon-button--selected:not(:disabled) {
