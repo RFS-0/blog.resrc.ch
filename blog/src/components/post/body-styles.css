@@ -1,0 +1,20 @@
+/*Note: the prefix resrc is use to avoid naming conflicts with other css frameworks*/
+.resrc-body {
+    max-height: 0;
+    opacity: 1;
+    overflow: hidden;
+
+    transition: max-height 5s linear;
+}
+
+.resrc-body.resrc-hidden {
+    max-height: 0;
+    opacity: 0;
+
+    transition: max-height 0.3s linear;
+}
+
+.resrc-body:not(.resrc-hidden) {
+    max-height: 100svh;
+    opacity: 1;
+}
