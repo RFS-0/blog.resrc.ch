@@ -92,7 +92,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   const [unbounded, _] = createSignal(props?.unbounded || false);
   const [disabled, __] = createSignal(props?.disabled || false);
   const [hovered, setHovered] = createSignal(false);
-  const [focused, setFocused] = createSignal(false);
+  const [focused, ] = createSignal(false);
   const [pressed, setPressed] = createSignal(false);
 
   let rippleSize = '';
@@ -108,7 +108,6 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   let touchTimer: number | null = null;
   let clickTimer: number | null = null;
 
-  // arrow fucntion for dimension calculation
   const getDimensions = () => {
     return (rippler.parentElement ?? rippler).getBoundingClientRect();
   }
@@ -389,6 +388,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     }
   })
 
+  // noinspection JSUnusedAssignment
   return (
     <div
       ref={rippler!}

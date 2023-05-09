@@ -36,7 +36,7 @@ export const FilledTonalLinkIconButton: Component<FilledTonalLinkIconButtonProps
         <Ripple listen={listen} unbounded={true}></Ripple>
         <span class="icon-button__touch"></span>
         <span class="icon-button__icon">
-        {props.icon}
+        {iconButtonProps.icon}
       </span>
         <a
             {...linkProps}

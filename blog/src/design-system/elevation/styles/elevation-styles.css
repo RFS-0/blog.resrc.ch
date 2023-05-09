@@ -25,13 +25,13 @@
 }
 
 .shadow::before {
-    box-shadow: 0px calc(1px*(clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 3, 1) + 2*clamp(0, var(--_level) - 4, 1))) calc(1px*(2*clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 2, 1) + clamp(0, var(--_level) - 4, 1))) 0px var(--_shadow-color);
+    box-shadow: 0 calc(1px*(clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 3, 1) + 2*clamp(0, var(--_level) - 4, 1))) calc(1px*(2*clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 2, 1) + clamp(0, var(--_level) - 4, 1))) 0 var(--_shadow-color);
     opacity: .3;
 }
 
 .shadow::after {
     opacity: .15;
-    box-shadow: 0px calc(1px*(clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 1, 1) + 2*clamp(0, var(--_level) - 2, 3))) calc(1px*(3*clamp(0, var(--_level), 2) + 2*clamp(0, var(--_level) - 2, 3))) calc(1px*(clamp(0, var(--_level), 4) + 2*clamp(0, var(--_level) - 4, 1))) var(--_shadow-color);
+    box-shadow: 0 calc(1px*(clamp(0, var(--_level), 1) + clamp(0, var(--_level) - 1, 1) + 2*clamp(0, var(--_level) - 2, 3))) calc(1px*(3*clamp(0, var(--_level), 2) + 2*clamp(0, var(--_level) - 2, 3))) calc(1px*(clamp(0, var(--_level), 4) + 2*clamp(0, var(--_level) - 4, 1))) var(--_shadow-color);
 }
 
 .surface {
