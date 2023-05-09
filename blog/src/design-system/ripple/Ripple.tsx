@@ -77,7 +77,7 @@ export type RippleProps = ParentProps & JSX.IntrinsicElements['div'] & {
 
 
 export const Ripple: ParentComponent<RippleProps> = (props) => {
-  let rippler!: HTMLDivElement;
+  let rippler!: HTMLDivElement | null;
 
   const PRESS_GROW_MS = 450;
   const MINIMUM_PRESS_MS = 225;
@@ -92,7 +92,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   const [unbounded, _] = createSignal(props?.unbounded || false);
   const [disabled, __] = createSignal(props?.disabled || false);
   const [hovered, setHovered] = createSignal(false);
-  const [focused, setFocused] = createSignal(false);
+  const [focused, ] = createSignal(false);
   const [pressed, setPressed] = createSignal(false);
 
   let rippleSize = '';
@@ -389,6 +389,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     }
   })
 
+  // noinspection JSUnusedAssignment
   return (
     <div
       ref={rippler!}
