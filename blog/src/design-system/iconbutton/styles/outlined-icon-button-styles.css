@@ -37,12 +37,12 @@
 .icon-button--outlined {
   background-color: rgba(0, 0, 0, 0);
   color: var(--_unselected-icon-color);
-  --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
-  --md-ripple-focus-opacity: var(--_focus-state-layer-opacity);
-  --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
-  --md-ripple-hover-opacity: var(--_hover-state-layer-opacity);
-  --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
-  --md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)
+  --ripple-focus-color: var(--_unselected-focus-state-layer-color);
+  --ripple-focus-opacity: var(--_focus-state-layer-opacity);
+  --ripple-hover-color: var(--_unselected-hover-state-layer-color);
+  --ripple-hover-opacity: var(--_hover-state-layer-opacity);
+  --ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
+  --ripple-pressed-opacity: var(--_pressed-state-layer-opacity)
 }
 
 .icon-button--outlined::before {
@@ -89,12 +89,12 @@
 }
 
 .icon-button--outlined.icon-button--selected {
-  --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
-  --md-ripple-focus-opacity: var(--_focus-state-layer-opacity);
-  --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
-  --md-ripple-hover-opacity: var(--_hover-state-layer-opacity);
-  --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
-  --md-ripple-pressed-opacity: var(--_pressed-state-layer-opacity)
+  --ripple-focus-color: var(--_selected-focus-state-layer-color);
+  --ripple-focus-opacity: var(--_focus-state-layer-opacity);
+  --ripple-hover-color: var(--_selected-hover-state-layer-color);
+  --ripple-hover-opacity: var(--_hover-state-layer-opacity);
+  --ripple-pressed-color: var(--_selected-pressed-state-layer-color);
+  --ripple-pressed-opacity: var(--_pressed-state-layer-opacity)
 }
 
 .icon-button--outlined.icon-button--selected:not(:disabled) {

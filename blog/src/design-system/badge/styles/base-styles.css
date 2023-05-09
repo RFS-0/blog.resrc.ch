@@ -9,7 +9,7 @@
     --_large-label-text-weight: var(--md-badge-large-label-text-weight, 500);
     --_large-shape: var(--md-badge-large-shape, 9999px);
     --_large-size: var(--md-badge-large-size, 16px);
-    --_shape: var(--md-badge-shape, 9999px);
+    --_ripple_shape: var(--md-badge-shape, 9999px);
     --_size: var(--md-badge-size, 6px);
 }
 
@@ -20,7 +20,7 @@
     position: absolute;
     inset-block-start: 0px;
     background-color: var(--_color);
-    border-radius: var(--_shape);
+    border-radius: var(--_ripple_shape);
     height: var(--_size);
 }
 

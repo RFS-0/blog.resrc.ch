@@ -84,7 +84,7 @@
 
 .base-checkbox .outline,
 .base-checkbox .background,
-.base-checkbox .base-ripple,
+.base-checkbox .ripple,
 .base-checkbox .icon {
     inset: 0;
     margin: auto;
@@ -126,32 +126,32 @@
     transform: scale(1);
 }
 
-.base-checkbox .base-ripple {
+.base-checkbox .ripple {
     height: var(--_state-layer-size);
     width: var(--_state-layer-size);
-    --md-ripple-focus-color: var(--_unselected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_unselected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity);
+    --ripple-focus-color: var(--_unselected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_unselected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_unselected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_unselected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_unselected-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_unselected-pressed-state-layer-opacity);
 }
 
-.base-checkbox .selected .base-ripple {
-    --md-ripple-focus-color: var(--_selected-focus-state-layer-color);
-    --md-ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
-    --md-ripple-hover-color: var(--_selected-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_selected-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity);
+.base-checkbox .selected .ripple {
+    --ripple-focus-color: var(--_selected-focus-state-layer-color);
+    --ripple-focus-opacity: var(--_selected-focus-state-layer-opacity);
+    --ripple-hover-color: var(--_selected-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_selected-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_selected-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_selected-pressed-state-layer-opacity);
 }
 
-.base-checkbox .error .base-ripple {
-    --md-ripple-focus-color: var(--_error-focus-state-layer-color);
-    --md-ripple-hover-color: var(--_error-hover-state-layer-color);
-    --md-ripple-hover-opacity: var(--_error-hover-state-layer-opacity);
-    --md-ripple-pressed-color: var(--_error-pressed-state-layer-color);
-    --md-ripple-pressed-state-layer-opacity: var(--_error-pressed-state-layer-opacity);
+.base-checkbox .error .ripple {
+    --ripple-focus-color: var(--_error-focus-state-layer-color);
+    --ripple-hover-color: var(--_error-hover-state-layer-color);
+    --ripple-hover-opacity: var(--_error-hover-state-layer-opacity);
+    --ripple-pressed-color: var(--_error-pressed-state-layer-color);
+    --ripple-pressed-state-layer-opacity: var(--_error-pressed-state-layer-opacity);
 }
 
 .base-checkbox .icon {

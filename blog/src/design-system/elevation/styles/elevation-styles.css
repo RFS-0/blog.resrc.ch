@@ -1,10 +1,11 @@
 .base-elevation {
     --_duration: var(--md-elevation-duration, 0s);
-    --_easing: var(--md-elevation-easing, cubic-bezier(0.2, 0, 0, 1));
-    --_level: var(--md-elevation-level, 0);
-    --_shadow-color: var(--md-elevation-shadow-color, var(--md-sys-color-shadow, #000));
-    --_surface-tint-color: var(--md-elevation-surface-tint-color, var(--md-sys-color-primary, #6750a4));
-    border-radius: inherit;
+    --_easing: cubic-bezier(0.2, 0, 0, 1);
+    --_level: 1;
+    --_shadow-color: var(--sys-shadow);
+    --_surface-tint-color: var(--sys-primary);
+    --_container-shape: 9999px;
+    border-radius: var(--_container-shape);
     display: flex;
     position: absolute;
     inset: 0;

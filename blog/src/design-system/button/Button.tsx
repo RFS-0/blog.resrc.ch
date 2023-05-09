@@ -1,92 +1,113 @@
-import { createSignal, JSX, Show, VoidProps } from 'solid-js';
-import { Elevation } from '../elevation/Elevation';
-import { FocusRing } from '../focus/FocusRing';
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple';
+import { createSignal, JSX, Show, splitProps } from 'solid-js';
+import {
+  composeEventHandlers,
+  createHandlers,
+  createRippleEventEmitter,
+  Elevation,
+  FocusRing,
+  Ripple,
+} from '~/design-system';
+
 import './styles/shared-button-styles.css';
+import './styles/shared-button-elevation-styles.css';
+import './styles/elevated-button-styles.css';
+import './styles/filled-button-styles.css';
+import './styles/outlined-button-styles.css';
+import './styles/tonal-button-styles.css';
+import './styles/text-button-styles.css';
 
 export type ButtonProps = {
-  variant?: 'filled' | 'outlined' | 'elevated' | 'tonal'
-  color: 'primary'
+  variant?: 'filled' | 'outlined' | 'elevated' | 'tonal' | 'text';
+  selected?: boolean
   onClick?: (ev: MouseEvent) => void
   label?: string;
-  disabled?: boolean;
   leadingIcon?: JSX.Element;
   trailingIcon?: JSX.Element;
-  ref?: HTMLButtonElement;
   preventClickDefault?: boolean;
   ariaHasPopup?: boolean;
   ariaLabel?: string;
-} & VoidProps
+} & JSX.HTMLAttributes<HTMLButtonElement>
 
 export const Button = (props: ButtonProps) => {
-  let icon: HTMLElement
-  let button: HTMLElement
+  const [variantProps, buttonProps] = splitProps(props, [
+    'variant',
+    'selected',
+    'label',
+    'leadingIcon',
+    'trailingIcon',
+    'preventClickDefault',
+    'ariaHasPopup',
+    'ariaLabel',
+  ]);
 
-  const { listen, emit } = createRippleEventEmitter()
+  const [focus, setFocus] = createSignal(false);
+  const {listen, emit} = createRippleEventEmitter();
 
-  const [showFocusRing, setShowFocusRing] = createSignal(false)
-  const [showHover, setShowHover] = createSignal(false)
+  const rippleHandlers = createHandlers(emit);
 
-  const handlePointerDown = (e: PointerEvent) => {
-    emit({ type: 'pointerdown', pointerEvent: (e) });
-    setShowFocusRing(true)
-  }
+  const [selected, setSelected] = createSignal(variantProps?.selected || false);
+
+  const activateFocus = () => {
+    setFocus(true);
+  };
+
+  const deactivateFocus = () => {
+    setFocus(false);
+  };
 
   const handleClick = (e: MouseEvent) => {
-    emit({ type: 'pointerdown', pointerEvent: (e) });
     if (props?.preventClickDefault) {
-      e.preventDefault()
+      e.preventDefault();
     }
-    props.onClick && props.onClick(e)
-  }
+    setSelected(!selected());
+  };
 
   return (
-    <button
-      ref={props.ref}
-      class={
-        `
-        ${'base-button md3-button md3-button--' + props.color} 
-        ${!!props?.leadingIcon ? 'md3-button--icon-leading' : ''} 
-        ${!!props?.trailingIcon ? 'md3-button--icon-trailing' : ''} 
-        ${props?.variant === 'elevated' ? 'base-elevated-button  md3-button--elevated' : ''}
-        ${props?.variant === 'filled' ? 'base-filled-button  md3-button--filled' : ''}
-        ${props?.variant === 'outlined' ? 'base-outlined-button  md3-button--outlined' : ''}
-        ${props?.variant === 'tonal' ? 'base-tonal-button  md3-button--tonal tonal-button--primary' : ''}
-        `
-      }
-      disabled={props?.disabled || false}
-      aria-label={props?.ariaLabel || ''}
-      aria-haspopup={props?.ariaHasPopup || false}
-      {...createHandlers(emit)}
-      onPointerDown={handlePointerDown}
-      onFocus={() => setShowFocusRing(true)}
-      onBlur={() => setShowFocusRing(false)}
-      onClick={handleClick}
-    >
-      <FocusRing visible={showFocusRing()}></FocusRing>
-      <Show when={props.variant === 'elevated' || props.variant === 'filled' || props.variant === 'tonal'}>
-        <Elevation shadow={true} surface={props.variant !== 'tonal' ? true : false} />
-      </Show>
-      <Ripple listen={listen} unbounded={true}></Ripple>
-      <Show when={props?.variant === 'outlined'}>
-        <span class="md3-button__outline"></span>
-      </Show>
-      <span class="md3-button__touch"></span>
-      <Show when={!!props?.leadingIcon}>
-        <span class="md3-button__icon-slot-container md3-button__icon--leading">
+      <button
+          {...buttonProps}
+          {...rippleHandlers}
+          onClick={composeEventHandlers([buttonProps?.onClick, rippleHandlers.onClick, handleClick])}
+          onFocus={composeEventHandlers([buttonProps?.onfocus, activateFocus])}
+          onBlur={composeEventHandlers([buttonProps?.onblur, deactivateFocus])}
+          onPointerDown={composeEventHandlers([buttonProps?.onPointerDown, deactivateFocus])}
+          class={'button-shared button'}
+          classList={{
+            'button-elevation-shared': variantProps?.variant === 'elevated' || props.variant === 'filled' || props.variant === 'tonal',
+            'button--icon-leading': !!variantProps?.leadingIcon,
+            'button--icon-trailing': !!variantProps?.trailingIcon,
+            'button--elevated': variantProps?.variant === 'elevated',
+            'button--filled': variantProps?.variant === 'filled',
+            'button--outlined': variantProps?.variant === 'outlined',
+            'button--tonal': variantProps?.variant === 'tonal',
+            'button--text': variantProps?.variant === 'text',
+          }}
+          aria-label={props?.ariaLabel || ''}
+          aria-haspopup={props?.ariaHasPopup || false}
+      >
+        <FocusRing visible={focus()}></FocusRing>
+        <Show when={props.variant === 'elevated' || props.variant === 'filled' || props.variant === 'tonal'}>
+          <Elevation/>
+        </Show>
+        <Ripple listen={listen} unbounded={true}></Ripple>
+        <Show when={variantProps?.variant === 'outlined'}>
+          <span class="button__outline"></span>
+        </Show>
+        <span class="button__touch"></span>
+        <Show when={!!props?.leadingIcon}>
+        <span class="button__icon-container button__icon--leading">
           {props.leadingIcon}
         </span>
-      </Show>
-      <Show when={!!props?.label}>
-        <span class="md3-button__label">
+        </Show>
+        <Show when={!!props?.label}>
+        <span class="button__label">
           {props.label}
         </span>
-      </Show>
-      <Show when={!!props?.trailingIcon}>
-        <span class="md3-button__icon-slot-container md3-button__icon--trailing">
+        </Show>
+        <Show when={!!props?.trailingIcon}>
+        <span class="button__icon-container button__icon--trailing">
           {props.trailingIcon}
         </span>
-      </Show>
-    </button>
+        </Show>
+      </button>
   );
-}
+};

@@ -1,10 +1,10 @@
 .base-radio {
-    --md-ripple-hover-color: var(--md-radio-unselected-hover-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --md-ripple-focus-color: var(--md-radio-unselected-focus-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --md-ripple-pressed-color: var(--md-radio-unselected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --md-ripple-hover-opacity: var(--md-radio-unselected-hover-state-layer-opacity, 0.08);
-    --md-ripple-focus-opacity: var(--md-radio-unselected-focus-state-layer-opacity, 0.12);
-    --md-ripple-pressed-state-layer-opacity: var(--md-radio-unselected-pressed-state-layer-opacity, 0.12);
+    --ripple-hover-color: var(--md-radio-unselected-hover-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
+    --ripple-focus-color: var(--md-radio-unselected-focus-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
+    --ripple-pressed-color: var(--md-radio-unselected-pressed-state-layer-color, var(--md-sys-color-primary, #6750a4));
+    --ripple-hover-opacity: var(--md-radio-unselected-hover-state-layer-opacity, 0.08);
+    --ripple-focus-opacity: var(--md-radio-unselected-focus-state-layer-opacity, 0.12);
+    --ripple-pressed-state-layer-opacity: var(--md-radio-unselected-pressed-state-layer-opacity, 0.12);
     --md-focus-ring-offset-vertical: -2px;
     --md-focus-ring-offset-horizontal: -2px;
     display: inline-flex
@@ -103,12 +103,12 @@
 }
 
 .base-radio[checked] {
-    --md-ripple-hover-color: var(--md-radio-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --md-ripple-focus-color: var(--md-radio-selected-focus-state-layer-color, var(--md-sys-color-primary, #6750a4));
-    --md-ripple-pressed-color: var(--md-radio-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --md-ripple-hover-opacity: var(--md-radio-selected-hover-state-layer-opacity, 0.08);
-    --md-ripple-focus-opacity: var(--md-radio-selected-focus-state-layer-opacity, 0.12);
-    --md-ripple-pressed-state-layer-opacity: var(--md-radio-selected-pressed-state-layer-opacity, 0.12)
+    --ripple-hover-color: var(--md-radio-selected-hover-state-layer-color, var(--md-sys-color-primary, #6750a4));
+    --ripple-focus-color: var(--md-radio-selected-focus-state-layer-color, var(--md-sys-color-primary, #6750a4));
+    --ripple-pressed-color: var(--md-radio-selected-pressed-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
+    --ripple-hover-opacity: var(--md-radio-selected-hover-state-layer-opacity, 0.08);
+    --ripple-focus-opacity: var(--md-radio-selected-focus-state-layer-opacity, 0.12);
+    --ripple-pressed-state-layer-opacity: var(--md-radio-selected-pressed-state-layer-opacity, 0.12)
 }
 
 .md3-radio {
