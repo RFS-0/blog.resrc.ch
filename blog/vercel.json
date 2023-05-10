@@ -2,11 +2,11 @@
   "builds": [
     { "src": "{{Source for distribution}}", "use": "@vercel/static" }
   ],
-  "version": 2,
-  "public": false,
   "github": {
     "enabled": false
   },
   "ignoreCommand": "ls && bash check-branch.sh",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "public": false,
+  "version": 2
 }
