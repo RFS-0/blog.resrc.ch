@@ -6,5 +6,6 @@
   "github": {
     "enabled": false
   },
+  "name": "blog",
   "public": false
 }
