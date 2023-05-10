@@ -13,11 +13,11 @@ import './post-styles.css';
 export type DisplayVariant = 'preview-small' | 'preview-large' | 'full';
 
 export type PostProps = {
-  display: DisplayVariant;
+  display?: DisplayVariant;
 }
 
 export const Post: Component<PostProps> = (props) => {
-  const displaySignal = createSignal(props.display);
+  const displaySignal = createSignal(props?.display || 'preview-small');
   const [display] = displaySignal;
 
   let post: HTMLDivElement;
