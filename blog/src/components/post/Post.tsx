@@ -1,13 +1,14 @@
 import { Component, createSignal } from 'solid-js';
 import { Header } from '~/components/post/Header';
 
-import './post-styles.css';
 import { Button, Icon } from '~/design-system';
 import { MetaData } from '~/components/post/MetaData';
 import { Abstract } from '~/components/post/Abstract';
 import { SectionTitle } from '~/components/post/SectionTitle';
 import { Section } from '~/components/post/Section';
 import { Body } from '~/components/post/Body';
+
+import './post-styles.css';
 
 export type DisplayVariant = 'preview-small' | 'preview-large' | 'full';
 
