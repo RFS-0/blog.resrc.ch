@@ -27,7 +27,7 @@ export const Post: Component<PostProps> = (props) => {
       (
           <div
               ref={post!}
-              class={'post-container'}
+              class={'post-container hover:shadow-lg'}
               classList={{
                 'large': display() === 'preview-large' || display() === 'full',
               }}
