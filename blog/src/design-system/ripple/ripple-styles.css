@@ -65,10 +65,6 @@
     transition-duration: 105ms
 }
 
-.ripple--unbounded[unbounded] {
-    --_state-layer-shape: var(--_ripple_shape)
-}
-
-.ripple[unbounded] {
-    border-radius: var(--_state-layer-shape);
+.ripple-unbounded {
+    --_ripple_shape: 9999px;
 }
