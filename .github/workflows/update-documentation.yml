@@ -1,8 +1,9 @@
 name: Update GitHub Page for Documentation
 on:
-  push:
-    branches:
-      - 'main'
+  workflow_run:
+    workflows: ["deploy-blog"]
+    types: [completed]
+
 jobs:
   update-documentation:
     defaults:
@@ -10,6 +11,7 @@ jobs:
         shell: bash
         working-directory: docs
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout main
