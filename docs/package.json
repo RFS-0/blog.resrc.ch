@@ -13,6 +13,7 @@
     "watch": "npm-watch",
     "build": "node build-documentation.js --outputDir './dist'",
     "build-for-gh-page": "node build-documentation.js --outputDir '.'",
+    "test": "echo \"No test specified\"",
     "serve": "npm run watch & npx http-server ./dist -p 9001 -o",
     "dev": "concurrently --kill-others \"npm:watch\" \"npm:serve\""
   },

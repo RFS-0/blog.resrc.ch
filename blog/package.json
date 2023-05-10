@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
+    "test": "echo \"No test specified\"",
     "start": "solid-start start"
   },
   "type": "module",

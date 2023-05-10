@@ -10,33 +10,39 @@ jobs:
         shell: bash
         working-directory: docs
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout main
         uses: actions/checkout@v3
         with:
           ref: main
           fetch-depth: 0
+
       - name: Checkout documentation page
         uses: actions/checkout@v2.4.0
         with:
           ref: documentation-page
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Merge main into documentation page
         run: |
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
           git merge origin/main
+
       - name: Build documentation
         uses: actions/setup-node@v3
         with:
           node-version: '20'
       - run: npm install
       - run: npm run build-for-gh-page
+
       - name: Commit updated static files for documentation page
         run: |
           git add .
           git commit --message='[AUTO-COMMIT] Update documentation page'
+
       - name: Push github-pages branch
         run: |
           git push

@@ -1,3 +1,12 @@
 {
-  "ignoreCommand": "ls && bash check-branch.sh"
+  "builds": [
+    { "src": "{{Source for distribution}}", "use": "@vercel/static" }
+  ],
+  "version": 2,
+  "public": false,
+  "github": {
+    "enabled": false
+  },
+  "ignoreCommand": "ls && bash check-branch.sh",
+  "outputDirectory": "dist"
 }

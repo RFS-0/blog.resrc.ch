@@ -1,4 +1,6 @@
 packages:
-  - 'docs/**'
   - 'blog/**'
+  - 'capabilities/**'
   - 'common-config/**'
+  - 'docs/**'
+  - 'domain/**'
