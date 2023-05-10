@@ -20,23 +20,23 @@
 @media (min-width: 233px) {
     /* sm */
     .page {
-        gap: var(--fib-7);
-        margin: var(--fib-7);
+        gap: var(--fib-8);
+        margin: var(--fib-8);
     }
 }
 
 @media (min-width: 411px) {
     /* md */
     .page {
-        gap: var(--fib-8);
-        margin: var(--fib-8);
+        gap: var(--fib-9);
+        margin: var(--fib-9);
     }
 }
 
 @media (min-width: 788px) {
     /* lg */
     .page {
-        gap: var(--fib-9);
-        margin: var(--fib-9);
+        gap: var(--fib-10);
+        margin: var(--fib-10);
     }
 }
