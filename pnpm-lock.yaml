@@ -64,6 +64,12 @@ importers:
       typescript: 4.9.5
       vite: 4.3.3
 
+  capabilities:
+    specifiers:
+      common-config: workspace:*
+    dependencies:
+      common-config: link:../common-config
+
   common-config:
     specifiers: {}
 
@@ -84,6 +90,14 @@ importers:
       concurrently: 8.0.1
       fs-extra: 11.1.1
       npm-watch: 0.11.0
+
+  domain:
+    specifiers:
+      capabilities: workspace:*
+      common-config: workspace:*
+    dependencies:
+      capabilities: link:../capabilities
+      common-config: link:../common-config
 
 packages:
 

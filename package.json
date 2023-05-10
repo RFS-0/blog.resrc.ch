@@ -12,7 +12,8 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "test": "turbo run test"
   },
   "dependencies": {
     "@types/uuid": "^9.0.1",

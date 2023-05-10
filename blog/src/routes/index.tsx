@@ -5,10 +5,6 @@ export default function Home() {
   return (
       <Page>
         <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
       </Page>
   );
 }
