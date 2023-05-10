@@ -7,5 +7,6 @@
     "enabled": false
   },
   "name": "blog",
-  "public": false
+  "public": false,
+  "outputDirectory": "output/static"
 }
