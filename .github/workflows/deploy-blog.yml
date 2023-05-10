@@ -1,16 +1,14 @@
 name: Deploy Blog to Vercel
-
 on:
   push:
     branches:
       - main
 
 jobs:
-  test_and_deploy:
+  deploy-blog:
     defaults:
       run:
         shell: bash
-        working-directory: docs
     runs-on: ubuntu-latest
 
     steps:
@@ -25,8 +23,8 @@ jobs:
         with:
           node-version: 20
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
@@ -38,13 +36,15 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
+
 
       - name: Install dependencies
         run: pnpm install
@@ -57,11 +57,11 @@ jobs:
 
       - name: Deploy to Vercel
         if: success()
-        uses: vercel/action@25
+        uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_BLOG_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'  # or any other arguments you want to pass to 'vercel deploy'
+          vercel-args: '--prod'
           working-directory: ./blog

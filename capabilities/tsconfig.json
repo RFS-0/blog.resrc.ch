@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "ch.resrc.bcm.common-config/internal-tsconfig.json",
+  "extends": "common-config/internal-tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   },
