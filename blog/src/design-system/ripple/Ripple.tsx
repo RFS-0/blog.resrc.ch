@@ -44,7 +44,7 @@ type RippleEvent = {
 };
 
 export function createRippleEventEmitter(): EventBus<RippleEvent> {
-  return createEventBus<RippleEvent>()
+  return createEventBus<RippleEvent>();
 }
 
 type RippleHandlers = {
@@ -59,14 +59,14 @@ type RippleHandlers = {
 
 export function createHandlers(emit: Emit<RippleEvent>): RippleHandlers {
   return {
-    onClick: (ev) => emit({ type: 'click', pointerEvent: (ev) }),
-    onContextMenu: (ev) => emit({ type: 'contextmenu', pointerEvent: (ev) }),
-    onPointerCancel: (ev) => emit({ type: 'pointercancel', pointerEvent: (ev) }),
-    onPointerDown: (ev) => emit({ type: 'pointerdown', pointerEvent: (ev) }),
-    onPointerEnter: (ev) => emit({ type: 'pointerenter', pointerEvent: (ev) }),
-    onPointerLeave: (ev) => emit({ type: 'pointerleave', pointerEvent: (ev) }),
-    onPointerUp: (ev) => emit({ type: 'pointerup', pointerEvent: (ev) })
-  }
+    onClick: (ev) => emit({type: 'click', pointerEvent: (ev)}),
+    onContextMenu: (ev) => emit({type: 'contextmenu', pointerEvent: (ev)}),
+    onPointerCancel: (ev) => emit({type: 'pointercancel', pointerEvent: (ev)}),
+    onPointerDown: (ev) => emit({type: 'pointerdown', pointerEvent: (ev)}),
+    onPointerEnter: (ev) => emit({type: 'pointerenter', pointerEvent: (ev)}),
+    onPointerLeave: (ev) => emit({type: 'pointerleave', pointerEvent: (ev)}),
+    onPointerUp: (ev) => emit({type: 'pointerup', pointerEvent: (ev)}),
+  };
 }
 
 export type RippleProps = ParentProps & JSX.IntrinsicElements['div'] & {
@@ -74,7 +74,6 @@ export type RippleProps = ParentProps & JSX.IntrinsicElements['div'] & {
   unbounded?: boolean
   disabled?: boolean
 }
-
 
 export const Ripple: ParentComponent<RippleProps> = (props) => {
   let rippler!: HTMLDivElement;
@@ -92,7 +91,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
   const [unbounded, _] = createSignal(props?.unbounded || false);
   const [disabled, __] = createSignal(props?.disabled || false);
   const [hovered, setHovered] = createSignal(false);
-  const [focused, ] = createSignal(false);
+  const [focused] = createSignal(false);
   const [pressed, setPressed] = createSignal(false);
 
   let rippleSize = '';
@@ -110,14 +109,13 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
 
   const getDimensions = () => {
     return (rippler.parentElement ?? rippler).getBoundingClientRect();
-  }
+  };
 
   const determineRippleSize = () => {
-    const { height, width } = getDimensions();
+    const {height, width} = getDimensions();
     const maxDim = Math.max(height, width);
     const softEdgeSize =
-      Math.max(SOFT_EDGE_CONTAINER_RATIO * maxDim, SOFT_EDGE_MINIMUM_SIZE);
-
+        Math.max(SOFT_EDGE_CONTAINER_RATIO * maxDim, SOFT_EDGE_MINIMUM_SIZE);
 
     let maxRadius: number;
     let _initialSize = Math.floor(maxDim * INITIAL_ORIGIN_SCALE);
@@ -133,19 +131,22 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     initialSize = _initialSize;
     rippleScale = `${(maxRadius + softEdgeSize) / _initialSize}`;
     rippleSize = `${initialSize}px`;
-  }
+  };
 
-  const getNormalizedPointerEventCoords: (pointerEvent: PointerEvent) => { x: number, y: number } = (pointerEvent) => {
-    const { scrollX, scrollY } = window;
-    const { left, top } = getDimensions();
+  const getNormalizedPointerEventCoords: (pointerEvent: Event & Record<'pageX', number> & Record<'pageY', number>) => {
+    x: number,
+    y: number
+  } = (pointerEvent) => {
+    const {scrollX, scrollY} = window;
+    const {left, top} = getDimensions();
     const documentX = scrollX + left;
     const documentY = scrollY + top;
-    const { pageX, pageY } = pointerEvent;
-    return { x: pageX - documentX, y: pageY - documentY };
-  }
+    const {pageX, pageY} = pointerEvent;
+    return {x: pageX - documentX, y: pageY - documentY};
+  };
 
   const getTranslationCoordinates = (positionEvent?: Event | null) => {
-    const { height, width } = getDimensions();
+    const {height, width} = getDimensions();
     // end in the center
     const endPoint = {
       x: (width - initialSize) / 2,
@@ -153,9 +154,16 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     };
 
     let startPoint: { x: number; y: number };
-    if (positionEvent instanceof PointerEvent) {
-      startPoint = getNormalizedPointerEventCoords(positionEvent);
+    if (
+        positionEvent && 'pageX' in positionEvent &&
+        'pageY' in positionEvent &&
+        typeof positionEvent['pageX'] === 'number' &&
+        typeof positionEvent['pageY'] === 'number'
+    ) {
+      const pointerEvent = positionEvent as Event & Record<'pageX', number> & Record<'pageY', number>;
+      startPoint = getNormalizedPointerEventCoords(pointerEvent);
     } else {
+      console.log('no position event');
       startPoint = {
         x: width / 2,
         y: height / 2,
@@ -168,35 +176,35 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       y: startPoint.y - (initialSize / 2),
     };
 
-    return { startPoint, endPoint };
-  }
+    return {startPoint, endPoint};
+  };
 
   const startPressAnimation = (positionEvent?: Event | null) => {
     determineRippleSize();
-    const { startPoint, endPoint } =
-      getTranslationCoordinates(positionEvent);
+    const {startPoint, endPoint} =
+        getTranslationCoordinates(positionEvent);
     const translateStart = `${startPoint.x}px, ${startPoint.y}px`;
     const translateEnd = `${endPoint.x}px, ${endPoint.y}px`;
 
     const signal = pressAnimationSignal.start();
 
     let _growAnimation = rippler.animate(
-      {
-        top: [0, 0],
-        left: [0, 0],
-        height: [rippleSize, rippleSize],
-        width: [rippleSize, rippleSize],
-        transform: [
-          `translate(${translateStart}) scale(1)`,
-          `translate(${translateEnd}) scale(${rippleScale})`
-        ],
-      },
-      {
-        pseudoElement: PRESS_PSEUDO,
-        duration: PRESS_GROW_MS,
-        easing: Easing.STANDARD,
-        fill: ANIMATION_FILL
-      });
+        {
+          top: [0, 0],
+          left: [0, 0],
+          height: [rippleSize, rippleSize],
+          width: [rippleSize, rippleSize],
+          transform: [
+            `translate(${translateStart}) scale(1)`,
+            `translate(${translateEnd}) scale(${rippleScale})`,
+          ],
+        },
+        {
+          pseudoElement: PRESS_PSEUDO,
+          duration: PRESS_GROW_MS,
+          easing: Easing.STANDARD,
+          fill: ANIMATION_FILL,
+        });
 
     _growAnimation.addEventListener('finish', () => {
       pressAnimationSignal.finish();
@@ -209,17 +217,17 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     });
 
     growAnimation = _growAnimation;
-  }
+  };
 
   const beginHover = (hoverEvent?: Event) => {
     if ((hoverEvent as PointerEvent)?.pointerType !== 'touch') {
       setHovered(true);
     }
-  }
+  };
 
   const endHover = () => {
     setHovered(false);
-  }
+  };
   const beginPress = (positionEvent?: Event | null) => {
     setPressed(true);
     if (delayedEndPressHandle !== null) {
@@ -227,7 +235,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       delayedEndPressHandle = null;
     }
     startPressAnimation(positionEvent);
-  }
+  };
 
   const endPress = () => {
     const pressAnimationPlayState = growAnimation?.currentTime ?? Infinity;
@@ -249,11 +257,11 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       clearTimeout(clickTimer);
       clickTimer = null;
     }
-  }
+  };
 
-  const isTouch = ({ pointerType }: PointerEvent) => {
+  const isTouch = ({pointerType}: PointerEvent) => {
     return pointerType === 'touch';
-  }
+  };
 
   const shouldReactToEvent = (ev: PointerEvent, hovering: boolean) => {
     const enabled = !disabled();
@@ -261,8 +269,8 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
     const isInteractionPointer = rippleStartEvent === null || rippleStartEvent.pointerId === ev.pointerId;
     const isPrimaryButton = ev.buttons === 1;
     return enabled && isPrimaryPointer && isInteractionPointer &&
-      (isTouch(ev) || isPrimaryButton || hovering);
-  }
+        (isTouch(ev) || isPrimaryButton || hovering);
+  };
 
   const click = (ev: PointerEvent) => {
     // Click is a MouseEvent in Firefox and Safari, so we cannot use
@@ -277,19 +285,19 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       beginPress(ev);
       endPress();
     }
-  }
+  };
 
   const contextMenu = () => {
     if (!disabled()) {
       checkBoundsAfterContextMenu = true;
       endPress();
     }
-  }
+  };
 
-  const inBounds = ({ x, y }: PointerEvent) => {
-    const { top, left, bottom, right } = rippler!.getBoundingClientRect();
+  const inBounds = ({x, y}: PointerEvent) => {
+    const {top, left, bottom, right} = rippler!.getBoundingClientRect();
     return x >= left && x <= right && y >= top && y <= bottom;
-  }
+  };
 
   const waitForTouchHold = () => {
     if (touchTimer !== null) {
@@ -303,7 +311,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       state = State.HOLDING;
       beginPress();
     }, TOUCH_DELAY_MS);
-  }
+  };
 
   const pointerDown = (ev: PointerEvent) => {
     if (!shouldReactToEvent(ev, true)) {
@@ -323,19 +331,19 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       state = State.WAITING_FOR_CLICK;
       beginPress(ev);
     }
-  }
+  };
 
   const pointerCancel = (ev: PointerEvent) => {
     if (shouldReactToEvent(ev, true)) {
       endPress();
     }
-  }
+  };
 
   const pointerEnter = (ev: PointerEvent) => {
     if (shouldReactToEvent(ev, true)) {
       beginHover(ev);
     }
-  }
+  };
 
   const pointerLeave = (ev: PointerEvent) => {
     if (shouldReactToEvent(ev, true)) {
@@ -345,7 +353,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
         endPress();
       }
     }
-  }
+  };
 
   const pointerUp = (ev: PointerEvent) => {
     if (!isTouch(ev) || !shouldReactToEvent(ev, true)) {
@@ -357,7 +365,7 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       state = State.WAITING_FOR_CLICK;
       beginPress(ev);
     }
-  }
+  };
 
   props.listen(rippleEvent => {
     switch (rippleEvent.type) {
@@ -386,24 +394,24 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
         console.error('Unknown ripple event type', rippleEvent);
         break;
     }
-  })
+  });
 
   // noinspection JSUnusedAssignment
   return (
-    <div
-      ref={rippler!}
-      {...props}
-      class={
-        `ripple 
+      <div
+          ref={rippler!}
+          {...props}
+          class={
+            `ripple 
          ripple-surface 
          ${hovered() ? 'ripple--hovered' : ''} 
          ${focused() ? 'ripple--focused' : ''} 
          ${pressed() ? 'ripple--pressed' : ''} 
          ${unbounded() ? 'ripple--unbounded' : ''} 
          `
-      }
-    >
-      {props.children}
-    </div >
+          }
+      >
+        {props.children}
+      </div>
   );
 };
