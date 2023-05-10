@@ -33,7 +33,6 @@ export const Post: Component<PostProps> = (props) => {
               }}
           >
             <Header
-                post={post!}
                 display={displaySignal}
                 title={'Lorem Ipsum Dolor Sit Amet'}
             />
