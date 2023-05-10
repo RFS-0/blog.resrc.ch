@@ -1,6 +1,9 @@
 :root {
     color-scheme: light;
 
+    --sys-transition-duration: 0.4s;
+    --sys-transition-delay: 0.4s;
+
     --fib-1: 1px;
     --fib-2: 1px;
     --fib-3: 2px;

@@ -7,7 +7,9 @@
     min-height: var(--fib-12);
     padding: var(--fib-8);
 
-    transition: width 0.5s linear;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--sys-transition-duration);
 }
 
 .post-container.large {
