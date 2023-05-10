@@ -1,8 +1,9 @@
 name: Update GitHub Page for Documentation
 on:
   workflow_run:
-    workflows: ["deploy-blog"]
-    types: [completed]
+    workflows: [ "Production Deployment of Blog" ]
+    types:
+      - completed§
 
 jobs:
   update-documentation:
