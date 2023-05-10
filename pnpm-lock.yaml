@@ -37,6 +37,7 @@ importers:
       '@solidjs/router': ^0.8.2
       autoprefixer: ^10.4.13
       common-config: workspace:*
+      domain: workspace:*
       postcss: ^8.4.21
       solid-js: ^1.7.2
       solid-start: ^0.2.26
@@ -52,6 +53,7 @@ importers:
       '@solidjs/meta': 0.28.4_solid-js@1.7.3
       '@solidjs/router': 0.8.2_solid-js@1.7.3
       common-config: link:../common-config
+      domain: link:../domain
       solid-js: 1.7.3
       solid-start: 0.2.26_z3ffk5j3zhiz2k7qebxjk42gfi
       solid-start-vercel: 0.2.26_sqz3tnbgiqyjstyl465zp6m6oq

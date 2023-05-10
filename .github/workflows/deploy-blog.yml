@@ -1,4 +1,4 @@
-name: Deploy Blog to Vercel
+name: Production Deployment of Blog
 on:
   push:
     branches:
@@ -44,8 +44,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-
-
       - name: Install dependencies
         run: pnpm install
 
@@ -55,13 +53,12 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-      - name: Deploy to Vercel
+      - name: Install Vercel CLI
         if: success()
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_BLOG_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          working-directory: ./blog
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

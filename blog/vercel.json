@@ -1,12 +1,10 @@
 {
-  "builds": [
-    { "src": "{{Source for distribution}}", "use": "@vercel/static" }
-  ],
+  "buildCommand": "",
+  "framework": "solidstart",
+  "installCommand": "",
+  "ignoreCommand": "bash ./check-branch.sh",
   "github": {
     "enabled": false
   },
-  "ignoreCommand": "ls && bash check-branch.sh",
-  "outputDirectory": "dist",
-  "public": false,
-  "version": 2
+  "public": false
 }
