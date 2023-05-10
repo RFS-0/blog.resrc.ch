@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "common-config": "workspace:*",
+    "domain": "workspace:*",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
     "@solid-primitives/context":  "^0.2.1",
