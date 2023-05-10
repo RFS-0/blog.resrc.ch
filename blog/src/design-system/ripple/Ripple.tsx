@@ -401,15 +401,13 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
       <div
           ref={rippler!}
           {...props}
-          class={
-            `ripple 
-         ripple-surface 
-         ${hovered() ? 'ripple--hovered' : ''} 
-         ${focused() ? 'ripple--focused' : ''} 
-         ${pressed() ? 'ripple--pressed' : ''} 
-         ${unbounded() ? 'ripple--unbounded' : ''} 
-         `
-          }
+          class={'ripple ripple-surface'}
+          classList={{
+            'ripple--hovered': hovered(),
+            'ripple--focused': focused(),
+            'ripple--pressed': pressed(),
+            'ripple--unbounded': unbounded(),
+          }}
       >
         {props.children}
       </div>
