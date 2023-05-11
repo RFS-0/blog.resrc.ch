@@ -20,6 +20,8 @@ export const Post: Component<PostProps> = (props) => {
   const displaySignal = createSignal(props?.display || 'preview-small');
   const [display] = displaySignal;
 
+  const [hovered, setHovered] = createSignal(false);
+
   let post: HTMLDivElement;
 
   // noinspection JSUnusedAssignment
@@ -27,10 +29,14 @@ export const Post: Component<PostProps> = (props) => {
       (
           <div
               ref={post!}
-              class={'post-container hover:shadow-lg'}
+              class={'post-container'}
               classList={{
                 'large': display() === 'preview-large' || display() === 'full',
+                'post-container--hover': hovered()
+
               }}
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
           >
             <Header
                 display={displaySignal}
