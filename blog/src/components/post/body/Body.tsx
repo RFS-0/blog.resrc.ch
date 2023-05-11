@@ -1,18 +1,18 @@
-import { Accessor, Component, ParentProps } from 'solid-js';
-import { DisplayVariant } from '~/components/post/Post';
-
+import { Component, ParentProps } from 'solid-js';
+import { usePostContext } from '~/components/post/PostContextProvider';
 import './body-styles.css';
 
 export type BodyProps = {
-  display: Accessor<DisplayVariant>
 } & ParentProps
 
 export const Body: Component<BodyProps> = (props) => {
+  const {displaySignal} = usePostContext();
+  const [display, setDisplay] = displaySignal;
   return (
       <div
           class={'resrc-body'}
           classList={{
-            'resrc-hidden': props.display() === 'preview-small'
+            'resrc-hidden': display() === 'preview-small'
           }}
       >
           {props.children}

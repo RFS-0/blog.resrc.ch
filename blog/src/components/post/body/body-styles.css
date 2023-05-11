@@ -1,5 +1,8 @@
 /*Note: the prefix resrc is use to avoid naming conflicts with other css frameworks*/
 .resrc-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fib-5);
     max-height: 0;
     opacity: 1;
     overflow: hidden;

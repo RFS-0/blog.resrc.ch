@@ -1,13 +1,14 @@
-import { Accessor, Component } from 'solid-js';
+import { Component } from 'solid-js';
 import { Button, Icon } from '~/design-system';
-import { DisplayVariant } from '~/components/post/Post';
+import { usePostContext } from '~/components/post/PostContextProvider';
 
 export type TagProps = {
-  display: Accessor<DisplayVariant>,
   tag: string
 }
 
 export const Tag: Component<TagProps> = (props) => {
+  const {displaySignal} = usePostContext();
+  const [display, setDisplay] = displaySignal;
   const filterPostByTag = (tag: string) => {
     console.log('filtering posts by tag: ', tag);
   };
@@ -25,9 +26,9 @@ export const Tag: Component<TagProps> = (props) => {
           }
           labelElement={
             <span classList={{
-              'label-small': props.display() === 'preview-small',
-              'label-medium': props.display() === 'preview-large',
-              'label-large': props.display() === 'full',
+              'label-small': display() === 'preview-small',
+              'label-medium': display() === 'preview-large',
+              'label-large': display() === 'full',
             }}>
             {props.tag}
             </span>

@@ -1,13 +1,14 @@
-import { Accessor, Component } from 'solid-js';
+import { Component } from 'solid-js';
 import { Button, Icon } from '~/design-system';
-import { DisplayVariant } from '~/components/post/Post';
+import { usePostContext } from '~/components/post/PostContextProvider';
 
 export type DatePublishedProps = {
-  display: Accessor<DisplayVariant>,
   date: Date
 }
 
 export const DatePublished: Component<DatePublishedProps> = (props) => {
+  const {displaySignal} = usePostContext();
+  const [display, setDisplay] = displaySignal;
   const filterPostByDate = (date: Date) => {
     console.log('filtering posts by date', date);
   };
@@ -25,9 +26,9 @@ export const DatePublished: Component<DatePublishedProps> = (props) => {
           }
           labelElement={
             <span classList={{
-              'label-small': props.display() === 'preview-small',
-              'label-medium': props.display() === 'preview-large',
-              'label-large': props.display() === 'full',
+              'label-small': display() === 'preview-small',
+              'label-medium': display() === 'preview-large',
+              'label-large': display() === 'full',
             }}>
             {props.date.toLocaleDateString()}
             </span>

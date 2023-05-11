@@ -1,15 +1,15 @@
-import { Component, Signal } from 'solid-js';
+import { Component } from 'solid-js';
 import { Icon, StandardIconToggleButton } from '~/design-system';
-
+import { usePostContext } from '~/components/post/PostContextProvider';
 import './header-styles.css';
 
 export type HeaderProps = {
-  display: Signal<'preview-small' | 'preview-large' | 'full'>;
   title: string
 }
 
 export const Header: Component<HeaderProps> = (props) => {
-  const [display, setDisplay] = props.display;
+  const {displaySignal} = usePostContext();
+  const [display, setDisplay] = displaySignal;
 
   const switchDisplay = () => {
     switch (display()) {
