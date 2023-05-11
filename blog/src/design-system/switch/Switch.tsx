@@ -1,7 +1,7 @@
-import { createSignal, Show } from 'solid-js'
-import { FocusRing } from '../focus/FocusRing'
-import { createHandlers, createRippleEventEmitter, Ripple } from '../ripple/Ripple'
-import './styles/base-styles.css'
+import { createSignal, Show } from 'solid-js';
+import { createHandlers, createRippleEventEmitter, FocusRing, Ripple } from '~/design-system';
+
+import './styles/base-styles.css';
 
 export type SwitchProps = {
   selected?: boolean
@@ -16,7 +16,8 @@ export const Switch = (props: SwitchProps) => {
   const [selected, setSelected] = createSignal(props.selected || false)
   const [disabled, setDisabled] = createSignal(props.disabled || false)
   const [focused, setFocused] = createSignal(false)
-  const [ripleListen, rippleEmit] = createRippleEventEmitter()
+
+  const {listen, emit} = createRippleEventEmitter()
 
   const handleClick = () => {
     if (props?.disabled) {
@@ -31,7 +32,7 @@ export const Switch = (props: SwitchProps) => {
   }
 
   const handlePointerDown = (e: PointerEvent) => {
-    rippleEmit({ type: 'pointerdown', pointerEvent: (e) });
+    emit({ type: 'pointerdown', pointerEvent: (e) });
     setFocused(true);
   }
 
@@ -63,7 +64,7 @@ export const Switch = (props: SwitchProps) => {
       disabled={props?.disabled}
       aria-checked={props?.selected}
       aria-label={props?.ariaLabel || undefined}
-      {...createHandlers(rippleEmit)}
+      {...createHandlers(emit)}
       onPointerDown={handlePointerDown}
       onFocus={handleFocus}
       onBlur={handleBlur}
@@ -73,7 +74,7 @@ export const Switch = (props: SwitchProps) => {
       <span class="md3-switch__track">
         <span class="md3-switch__handle-container">
           <span class="md3-switch__ripple">
-            <Ripple listen={ripleListen} unbounded={true}></Ripple>
+            <Ripple listen={listen} unbounded={true}></Ripple>
           </span>
           <span
             class={
