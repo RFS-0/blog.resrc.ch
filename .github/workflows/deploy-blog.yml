@@ -53,15 +53,6 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-      - name: Show files in root
-        run: ls -la
-
-      - name: Show files in blog
-        run: ls -la ./blog
-
-      - name: Show files in blog/.vercel
-        run: ls -la ./blog/.vercel
-
       - name: Install Vercel CLI
         if: success()
         working-directory: ./blog
