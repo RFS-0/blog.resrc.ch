@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, Show } from 'solid-js';
 import { Icon, StandardIconToggleButton } from '~/design-system';
 import { usePostContext } from '~/components/post/PostContextProvider';
 import './header-styles.css';
@@ -37,13 +37,15 @@ export const Header: Component<HeaderProps> = (props) => {
         >
           {props.title}
         </div>
-        <div class={'header__menu'}>
-          <StandardIconToggleButton
-              onClick={switchDisplay}
-              offIcon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
-              onIcon={<Icon><span class="material-symbols-outlined">zoom_out</span></Icon>}
-          ></StandardIconToggleButton>
-        </div>
+        <Show when={display() !== 'full'}>
+          <div class={'header__menu'}>
+            <StandardIconToggleButton
+                onClick={switchDisplay}
+                offIcon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
+                onIcon={<Icon><span class="material-symbols-outlined">zoom_out</span></Icon>}
+            ></StandardIconToggleButton>
+          </div>
+        </Show>
       </div>
   );
 };

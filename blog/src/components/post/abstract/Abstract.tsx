@@ -6,13 +6,12 @@ export type AbstractProps = {
 
 export const Abstract: Component<AbstractProps> = props => {
   const {displaySignal} = usePostContext();
-  const [display, setDisplay] = displaySignal;
+  const [display, ] = displaySignal;
   return (
       <span
           classList={{
             'body-small': display() === 'preview-small',
-            'body-medium': display() === 'preview-large',
-            'body-large': display() === 'full',
+            'body-large': display() === 'full' || display() === 'preview-large',
           }}>{props.children}</span>
   );
 };

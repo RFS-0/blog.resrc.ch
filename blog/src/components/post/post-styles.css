@@ -12,7 +12,7 @@
     transition-duration: var(--sys-transition-duration);
 }
 
-.post-container--hover {
+.post-container--hover:not(.large) {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 2px 10px rgba(0,0,0,0.2);
 }
 
@@ -23,17 +23,20 @@
 @media (min-width: 233px) {
     .post-container {
         width: var(--fib-13);
+        gap: var(--fib-6);
     }
 }
 
 @media (min-width: 411px) {
     .post-container {
         width: var(--fib-13);
+        gap: var(--fib-6);
     }
 }
 
 @media (min-width: 788px) {
     .post-container {
         width: var(--fib-14);
+        gap: var(--fib-8);
     }
 }
