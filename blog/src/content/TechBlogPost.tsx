@@ -115,6 +115,26 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                 ]}
             />
           </Section>
+
+          <SectionTitle>Web Technologies</SectionTitle>
+          <Section>
+            The following resources are focused on domain driven design and related topics:
+
+            <Resources
+                resources={[
+                  {
+                    type: 'link',
+                    title: 'Dev.to Account of Ryan Carniato (SolidJS)',
+                    description:
+                        'Frontend performance enthusiast and Fine-Grained Reactivity super fan. Author of the SolidJS UI library and MarkoJS Core Team Member.',
+                    index: 1,
+                    data: {
+                      url: 'https://dev.to/ryansolid',
+                    },
+                  },
+                ]}
+            />
+          </Section>
         </Body>
         <Actions
             onAction={() => {
