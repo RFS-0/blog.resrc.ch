@@ -12,7 +12,6 @@ export const Actions = (props: ActionsProps) => {
 
   return (
       <div class={'flex flex-row'}>
-
         <Switch>
           <Match when={display() === 'preview-small' || display() === 'preview-large'}>
             <Button

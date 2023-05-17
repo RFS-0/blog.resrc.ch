@@ -40,6 +40,7 @@ export const Header: Component<HeaderProps> = (props) => {
         <Show when={display() !== 'full'}>
           <div class={'header__menu'}>
             <StandardIconToggleButton
+                selected={display() === 'preview-large'}
                 onClick={switchDisplay}
                 offIcon={<Icon><span class="material-symbols-outlined">zoom_in</span></Icon>}
                 onIcon={<Icon><span class="material-symbols-outlined">zoom_out</span></Icon>}

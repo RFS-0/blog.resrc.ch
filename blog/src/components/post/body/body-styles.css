@@ -14,6 +14,9 @@
 }
 
 .resrc-body.resrc-hidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
     max-height: 0;
     opacity: 0;
 
@@ -21,6 +24,6 @@
 }
 
 .resrc-body:not(.resrc-hidden) {
-    max-height: 100svh;
+    max-height: 100%;
     opacity: 1;
 }

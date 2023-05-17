@@ -4,11 +4,11 @@ import { PostContextProvider } from '~/components/post/PostContextProvider';
 import './post-styles.css';
 
 export type PostProps = {
-  display?: DisplayVariant;
+  display: DisplayVariant;
 } & ParentProps
 
 export const Post: Component<PostProps> = (props) => {
-  const displaySignal = createSignal<DisplayVariant>(props.display || 'preview-small');
+  const displaySignal = createSignal<DisplayVariant>(props.display);
   const [display] = displaySignal;
   const [hovered, setHovered] = createSignal(false);
 

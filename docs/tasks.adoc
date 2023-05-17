@@ -24,6 +24,46 @@ Thus, the following can be used as a template for a task:
 
 === Tasks In Progress
 
+=== Backlog
+
+. Write blog post on JS Arrays
+* Goal
+** Write a blog post on the maximum size of JS Arrays
+* Requirements
+** Blog post is written
+* Hints
+** Basic structure already exists
+
+. Write blog post on useful books for software developers
+* Goal
+** Write a blog post on useful books for software developers
+* Requirements
+** Blog post is written
+* Hints
+
+. Align design system to upstream changes in Material Design 3 Web
+* Goal
+** Align design system to upstream changes in Material Design 3 Web
+* Requirements
+** Design system is up to date
+* Hints
+
+. Extract design system to separate repository and NPM package
+* Goal
+** Facilitate the reuse of the design system
+* Requirements
+** Design system has its own repository
+** Design system is published as NPM package
+** NPM package is used in the project
+* Hints
+
+==== Implement navigation functionality
+
+[#tasks-with-open-questions]
+=== Tasks With Open Questions
+
+=== Completed Tasks
+
 . Implement root page according to mockup
 * Goal
 ** Implement root page according to mockup in Figma
@@ -31,34 +71,3 @@ Thus, the following can be used as a template for a task:
 ** Root page looks like mockup
 * Hints
 ** Reuse/Extend existing components for Material Design 3
-
-=== Backlog
-
-==== Implement navigation functionality
-
-. Navigation Functionality
-* Goal
-** Implement basic navigation functionality for the blog-like web app, allowing users to easily navigate through the site and access different sections as described in the provided sitemap.
-This will enhance user experience and help them find relevant content efficiently.
-* Requirements
-** Ensure the navigation bar or menu is easily accessible and visible on all pages of the website.
-** Ensure the navigation bar or menu is responsive and adapts well to different screen sizes, such as mobile, tablet, and desktop.
-** Create a navigation bar or menu containing links to each section of the website as described in the sitemap depicted below.
-** The navigation functionality should follow web accessibility guidelines to support users with disabilities.
-Hints
-** Consider using popular front-end libraries and frameworks, such as Bootstrap or Tailwind CSS, to create a responsive and accessible navigation bar.
-** You may use the <nav> HTML element to create a semantic and accessible navigation bar.
-** Utilize CSS media queries to adapt the navigation bar or menu to different screen sizes.
-* Result
-** The implemented basic navigation functionality will allow users to easily access and navigate between different sections of the website, as described in the sitemap.
-The navigation bar or menu will be responsive and accessible, ensuring a smooth user experience across various devices and for users with disabilities.
-
-plantuml::./diagrams/sitemap.puml[format=svg]
-
-
-[#tasks-with-open-questions]
-=== Tasks With Open Questions
-
-
-=== Completed Tasks
-

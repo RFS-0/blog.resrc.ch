@@ -1,0 +1,10 @@
+.resources {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fib-7);
+    margin-top: var(--fib-8);
+    margin-bottom: var(--fib-8);
+    padding: var(--fib-8);
+    background-color: var(--sys-surface-container-high);
+    border-radius: var(--fib-8);
+}

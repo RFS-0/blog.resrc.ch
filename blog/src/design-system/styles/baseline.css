@@ -530,3 +530,6 @@ a {
     text-decoration: underline
 }
 
+.bg-surface-container-high {
+    background-color: var(--sys-surface-container-high);
+}
