@@ -1,4 +1,4 @@
-import { Component, createSignal, ParentProps } from 'solid-js';
+import { Component, createEffect, createSignal, ParentProps } from 'solid-js';
 
 import './post-styles.css';
 import { DisplayVariant } from '~/components/post/post-types';
@@ -14,6 +14,18 @@ export const Post: Component<PostProps> = (props) => {
   const [hovered, setHovered] = createSignal(false);
 
   let post: HTMLDivElement;
+
+  createEffect(() => {
+    if (!!post && display() !== 'full') {
+      setTimeout(() => {
+        post.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'center'
+        })
+      }, 401)
+    }
+  });
 
   // noinspection JSUnusedAssignment
   return (
