@@ -1,0 +1,25 @@
+.section {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+@media (min-width: 233px) {
+    .section {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media (min-width: 411px) {
+    .section {
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
+@media (min-width: 788px) {
+    .section {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}

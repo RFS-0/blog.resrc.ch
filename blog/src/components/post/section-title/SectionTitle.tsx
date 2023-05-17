@@ -6,14 +6,14 @@ export type SectionTitleProps = {} & ParentProps
 
 export const SectionTitle = (props: SectionTitleProps) => {
   const {displaySignal} = usePostContext();
-  const [display, ] = displaySignal;
+  const [display] = displaySignal;
 
   return (
       <span
           class={'section-title'}
           classList={{
-            'title-large': display() === 'preview-small' || display() === 'preview-large',
-            'headline-large': display() === 'full',
+            'title-small': display() === 'preview-large' || display() === 'preview-small',
+            'headline-small': display() === 'full',
           }}>{props.children}</span>
   );
 };

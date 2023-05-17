@@ -4,7 +4,7 @@ import { usePostContext } from '~/components/post/PostContextProvider';
 import './header-styles.css';
 
 export type HeaderProps = {
-  title: string
+  headline: string
 }
 
 export const Header: Component<HeaderProps> = (props) => {
@@ -30,12 +30,12 @@ export const Header: Component<HeaderProps> = (props) => {
         <div
             class="header__title"
             classList={{
-              'title-large': display() === 'preview-small',
-              'display-medium': display() === 'preview-large',
-              'display-large': display() === 'full',
+              'title-small': display() === 'preview-small',
+              'title-large': display() === 'preview-large',
+              'headline-medium': display() === 'full',
             }}
         >
-          {props.title}
+          {props.headline}
         </div>
         <Show when={display() !== 'full'}>
           <div class={'header__menu'}>

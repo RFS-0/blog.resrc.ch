@@ -16,7 +16,7 @@ export default function TechBlogs() {
       <Page>
         <Post display={'full'}>
           <Header
-              title={'Noteworthy Tech Blogs for Programmers'}
+              headline={'Noteworthy Tech Blogs for Programmers'}
           />
           <MetaData
               publishedOn={new Date(2023, 4, 11)}

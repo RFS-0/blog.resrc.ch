@@ -19,11 +19,11 @@
     --_hover-state-layer-color: var(--sys-primary);
     --_hover-state-layer-opacity: 0.08;
     --_label-text-color: var(--sys-primary);
-    --_label-text-font: Roboto;
+    --_label-text-font: var(--sys-font-family);
     --_label-text-line-height: 1.25rem;
     --_label-text-size: 0.875rem;
     --_label-text-tracking: 0.006rem;
-    --_label-text-type: Roboto;
+    --_label-text-type: var(--sys-font-family);
     --_label-text-weight: 500;
     --_pressed-container-elevation: 1;
     --_pressed-label-text-color: var(--sys-primary);

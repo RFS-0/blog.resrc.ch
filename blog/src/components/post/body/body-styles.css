@@ -5,7 +5,7 @@
     gap: var(--fib-5);
     max-height: 0;
     opacity: 1;
-    overflow: hidden;
+    height: 100%;
 
     transition-property: all;
     transition-timing-function: ease-in-out;

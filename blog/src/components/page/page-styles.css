@@ -22,6 +22,7 @@
     .page {
         gap: var(--fib-8);
         margin: var(--fib-8);
+        margin: var(--fib-5);
     }
 }
 

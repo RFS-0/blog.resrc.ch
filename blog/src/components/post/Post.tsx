@@ -1,8 +1,7 @@
 import { Component, createEffect, createSignal, ParentProps } from 'solid-js';
-
-import './post-styles.css';
 import { DisplayVariant } from '~/components/post/post-types';
 import { PostContextProvider } from '~/components/post/PostContextProvider';
+import './post-styles.css';
 
 export type PostProps = {
   display?: DisplayVariant;
@@ -21,9 +20,9 @@ export const Post: Component<PostProps> = (props) => {
         post.scrollIntoView({
           behavior: 'smooth',
           block: 'center',
-          inline: 'center'
-        })
-      }, 401)
+          inline: 'center',
+        });
+      }, 401);
     }
   });
 
@@ -35,7 +34,8 @@ export const Post: Component<PostProps> = (props) => {
                 ref={post!}
                 class={'post-container'}
                 classList={{
-                  'large': display() === 'preview-large' || display() === 'full',
+                  'large': display() === 'preview-large',
+                  'full': display() === 'full',
                   'post-container--hover': hovered(),
 
                 }}

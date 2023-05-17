@@ -45,7 +45,7 @@
     --_hover-supporting-text-color: var(--md-outlined-field-hover-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));
     --_hover-trailing-icon-color: var(--md-outlined-field-hover-trailing-icon-color, var(--md-sys-color-on-surface-variant, #49454f));
     --_label-text-color: var(--md-outlined-field-label-text-color, var(--md-sys-color-on-surface-variant, #49454f));
-    --_label-text-font: var(--md-outlined-field-label-text-font, Roboto);
+    --_label-text-font: var(--md-outlined-field-label-text-font, --sys-font-family);
     --_label-text-line-height: var(--md-outlined-field-label-text-line-height, 1.5rem);
     --_label-text-populated-line-height: var(--md-outlined-field-label-text-populated-line-height, 1rem);
     --_label-text-populated-size: var(--md-outlined-field-label-text-populated-size, 0.75rem);
@@ -57,7 +57,7 @@
     --_outline-color: var(--md-outlined-field-outline-color, var(--md-sys-color-outline, #79747e));
     --_outline-width: var(--md-outlined-field-outline-width, 1px);
     --_supporting-text-color: var(--md-outlined-field-supporting-text-color, var(--md-sys-color-on-surface-variant, #49454f));
-    --_supporting-text-font: var(--md-outlined-field-supporting-text-font, Roboto);
+    --_supporting-text-font: var(--md-outlined-field-supporting-text-font, --sys-font-family);
     --_supporting-text-line-height: var(--md-outlined-field-supporting-text-line-height, 1rem);
     --_supporting-text-size: var(--md-outlined-field-supporting-text-size, 0.75rem);
     --_supporting-text-tracking: var(--md-outlined-field-supporting-text-tracking, 0.025rem);

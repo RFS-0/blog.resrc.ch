@@ -8,7 +8,7 @@ export const AppBarMiddleContent: Component<AppBarMiddleContentProps> = (_) => {
 
   return (
     <div class='app-bar-middle-content'>
-      <div class='app-bar-middle-content__title'>
+      <div class='app-bar-middle-content__title body-large'>
         resrc Blog
       </div>
       <div class='app-bar-middle-content__search'>

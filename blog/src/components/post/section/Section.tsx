@@ -1,20 +1,23 @@
 import { ParentProps } from 'solid-js';
 import { usePostContext } from '~/components/post/PostContextProvider';
 
-export type SectionProps = {
-} & ParentProps
+import './section-styles.css';
+
+export type SectionProps = {} & ParentProps
 
 export const Section = (props: SectionProps) => {
   const {displaySignal} = usePostContext();
   const [display, setDisplay] = displaySignal;
 
   return (
-    <section classList={{
-
-      'body-medium': display() === 'preview-small' || display() === 'preview-large',
-      'body-large': display() === 'full',
-    }}>
-      {props.children}
-    </section>
+      <section
+          class="section"
+          classList={{
+            'body-small': display() === 'preview-small',
+            'body-medium': display() === 'preview-large',
+            'body-large': display() === 'full',
+          }}>
+        {props.children}
+      </section>
   );
-}
+};

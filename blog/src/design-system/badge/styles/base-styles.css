@@ -2,7 +2,7 @@
     --_color: var(--sys-error);
     --_large-color: var(--sys-error);
     --_large-label-text-color: var(--sys-on-error);
-    --_large-label-text-font: Roboto;
+    --_large-label-text-font: var(--sys-font-family);
     --_large-label-text-line-height:  1rem;
     --_large-label-text-size:  0.688rem;
     --_large-label-text-tracking: 0.031rem;

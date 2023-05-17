@@ -4,85 +4,88 @@
     --sys-transition-delay: 0.4s;
     --sys-transition-duration: 0.4s;
 
+    --sys-font-family: 'Noto Serif', serif;
+
     /*set 1 rem to 21px*/
     font-size: 21px;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--sys-font-family);
+    font-weight: 400;
     font-style: normal;
 
     --sys-display-large--font-weight: 400;
-    --sys-display-large--line-height: 3rem; /*63px*/
-    --sys-display-large--font-size: 2.62rem; /*55px*/
+    --sys-display-large--line-height: 4.5rem;
+    --sys-display-large--font-size: 3.3rem;
     --sys-display-large--letter-spacing: -0.25;
 
-    --sys-display-medium--line-height: 2.62rem; /*55px*/
-    --sys-display-medium--font-size: 2rem; /*42px*/
+    --sys-display-medium--line-height: 4rem;
+    --sys-display-medium--font-size: 2.9rem;
     --sys-display-medium--letter-spacing: 0;
     --sys-display-medium--font-weight: 400;
 
-    --sys-display-small--line-height: 2rem; /*42px*/
-    --sys-display-small--font-size: 1.62rem; /*34px*/
+    --sys-display-small--line-height: 3.5rem;
+    --sys-display-small--font-size: 2.5rem;
     --sys-display-small--letter-spacing: 0;
     --sys-display-small--font-weight: 400;
 
-    --sys-headline-large--line-height: 2.24rem; /*47px*/
-    --sys-headline-large--font-size: 1.62rem; /*34px*/
+    --sys-headline-large--line-height: 3.0rem;
+    --sys-headline-large--font-size: 2.2rem;
     --sys-headline-large--letter-spacing: 0;
     --sys-headline-large--font-weight: 400;
 
-    --sys-headline-medium--line-height: 1.62rem; /*34px*/
-    --sys-headline-medium--font-size: 1.24rem; /*26px*/
+    --sys-headline-medium--line-height: 2.7rem;
+    --sys-headline-medium--font-size: 1.9rem;
     --sys-headline-medium--letter-spacing: 0;
     --sys-headline-medium--font-weight: 400;
 
-    --sys-headline-small--line-height: 1.24rem; /*26px*/
-    --sys-headline-small--font-size: 1rem; /*21px*/
+    --sys-headline-small--line-height: 2.6rem;
+    --sys-headline-small--font-size: 1.7rem;
     --sys-headline-small--letter-spacing: 0;
     --sys-headline-small--font-weight: 400;
 
-    --sys-title-large--line-height: 1.24rem; /*26px*/
-    --sys-title-large--font-size: 1rem; /*21px*/
+    --sys-title-large--line-height: 2.4rem;
+    --sys-title-large--font-size: 1.6rem;
     --sys-title-large--letter-spacing: 0;
     --sys-title-large--font-weight: 500;
 
-    --sys-title-medium--line-height: 1rem; /*21px*/
-    --sys-title-medium--font-size: 0.76rem; /*16px*/
+    --sys-title-medium--line-height: 2.3rem;
+    --sys-title-medium--font-size: 1.5rem;
     --sys-title-medium--letter-spacing: 0.15;
     --sys-title-medium--font-weight: 500;
 
-    --sys-title-small--line-height: 0.76rem; /*16px*/
-    --sys-title-small--font-size: 0.52rem; /*11px*/
+    --sys-title-small--line-height: 2.2rem;
+    --sys-title-small--font-size: 1.4rem;
     --sys-title-small--letter-spacing: 0.1;
     --sys-title-small--font-weight: 500;
 
-    --sys-label-large--line-height: 1rem; /*21px*/
-    --sys-label-large--font-size: 0.62rem; /*13px*/
-    --sys-label-large--letter-spacing: 0.1;
-    --sys-label-large--font-weight: 500;
-
-    --sys-label-medium--line-height: 0.76rem; /*16px*/
-    --sys-label-medium--font-size: 0.52rem; /*11px*/
-    --sys-label-medium--letter-spacing: 0.5;
-    --sys-label-medium--font-weight: 500;
-
-    --sys-label-small--line-height: 0.76rem; /*16px*/
-    --sys-label-small--font-size: 0.48rem; /*10px*/
-    --sys-label-small--letter-spacing: 0.5;
-    --sys-label-small--font-weight: 500;
-
-    --sys-body-large--line-height: 1.14rem; /*24px*/
-    --sys-body-large--font-size: 0.76rem; /*16px*/
+    --sys-body-large--line-height: 1.7rem;
+    --sys-body-large--font-size: 1.1rem;
     --sys-body-large--letter-spacing: 0.5;
     --sys-body-large--font-weight: 400;
 
-    --sys-body-medium--line-height: 1rem; /*21px*/
-    --sys-body-medium--font-size: 0.62rem; /*13px*/
+    --sys-body-medium--line-height: 1.6rem;
+    --sys-body-medium--font-size: 1rem;
     --sys-body-medium--letter-spacing: 0.25;
     --sys-body-medium--font-weight: 400;
 
-    --sys-body-small--line-height: 0.76rem; /*16px*/
-    --sys-body-small--font-size: 0.62rem; /*13px*/
+    --sys-body-small--line-height: 1.5rem;
+    --sys-body-small--font-size: 0.9rem;
     --sys-body-small--letter-spacing: 0.25;
     --sys-body-small--font-weight: 400;
+
+    --sys-label-large--line-height: 1.3rem;
+    --sys-label-large--font-size: 0.8rem;
+    --sys-label-large--letter-spacing: 0.1;
+    --sys-label-large--font-weight: 500;
+
+    --sys-label-medium--line-height: 1.2rem;
+    --sys-label-medium--font-size: 0.7rem;
+    --sys-label-medium--letter-spacing: 0.5;
+    --sys-label-medium--font-weight: 500;
+
+    --sys-label-small--line-height: 1.1rem;
+    --sys-label-small--font-size: 0.6rem;
+    --sys-label-small--letter-spacing: 0.5;
+    --sys-label-small--font-weight: 500;
 
     --fib-1: 1px;
     --fib-2: 1px;

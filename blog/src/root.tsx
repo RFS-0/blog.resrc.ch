@@ -21,7 +21,7 @@ export default function Root() {
               href="https://fonts.gstatic.com"
               crossorigin="anonymous"/>
           <Link
-              href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&display=swap"
               rel="stylesheet"
               crossorigin="anonymous"/>
           <Link rel="stylesheet"

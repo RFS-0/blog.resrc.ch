@@ -16,11 +16,11 @@
     --_list-item-hover-state-layer-color: var(--md-menu-list-item-hover-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));
     --_list-item-hover-state-layer-opacity: var(--md-menu-list-item-hover-state-layer-opacity, 0.08);
     --_list-item-label-text-color: var(--md-menu-list-item-label-text-color, var(--md-sys-color-on-surface, #1c1b1f));
-    --_list-item-label-text-font: var(--md-menu-list-item-label-text-font, Roboto);
+    --_list-item-label-text-font: var(--md-menu-list-item-label-text-font, --sys-font-family);
     --_list-item-label-text-line-height: var(--md-menu-list-item-label-text-line-height, 1.25rem);
     --_list-item-label-text-size: var(--md-menu-list-item-label-text-size, 0.875rem);
     --_list-item-label-text-tracking: var(--md-menu-list-item-label-text-tracking, 0.006rem);
-    --_list-item-label-text-type: var(--md-menu-list-item-label-text-type, 500 0.875rem / 1.25rem Roboto);
+    --_list-item-label-text-type: var(--md-menu-list-item-label-text-type, 500 0.875rem / 1.25rem --sys-font-family);
     --_list-item-label-text-weight: var(--md-menu-list-item-label-text-weight, 500);
     --_list-item-pressed-label-text-color: var(--md-menu-list-item-pressed-label-text-color, var(--md-sys-color-on-surface, #1c1b1f));
     --_list-item-pressed-state-layer-color: var(--md-menu-list-item-pressed-state-layer-color, var(--md-sys-color-on-surface, #1c1b1f));

@@ -10,7 +10,7 @@
 .app-bar-middle-content__title {
     display: flex;
     align-items: center;
-    width: var(--fib-11);
+    width: var(--fib-12);
     height: 100%;
 }
 

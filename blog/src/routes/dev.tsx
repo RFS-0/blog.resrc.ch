@@ -160,6 +160,105 @@ export default function Dev() {
 
           </div>
         </Page>
+
+        <div class="display-large">
+          Display large
+        </div>
+        <div class="display-large">
+          Display large
+        </div>
+        <div class="display-medium">
+          Display medium
+        </div>
+        <div class="display-medium">
+          Display medium
+        </div>
+        <div class="display-small">
+          Display small
+        </div>
+        <div class="display-small">
+          Display small
+        </div>
+
+
+        <div class="headline-large">
+          Headline large
+        </div>
+        <div class="headline-large">
+          Headline large
+        </div>
+        <div class="headline-medium">
+          Headline medium
+        </div>
+        <div class="headline-medium">
+          Headline medium
+        </div>
+        <div class="headline-small">
+          Headline small
+        </div>
+        <div class="headline-small">
+          Headline small
+        </div>
+
+
+        <div class="title-large">
+          Title large
+        </div>
+        <div class="title-large">
+          Title large
+        </div>
+        <div class="title-medium">
+          Title medium
+        </div>
+        <div class="title-medium">
+          Title medium
+        </div>
+        <div class="title-small">
+          Title small
+        </div>
+        <div class="title-small">
+          Title small
+        </div>
+
+        <div class="body-large">
+          Body large
+        </div>
+        <div class="body-large">
+          Body large
+        </div>
+        <div class="body-medium">
+          Body medium
+        </div>
+        <div class="body-medium">
+          Body medium
+        </div>
+        <div class="body-small">
+          Body small
+        </div>
+        <div class="body-small">
+          Body small
+        </div>
+
+
+        <div class="label-large">
+          Label large
+        </div>
+        <div class="label-large">
+          Label large
+        </div>
+        <div class="label-medium">
+          Label medium
+        </div>
+        <div class="label-medium">
+          Label medium
+        </div>
+        <div class="label-small">
+          Label small
+        </div>
+        <div class="label-small">
+          Label small
+        </div>
+
       </main>
   );
 }
