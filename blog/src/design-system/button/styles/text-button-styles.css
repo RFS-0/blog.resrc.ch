@@ -54,6 +54,6 @@
 @media (min-width: 788px) {
     .button-shared.button--text {
         --_with-icon-icon-size: 24px;
-        --_container-height: 48px;
+        --_container-height: 40px;
     }
 }
