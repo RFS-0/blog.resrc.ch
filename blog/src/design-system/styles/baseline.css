@@ -1,8 +1,88 @@
 :root {
     color-scheme: light;
 
-    --sys-transition-duration: 0.4s;
     --sys-transition-delay: 0.4s;
+    --sys-transition-duration: 0.4s;
+
+    /*set 1 rem to 21px*/
+    font-size: 21px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+
+    --sys-display-large--font-weight: 400;
+    --sys-display-large--line-height: 3rem; /*63px*/
+    --sys-display-large--font-size: 2.62rem; /*55px*/
+    --sys-display-large--letter-spacing: -0.25;
+
+    --sys-display-medium--line-height: 2.62rem; /*55px*/
+    --sys-display-medium--font-size: 2rem; /*42px*/
+    --sys-display-medium--letter-spacing: 0;
+    --sys-display-medium--font-weight: 400;
+
+    --sys-display-small--line-height: 2rem; /*42px*/
+    --sys-display-small--font-size: 1.62rem; /*34px*/
+    --sys-display-small--letter-spacing: 0;
+    --sys-display-small--font-weight: 400;
+
+    --sys-headline-large--line-height: 2.24rem; /*47px*/
+    --sys-headline-large--font-size: 1.62rem; /*34px*/
+    --sys-headline-large--letter-spacing: 0;
+    --sys-headline-large--font-weight: 400;
+
+    --sys-headline-medium--line-height: 1.62rem; /*34px*/
+    --sys-headline-medium--font-size: 1.24rem; /*26px*/
+    --sys-headline-medium--letter-spacing: 0;
+    --sys-headline-medium--font-weight: 400;
+
+    --sys-headline-small--line-height: 1.24rem; /*26px*/
+    --sys-headline-small--font-size: 1rem; /*21px*/
+    --sys-headline-small--letter-spacing: 0;
+    --sys-headline-small--font-weight: 400;
+
+    --sys-title-large--line-height: 1.24rem; /*26px*/
+    --sys-title-large--font-size: 1rem; /*21px*/
+    --sys-title-large--letter-spacing: 0;
+    --sys-title-large--font-weight: 500;
+
+    --sys-title-medium--line-height: 1rem; /*21px*/
+    --sys-title-medium--font-size: 0.76rem; /*16px*/
+    --sys-title-medium--letter-spacing: 0.15;
+    --sys-title-medium--font-weight: 500;
+
+    --sys-title-small--line-height: 0.76rem; /*16px*/
+    --sys-title-small--font-size: 0.52rem; /*11px*/
+    --sys-title-small--letter-spacing: 0.1;
+    --sys-title-small--font-weight: 500;
+
+    --sys-label-large--line-height: 1rem; /*21px*/
+    --sys-label-large--font-size: 0.62rem; /*13px*/
+    --sys-label-large--letter-spacing: 0.1;
+    --sys-label-large--font-weight: 500;
+
+    --sys-label-medium--line-height: 0.76rem; /*16px*/
+    --sys-label-medium--font-size: 0.52rem; /*11px*/
+    --sys-label-medium--letter-spacing: 0.5;
+    --sys-label-medium--font-weight: 500;
+
+    --sys-label-small--line-height: 0.76rem; /*16px*/
+    --sys-label-small--font-size: 0.48rem; /*10px*/
+    --sys-label-small--letter-spacing: 0.5;
+    --sys-label-small--font-weight: 500;
+
+    --sys-body-large--line-height: 1.14rem; /*24px*/
+    --sys-body-large--font-size: 0.76rem; /*16px*/
+    --sys-body-large--letter-spacing: 0.5;
+    --sys-body-large--font-weight: 400;
+
+    --sys-body-medium--line-height: 1rem; /*21px*/
+    --sys-body-medium--font-size: 0.62rem; /*13px*/
+    --sys-body-medium--letter-spacing: 0.25;
+    --sys-body-medium--font-weight: 400;
+
+    --sys-body-small--line-height: 0.76rem; /*16px*/
+    --sys-body-small--font-size: 0.62rem; /*13px*/
+    --sys-body-small--letter-spacing: 0.25;
+    --sys-body-small--font-weight: 400;
 
     --fib-1: 1px;
     --fib-2: 1px;
@@ -235,161 +315,108 @@
 }
 
 .display-large {
-    font-size: 57px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 64px;
-    letter-spacing: -0.25px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-display-large--font-size);
+    font-weight: var(--sys-display-large--font-weight);
+    line-height: var(--sys-display-large--line-height);
+    letter-spacing: var(--sys-display-large--letter-spacing);
 }
 
 .display-medium {
-    font-size: 45px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 52px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-display-medium--font-size);
+    font-weight: var(--sys-display-medium--font-weight);
+    line-height: var(--sys-display-medium--line-height);
+    letter-spacing: var(--sys-display-medium--letter-spacing);
 }
 
 .display-small {
-    font-size: 36px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 44px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-display-small--font-size);
+    font-weight: var(--sys-display-small--font-weight);
+    line-height: var(--sys-display-small--line-height);
+    letter-spacing: var(--sys-display-small--letter-spacing);
 }
 
 .headline-large {
-    font-size: 32px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 40px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-headline-large--font-size);
+    font-weight: var(--sys-headline-large--font-weight);
+    line-height: var(--sys-headline-large--line-height);
+    letter-spacing: var(--sys-headline-large--letter-spacing);
 }
 
 .headline-medium {
-    font-size: 28px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 36px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-headline-medium--font-size);
+    font-weight: var(--sys-headline-medium--font-weight);
+    line-height: var(--sys-headline-medium--line-height);
+    letter-spacing: var(--sys-headline-medium--letter-spacing);
 }
 
 .headline-small {
-    font-size: 24px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 32px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-headline-small--font-size);
+    font-weight: var(--sys-headline-small--font-weight);
+    line-height: var(--sys-headline-small--line-height);
+    letter-spacing: var(--sys-headline-small--letter-spacing);
 }
 
 .title-large {
-    font-size: 22px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 28px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-title-large--font-size);
+    font-weight: var(--sys-title-large--font-weight);
+    line-height: var(--sys-title-large--line-height);
+    letter-spacing: var(--sys-title-large--letter-spacing);
 }
 
 .title-medium {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 24px;
-    letter-spacing: 0.15px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-title-medium--font-size);
+    font-weight: var(--sys-title-medium--font-weight);
+    line-height: var(--sys-title-medium--line-height);
+    letter-spacing: var(--sys-title-medium--letter-spacing);
 }
 
 .title-small {
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 20px;
-    letter-spacing: 0.1px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-title-small--font-size);
+    font-weight: var(--sys-title-small--font-weight);
+    line-height: var(--sys-title-small--line-height);
+    letter-spacing: var(--sys-title-small--letter-spacing);
 }
 
 .body-large {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-body-large--font-size);
+    font-weight: var(--sys-body-large--font-weight);
+    line-height: var(--sys-body-large--line-height);
+    letter-spacing: var(--sys-body-large--letter-spacing);
 }
 
 .body-medium {
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 20px;
-    letter-spacing: 0.25px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-body-medium--font-size);
+    font-weight: var(--sys-body-medium--font-weight);
+    line-height: var(--sys-body-medium--line-height);
+    letter-spacing: var(--sys-body-medium--letter-spacing);
 }
 
 .body-small {
-    font-size: 12px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 16px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-body-small--font-size);
+    font-weight: var(--sys-body-small--font-weight);
+    line-height: var(--sys-body-small--line-height);
+    letter-spacing: var(--sys-body-small--letter-spacing);
 }
 
 .label-large {
-    font-size: 14px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 20px;
-    letter-spacing: 0.1px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-label-large--font-size);
+    font-weight: var(--sys-label-large--font-weight);
+    line-height: var(--sys-label-large--line-height);
+    letter-spacing: var(--sys-label-large--letter-spacing);
 }
 
 .label-medium {
-    font-size: 12px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 16px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-label-medium--font-size);
+    font-weight: var(--sys-label-medium--font-weight);
+    line-height: var(--sys-label-medium--line-height);
+    letter-spacing: var(--sys-label-medium--letter-spacing);
 }
 
 .label-small {
-    font-size: 11px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 16px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: none;
+    font-size: var(--sys-label-small--font-size);
+    font-weight: var(--sys-label-small--font-weight);
+    line-height: var(--sys-label-small--line-height);
+    letter-spacing: var(--sys-label-small--letter-spacing);
 }
 
 .effect-style-resrc-elevation-1 {
@@ -488,7 +515,6 @@ body {
 
 a {
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
