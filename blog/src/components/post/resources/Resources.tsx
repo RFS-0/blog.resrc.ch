@@ -14,7 +14,8 @@ export type ResourcesProps = {
 }
 
 export const Resources: Component<ResourcesProps> = (props) => {
-  const _ = (tag: string) => {
+  // noinspection JSUnusedLocalSymbols
+  const filterPostByTag = (tag: string) => {
     console.log('filtering posts by tag: ', tag);
   };
 

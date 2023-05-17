@@ -17,11 +17,11 @@ export const Post: Component<PostProps> = (props) => {
   createEffect(() => {
     if (!!post && display() !== 'full') {
       setTimeout(() => {
-        post.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'center',
-        });
+              post.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'start',
+              });
       }, 401);
     }
   });
