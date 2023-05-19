@@ -1,0 +1,20 @@
+.diagram {
+    background-color: var(--sys-surface-container-high);
+    border-radius: var(--fib-8);
+    margin-top: var(--fib-8);
+    margin-bottom: var(--fib-8);
+    padding: var(--fib-8);
+    width: 100%;
+}
+
+.resrc-list {
+    background-color: var(--sys-surface-container-high);
+    border-radius: var(--fib-8);
+    display: flex;
+    flex-direction: column;
+    padding: var(--fib-8) var(--fib-9) var(--fib-8) var(--fib-10);
+}
+
+.resrc-list li, .resrc-list li::marker {
+    padding-left: var(--fib-7);
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="867px" preserveAspectRatio="none" style="width:741px;height:867px;background:transparent;" version="1.1"
+     viewBox="0 0 741 867" width="741px" zoomAndPan="magnify"
+>
+    <defs/>
+    <g><!--entity common-config-->
+        <g id="elem_common-config">
+            <polygon fill="#F1F1F1"
+                     points="137,131.93,147,121.93,288,121.93,288,158.4183,278,168.4183,137,168.4183,137,131.93"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="278" x2="288" y1="131.93" y2="121.93"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="278" y1="131.93" y2="131.93"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="278" x2="278" y1="131.93" y2="168.4183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="152"
+                  y="155.4652">common-config
+            </text>
+        </g>
+        <g id="elem_GMN3">
+            <path d="M125.5,6 L125.5,61.9316 A0,0 0 0 0 125.5,61.9316 L208.5,61.9316 L212.5,121.66 L216.5,61.9316 L299.5,61.9316 A0,0 0 0 0 299.5,61.9316 L299.5,16 L289.5,6 L125.5,6 A0,0 0 0 0 125.5,6 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M289.5,6 L289.5,16 L299.5,16 L289.5,6 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96"
+                  x="131.5" y="23.5684">- Gradle config
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71"
+                  x="131.5" y="38.8789">- TS config
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153"
+                  x="131.5" y="54.1895">- other reusable configs
+            </text>
+        </g><!--entity capabilities-->
+        <g id="elem_capabilities">
+            <polygon fill="#F1F1F1"
+                     points="154,250.8,164,240.8,271,240.8,271,277.2883,261,287.2883,154,287.2883,154,250.8"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="261" x2="271" y1="250.8" y2="240.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="154" x2="261" y1="250.8" y2="250.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="261" x2="261" y1="250.8" y2="287.2883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="169"
+                  y="274.3352">capabilities
+            </text>
+        </g>
+        <g id="elem_GMN7">
+            <path d="M305.5,228.42 L305.5,260.04 L271.41,264.04 L305.5,268.04 L305.5,299.6622 A0,0 0 0 0 305.5,299.6622 L699.5,299.6622 A0,0 0 0 0 699.5,299.6622 L699.5,238.42 L689.5,228.42 L305.5,228.42 A0,0 0 0 0 305.5,228.42 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M689.5,228.42 L689.5,238.42 L699.5,238.42 L689.5,228.42 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="320"
+                  x="311.5" y="245.9884">Core functionality reusable independent of domain
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="373"
+                  x="311.5" y="261.2989">- Result [Success, Failure] (follows the concept of a Monad)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101"
+                  x="311.5" y="276.6095">- Error handling
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75"
+                  x="311.5" y="291.92">- Validation
+            </text>
+        </g><!--entity domain-->
+        <g id="elem_domain">
+            <polygon fill="#F1F1F1"
+                     points="166.5,369.66,176.5,359.66,258.5,359.66,258.5,396.1483,248.5,406.1483,166.5,406.1483,166.5,369.66"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="248.5" x2="258.5" y1="369.66" y2="359.66"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="166.5" x2="248.5" y1="369.66" y2="369.66"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="248.5" x2="248.5" y1="369.66" y2="406.1483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52"
+                  x="181.5" y="393.1952">domain
+            </text>
+        </g>
+        <g id="elem_GMN11">
+            <path d="M294,362.6 L294,378.91 L258.98,382.91 L294,386.91 L294,403.2211 A0,0 0 0 0 294,403.2211 L411,403.2211 A0,0 0 0 0 411,403.2211 L411,372.6 L401,362.6 L294,362.6 A0,0 0 0 0 294,362.6 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M401,362.6 L401,372.6 L411,372.6 L401,362.6 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="300"
+                  y="380.1684">- Entities
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="300"
+                  y="395.4789">- Value objects
+            </text>
+        </g><!--entity use cases-->
+        <g id="elem_use cases">
+            <polygon fill="#F1F1F1"
+                     points="160,480.87,170,470.87,265,470.87,265,507.3583,255,517.3583,160,517.3583,160,480.87"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="255" x2="265" y1="480.87" y2="470.87"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="160" x2="255" y1="480.87" y2="480.87"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="255" x2="255" y1="480.87" y2="517.3583"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="175"
+                  y="504.4052">use cases
+            </text>
+        </g>
+        <g id="elem_GMN15">
+            <path d="M300,466.15 L300,490.12 L265.44,494.12 L300,498.12 L300,522.0816 A0,0 0 0 0 300,522.0816 L433,522.0816 A0,0 0 0 0 433,522.0816 L433,476.15 L423,466.15 L300,466.15 A0,0 0 0 0 300,466.15 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M423,466.15 L423,476.15 L433,476.15 L423,466.15 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="306"
+                  y="483.7184">- Use cases
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="306"
+                  y="499.0289">- Inbound ports
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="306"
+                  y="514.3395">- Outbound ports
+            </text>
+        </g><!--entity adapter 1-->
+        <g id="elem_adapter 1">
+            <polygon fill="#F1F1F1"
+                     points="301.5,596.8,311.5,586.8,407.5,586.8,407.5,623.2883,397.5,633.2883,301.5,633.2883,301.5,596.8"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="397.5" x2="407.5" y1="596.8" y2="586.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="301.5" x2="397.5" y1="596.8" y2="596.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="397.5" x2="397.5" y1="596.8" y2="633.2883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66"
+                  x="316.5" y="620.3352">adapter 1
+            </text>
+        </g>
+        <g id="elem_GMN19">
+            <path d="M442.5,582.08 L442.5,606.05 L407.97,610.05 L442.5,614.05 L442.5,638.0116 A0,0 0 0 0 442.5,638.0116 L734.5,638.0116 A0,0 0 0 0 734.5,638.0116 L734.5,592.08 L724.5,582.08 L442.5,582.08 A0,0 0 0 0 442.5,582.08 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M724.5,582.08 L724.5,592.08 L734.5,592.08 L724.5,582.08 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82"
+                  x="448.5" y="599.6484">Adapters for:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="271"
+                  x="448.5" y="614.9589">- Inbound/Driving ports (e.g. Presentation)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="270"
+                  x="448.5" y="630.2695">- Outbound/Driven ports (e.g. Persistence)
+            </text>
+        </g><!--entity adapter ...-->
+        <g id="elem_adapter ...">
+            <polygon fill="#F1F1F1"
+                     points="158,596.8,168,586.8,267,586.8,267,623.2883,257,633.2883,158,633.2883,158,596.8"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="257" x2="267" y1="596.8" y2="586.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="158" x2="257" y1="596.8" y2="596.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="257" x2="257" y1="596.8" y2="633.2883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="173"
+                  y="620.3352">adapter ...
+            </text>
+        </g><!--entity adapter N-->
+        <g id="elem_adapter N">
+            <polygon fill="#F1F1F1" points="16,596.8,26,586.8,123,586.8,123,623.2883,113,633.2883,16,633.2883,16,596.8"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="113" x2="123" y1="596.8" y2="586.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="16" x2="113" y1="596.8" y2="596.8"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="113" x2="113" y1="596.8" y2="633.2883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="31"
+                  y="620.3352">adapter N
+            </text>
+        </g><!--entity application-config-->
+        <g id="elem_application-config">
+            <polygon fill="#F1F1F1"
+                     points="129,708.01,139,698.01,296,698.01,296,734.4983,286,744.4983,129,744.4983,129,708.01"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="286" x2="296" y1="708.01" y2="698.01"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="129" x2="286" y1="708.01" y2="708.01"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="286" x2="286" y1="708.01" y2="744.4983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="144"
+                  y="731.5452">application-config
+            </text>
+        </g>
+        <g id="elem_GMN25">
+            <path d="M331,708.6 L331,717.26 L296.29,721.26 L331,725.26 L331,733.9105 A0,0 0 0 0 331,733.9105 L534,733.9105 A0,0 0 0 0 534,733.9105 L534,718.6 L524,708.6 L331,708.6 A0,0 0 0 0 331,708.6 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M524,708.6 L524,718.6 L534,718.6 L524,708.6 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="182" x="337"
+                  y="726.1684">Wiring up ports and adapters
+            </text>
+        </g><!--entity application-->
+        <g id="elem_application">
+            <polygon fill="#F1F1F1"
+                     points="154.5,814.5,164.5,804.5,270.5,804.5,270.5,840.9883,260.5,850.9883,154.5,850.9883,154.5,814.5"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="260.5" x2="270.5" y1="814.5" y2="804.5"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="154.5" x2="260.5" y1="814.5" y2="814.5"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="260.5" x2="260.5" y1="814.5" y2="850.9883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76"
+                  x="169.5" y="838.0352">application
+            </text>
+        </g>
+        <g id="elem_GMN29">
+            <path d="M305,815.09 L305,823.75 L270.58,827.75 L305,831.75 L305,840.4005 A0,0 0 0 0 305,840.4005 L592,840.4005 A0,0 0 0 0 592,840.4005 L592,825.09 L582,815.09 L305,815.09 A0,0 0 0 0 305,815.09 "
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M582,815.09 L582,825.09 L592,825.09 L582,815.09 " fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="266" x="311"
+                  y="832.6584">Bootstrapping of the application's runtime
+            </text>
+        </g><!--reverse link common-config to capabilities-->
+        <g id="link_common-config_capabilities">
+            <path d="M212.5,174.51 C212.5,194.8 212.5,221.76 212.5,240.58 " fill="none"
+                  id="common-config-backto-capabilities" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,169.71,208.5,178.71,212.5,174.71,216.5,178.71,212.5,169.71"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link capabilities to domain-->
+        <g id="link_capabilities_domain">
+            <path d="M212.5,293.37 C212.5,313.67 212.5,340.63 212.5,359.44 " fill="none" id="capabilities-backto-domain"
+                  style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,288.57,208.5,297.57,212.5,293.57,216.5,297.57,212.5,288.57"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link domain to use cases-->
+        <g id="link_domain_use cases">
+            <path d="M212.5,412.47 C212.5,430.58 212.5,453.68 212.5,470.52 " fill="none" id="domain-backto-use cases"
+                  style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,407.53,208.5,416.53,212.5,412.53,216.5,416.53,212.5,407.53"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link adapter 1 to application-config-->
+        <g id="link_adapter 1_application-config">
+            <path d="M320.39,637.28 C296.44,655.7 264.72,680.09 241.88,697.66 " fill="none"
+                  id="adapter 1-backto-application-config" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="324.08,633.68,314.5071,635.9952,320.1163,636.7279,319.3837,642.3371,324.08,633.68"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link adapter ... to application-config-->
+        <g id="link_adapter ..._application-config">
+            <path d="M212.5,639.61 C212.5,657.72 212.5,680.83 212.5,697.66 " fill="none"
+                  id="adapter ...-backto-application-config" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,634.68,208.5,643.68,212.5,639.68,216.5,643.68,212.5,634.68"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link adapter N to application-config-->
+        <g id="link_adapter N_application-config">
+            <path d="M103.85,637.28 C127.97,655.7 159.91,680.09 182.91,697.66 " fill="none"
+                  id="adapter N-backto-application-config" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="100.13,633.68,104.8413,642.3289,104.099,636.721,109.7069,635.9786,100.13,633.68"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link application-config to application-->
+        <g id="link_application-config_application">
+            <path d="M212.5,750.9 C212.5,767.66 212.5,788.52 212.5,804.12 " fill="none"
+                  id="application-config-backto-application" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,745.93,208.5,754.93,212.5,750.93,216.5,754.93,212.5,745.93"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link use cases to adapter 1-->
+        <g id="link_use cases_adapter 1">
+            <path d="M245.04,521.23 C269.65,540.97 303.08,567.79 326.5,586.59 " fill="none"
+                  id="use cases-backto-adapter 1" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="241.55,517.63,246.0673,526.3818,245.4502,520.7587,251.0732,520.1415,241.55,517.63"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link use cases to adapter ...-->
+        <g id="link_use cases_adapter ...">
+            <path d="M212.5,523.47 C212.5,542.96 212.5,568.5 212.5,586.59 " fill="none"
+                  id="use cases-backto-adapter ..." style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="212.5,518.63,208.5,527.63,212.5,523.63,216.5,527.63,212.5,518.63"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--reverse link use cases to adapter N-->
+        <g id="link_use cases_adapter N">
+            <path d="M179.73,521.23 C154.95,540.97 121.28,567.79 97.69,586.59 " fill="none"
+                  id="use cases-backto-adapter N" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818"
+                     points="183.25,517.63,173.7167,520.1033,179.3373,520.743,178.6976,526.3636,183.25,517.63"
+                     style="stroke:#181818;stroke-width:1.0;"/>
+        </g><!--SRC=[ZLF9JiCm4BtdAqQzq4eqY2i797Pne23ASa0St7ZI6gKUomk8lsVYDAtJ1CHnPfxVUxDOaqGO5RHUavuMf4kr76MQF88d0rJsQW1JkB52LWXDAcQUvcb4VeKMB0Od5bkSor1BgAap5eYgmeY5gfHNw3QYLYrNlf7j504ko2AKGHTUaHQS_zu9A2tHC3lg-5RIMYWTdJoY2vM7jtae2dJk4Aw5geB5TnYNL5NqvO2zrWuBDF6nW3lcbvFu_CfQih0IMbPADxsziBOKjObUFurkhvCs7GcrZnsrL0615XzO-FvqWcDVmWsC9gdKDCzj6ADRlQ30L8QiRpBtmQUfVHqXXV6yhkEUJb81E6i21oNParJfwDAgJvvEGmzZp9SvF5Xql8qufqd7HOIZxgAPLpcFl8J9h_xoF1_jfMQZBSYOIXLHhdl5IJS3481NPMllmMmCyQfXGpymgXt5N_GrxpcHTzvojgPdG7rc2UR0WGry36jCLBf73zDWfgUz3vYr1xMjTtvAbfn7YsWlC1iQGWjAjlqVM5p7Vu2pFTqTO60XMMAZnINdtb7_gpuRglu0]-->
+    </g>
+</svg>

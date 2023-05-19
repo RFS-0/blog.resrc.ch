@@ -1,0 +1,67 @@
+@startuml
+
+node "common-config"
+note top of "common-config"
+  - Gradle config
+  - TS config
+  - other reusable configs
+end note
+
+node "capabilities"
+note right of "capabilities"
+  Core functionality reusable independent of domain
+  - Result [Success, Failure] (follows the concept of a Monad)
+  - Error handling
+  - Validation
+end note
+
+node "domain"
+note right of "domain"
+  - Entities
+  - Value objects
+end note
+
+node "use cases"
+note right of "use cases"
+  - Use cases
+  - Inbound ports
+  - Outbound ports
+end note
+
+node "adapter 1"
+note right of "adapter 1"
+  Adapters for:
+  - Inbound/Driving ports (e.g. Presentation)
+  - Outbound/Driven ports (e.g. Persistence)
+end note
+
+node "adapter ..."
+node "adapter N"
+
+node "application-config"
+note right of "application-config"
+  Wiring up ports and adapters
+end note
+
+node "application"
+note right of "application"
+  Bootstrapping of the application's runtime
+end note
+
+"capabilities" -up-> "common-config"
+
+"domain" -up-> "capabilities"
+
+"use cases" -up-> "domain"
+
+"application-config" -up-> "adapter 1"
+"application-config" -up-> "adapter ..."
+"application-config" -up-> "adapter N"
+
+"application" -up-> "application-config"
+
+"adapter 1" -up-> "use cases"
+"adapter ..." -up-> "use cases"
+"adapter N" -up-> "use cases"
+
+@enduml
