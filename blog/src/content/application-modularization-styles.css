@@ -3,7 +3,8 @@
     border-radius: var(--fib-8);
     margin-top: var(--fib-8);
     margin-bottom: var(--fib-8);
-    padding: var(--fib-8);
+    padding-top: var(--fib-8);
+    padding-bottom: var(--fib-8);
     width: 100%;
 }
 
