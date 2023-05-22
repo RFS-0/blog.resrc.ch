@@ -43,10 +43,14 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                     content that improves my understanding of the world and helps me become a better programmer.
 
                     This collection of resources is an attempt to making more use of my time on the internet by focusing
-                    and
-                    consuming more high-quality content. This resource collection is divided into different categories,
-                    each of
+                    and consuming more high-quality content.
+
+                    This resource collection is divided into different categories, each of
                     which is focused on a different topic.
+
+                    The level of abstraction each of the categories represents does vary.
+
+                    Thus, the content in each of the categories might overlap with some other categories.
                 </Section>
                 <SectionTitle>Development Tools</SectionTitle>
                 <Section>
@@ -126,10 +130,20 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                         resources={[
                             {
                                 type: 'link',
+                                title: 'SolidJS Blog',
+                                description:
+                                    'Official blog of SolidJS',
+                                index: 1,
+                                data: {
+                                    url: 'https://www.solidjs.com/blog',
+                                },
+                            },
+                            {
+                                type: 'link',
                                 title: 'Dev.to Account of Ryan Carniato (SolidJS)',
                                 description:
                                     'Frontend performance enthusiast and Fine-Grained Reactivity super fan. Author of the SolidJS UI library and MarkoJS Core Team Member.',
-                                index: 1,
+                                index: 2,
                                 data: {
                                     url: 'https://dev.to/ryansolid',
                                 },
@@ -139,9 +153,40 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                                 title: 'Angular Blog',
                                 description:
                                     'News and Tips from the Angular Team',
-                                index: 2,
+                                index: 3,
                                 data: {
                                     url: 'https://blog.angular.io',
+                                },
+                            }
+                        ]}
+                    />
+                </Section>
+
+                <SectionTitle>Application Infrastructure Frameworks</SectionTitle>
+                <Section>
+                    The following resources are focused on technologies that provide the underlying support structure
+                    needed to build and run an application:
+
+                    <Resources
+                        resources={[
+                            {
+                                type: 'link',
+                                title: 'Spring Blog',
+                                description:
+                                    'The Spring.io blog is an online resource that provides updates, tutorials, news, and insights related to the Spring Framework and its ecosystem.',
+                                index: 1,
+                                data: {
+                                    url: 'https://spring.io/blog/',
+                                },
+                            },
+                            {
+                                type: 'link',
+                                title: 'Quarkus Blog',
+                                description:
+                                    'The Quarkus.io blog is a curated online resource providing insights, updates, tutorials, and news surrounding the Quarkus project, focusing on creating Kubernetes-native Java applications for cloud environments',
+                                index: 2,
+                                data: {
+                                    url: 'https://quarkus.io/blog/index.html',
                                 },
                             }
                         ]}
