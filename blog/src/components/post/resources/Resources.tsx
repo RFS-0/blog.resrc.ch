@@ -1,4 +1,4 @@
-import { Component, For, Match, Switch } from 'solid-js';
+import {Component, For, Match, Switch} from 'solid-js';
 import './resources-style.css';
 
 export type Resource = {
@@ -25,7 +25,7 @@ export const Resources: Component<ResourcesProps> = (props) => {
           {(resource) => (
               <Switch>
                 <Match when={resource.type === 'link'}>
-                  <a href={resource.data.url}>
+                  <a href={resource.data.url} target={'_blank'}>
                     [{resource.index}] -  {resource.title}
                   </a>
                 </Match>
