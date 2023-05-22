@@ -57,7 +57,7 @@ export const ReadTheDocsPost: Component<ReadTheDocsPostProps> = (props: ReadTheD
                                 title: 'AsciiDoc Syntax Quick Reference',
                                 description:
                                     'A short summary of how the most commonly used syntax works.',
-                                index: 1,
+                                index: 2,
                                 data: {
                                     url: 'https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/',
                                 },
