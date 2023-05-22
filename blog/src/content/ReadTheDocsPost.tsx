@@ -26,7 +26,7 @@ export const ReadTheDocsPost: Component<ReadTheDocsPostProps> = (props: ReadTheD
                 tags={['Resources', 'Documentation', 'Software Engineering']}
             />
             <Abstract>
-                This is just a summary of documentation resource I frequently use.
+                This is just a summary of documentation resources I frequently use.
 
                 It structured by technologies and sorted alphabetically.
             </Abstract>
