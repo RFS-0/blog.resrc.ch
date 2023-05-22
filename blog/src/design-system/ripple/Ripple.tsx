@@ -398,7 +398,9 @@ export const Ripple: ParentComponent<RippleProps> = (props) => {
 
     // noinspection JSUnusedAssignment
     return (
-        <div class='ripple-container'>
+        <div
+            class='ripple-container'
+        >
             <div
                 ref={rippler!}
                 {...props}

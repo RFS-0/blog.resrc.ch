@@ -1,11 +1,4 @@
 .ripple-container {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    border-radius: var(--_ripple_shape);
-}
-
-.ripple {
     --_focus-color: var(--ripple-focus-color, --sys-on-surface);
     --_focus-opacity: var(--ripple-focus-opacity, 0.12);
     --_hover-color: var(--ripple-hover-color, --sys-on-surface);
@@ -13,6 +6,13 @@
     --_pressed-color: var(--ripple-pressed-color, --sys-on-surface);
     --_pressed-opacity: var(--ripple-pressed-opacity, 0.12);
     --_ripple_shape: var(--ripple-shape, 9999px);
+
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: var(--_ripple_shape);
+    /*// TODO(https://bugs.webkit.org/show_bug.cgi?id=247546)*/
+    transform: scale(1);
 }
 
 .ripple {
