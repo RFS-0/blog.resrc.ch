@@ -1,3 +1,10 @@
+.ripple-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: var(--_ripple_shape);
+}
+
 .ripple {
     --_focus-color: var(--ripple-focus-color, --sys-on-surface);
     --_focus-opacity: var(--ripple-focus-opacity, 0.12);
@@ -45,24 +52,28 @@
 
 .ripple-surface::after {
     background: radial-gradient(closest-side, var(--_pressed-color) max(100% - 70px, 65%), transparent 100%);
+    border-radius: var(--_ripple_shape);
+
     transition: opacity 375ms linear;
     transform-origin: center center
 }
 
 .ripple--hovered::before {
     background-color: var(--_hover-color);
-    opacity: var(--_hover-opacity)
+    opacity: var(--_hover-opacity);
+
+    border-radius: var(--_ripple_shape);
 }
 
 .ripple--focused::before {
     background-color: var(--_focus-color);
     opacity: var(--_focus-opacity);
-    transition-duration: 75ms
+    transition-duration: 75ms;
 }
 
 .ripple--pressed::after {
     opacity: var(--_pressed-opacity);
-    transition-duration: 105ms
+    transition-duration: 105ms;
 }
 
 .ripple-unbounded {

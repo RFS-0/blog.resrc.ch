@@ -1,50 +1,52 @@
-import { Component, createEffect, createSignal, ParentProps } from 'solid-js';
-import { DisplayVariant } from '~/components/post/post-types';
-import { PostContextProvider } from '~/components/post/PostContextProvider';
+import {Component, createEffect, createSignal, ParentProps} from 'solid-js';
+import {DisplayVariant} from '~/components/post/post-types';
+import {PostContextProvider} from '~/components/post/PostContextProvider';
 import './post-styles.css';
 
 export type PostProps = {
-  display: DisplayVariant;
+    display: DisplayVariant;
 } & ParentProps
 
 export const Post: Component<PostProps> = (props) => {
-  const displaySignal = createSignal<DisplayVariant>(props.display);
-  const [display] = displaySignal;
-  const [hovered, setHovered] = createSignal(false);
+    const displaySignal = createSignal<DisplayVariant>(props.display);
+    const [display] = displaySignal;
+    const [hovered, setHovered] = createSignal(false);
 
-  let post: HTMLDivElement;
+    let post: HTMLDivElement;
 
-  createEffect(() => {
-    if (!!post && display() !== 'full') {
-      setTimeout(() => {
-              post.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'start',
-              });
-      }, 401);
-    }
-  });
+    createEffect((skip) => {
+        const hasPostElementRef = !!post
+        if (display() !== 'full' && hasPostElementRef && !skip) {
+            setTimeout(() => {
+                post.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'start',
+                });
+            }, 401);
+        }
+        return false;
+    }, true);
 
-  // noinspection JSUnusedAssignment
-  return (
-      (
-          <PostContextProvider displaySignal={displaySignal}>
-            <div
-                ref={post!}
-                class={'post-container'}
-                classList={{
-                  'large': display() === 'preview-large',
-                  'full': display() === 'full',
-                  'post-container--hover': hovered(),
+    // noinspection JSUnusedAssignment
+    return (
+        (
+            <PostContextProvider displaySignal={displaySignal}>
+                <div
+                    ref={post!}
+                    class={'post-container'}
+                    classList={{
+                        'large': display() === 'preview-large',
+                        'full': display() === 'full',
+                        'post-container--hover': hovered(),
 
-                }}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-            >
-              {props.children}
-            </div>
-          </PostContextProvider>
-      )
-  );
+                    }}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                >
+                    {props.children}
+                </div>
+            </PostContextProvider>
+        )
+    );
 };
