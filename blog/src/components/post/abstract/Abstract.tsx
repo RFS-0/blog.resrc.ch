@@ -8,8 +8,6 @@ export const Abstract: FlowComponent<AbstractProps, string> = props => {
     const {displaySignal} = usePostContext();
     const [display] = displaySignal;
 
-    console.log(props.children)
-
     const firstSentence = props.children.split('.')[0]
 
     return (
