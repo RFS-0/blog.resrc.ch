@@ -1,0 +1,7 @@
+.meta-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: var(--fib-4);
+}
