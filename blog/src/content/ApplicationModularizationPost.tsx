@@ -30,8 +30,10 @@ export const ApplicationModularizationPost: Component<ApplicationModularizationP
                 tags={['Modularization', 'Software Architecture', 'Programming',]}
             />
             <Abstract>
-                In this article, I delve into my preferred method for application modularization, a powerful approach
-                deeply rooted in the principles of the Ports & Adapters architecture and Domain-Driven Design (DDD).
+                In this article, I delve into my preferred method for application modularization.
+
+                The method is a powerful approach deeply rooted in the principles of the Ports & Adapters architecture
+                and Domain-Driven Design (DDD).
 
                 This methodology, which I learned through studying a project of a colleague, has greatly enhanced the
                 way I structure my applications.
