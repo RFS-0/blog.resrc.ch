@@ -1,4 +1,9 @@
 .abstract {
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
+
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--sys-transition-duration);
+    transition-delay: var(--sys-transition-delay);
 }
