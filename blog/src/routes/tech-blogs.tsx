@@ -1,10 +1,17 @@
-import { Page } from '~/components/page/Page';
-import { TechBlogPost } from '~/content/TechBlogPost';
+import {Page} from '~/components/page/Page';
+import {TechBlogPost} from '~/content/TechBlogPost';
+import {useNavigate} from '@solidjs/router';
 
 export default function TechBlogs() {
-  return (
-      <Page>
-        <TechBlogPost display={'full'}/>
-      </Page>
-  );
+    const navigate = useNavigate();
+    return (
+        <Page>
+            <TechBlogPost
+                display={'full'}
+                onAction={() => {
+                    navigate('/')
+                }}
+            />
+        </Page>
+    );
 }

@@ -1,4 +1,3 @@
-import {useNavigate} from '@solidjs/router';
 import {Post} from '~/components/post/Post';
 import {Header} from '~/components/post/header/Header';
 import {MetaData} from '~/components/post/meta-data/MetaData';
@@ -13,12 +12,10 @@ import {Resources} from '~/components/post/resources/Resources';
 
 export type TechBlogPostProps = {
     display?: DisplayVariant;
-    onAction?: () => void;
+    onAction: () => void;
 }
 
 export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostProps) => {
-    const navigate = useNavigate();
-
     return (
         <Post display={props.display || 'full'}>
             <Header
@@ -194,9 +191,7 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                 </Section>
             </Body>
             <Actions
-                onAction={() => {
-                    props.onAction && props.onAction() || navigate('/');
-                }}
+                onAction={props.onAction}
             />
         </Post>
     );

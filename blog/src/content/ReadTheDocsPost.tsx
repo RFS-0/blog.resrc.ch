@@ -1,4 +1,3 @@
-import {useNavigate} from '@solidjs/router';
 import {Post} from '~/components/post/Post';
 import {Header} from '~/components/post/header/Header';
 import {MetaData} from '~/components/post/meta-data/MetaData';
@@ -17,8 +16,6 @@ export type ReadTheDocsPostProps = {
 }
 
 export const ReadTheDocsPost: Component<ReadTheDocsPostProps> = (props: ReadTheDocsPostProps) => {
-    const navigate = useNavigate();
-
     return (
         <Post display={props.display || 'full'}>
             <Header
@@ -67,9 +64,7 @@ export const ReadTheDocsPost: Component<ReadTheDocsPostProps> = (props: ReadTheD
                 </Section>
             </Body>
             <Actions
-                onAction={() => {
-                    props.onAction && props.onAction() || navigate('/');
-                }}
+                onAction={props.onAction}
             />
         </Post>
     );
