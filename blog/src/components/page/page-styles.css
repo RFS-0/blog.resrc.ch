@@ -21,7 +21,8 @@
     /* sm */
     .page {
         gap: var(--fib-8);
-        margin: var(--fib-8);
+        margin-inline: var(--fib-6);
+        margin-block: var(--fib-8);
     }
 }
 
