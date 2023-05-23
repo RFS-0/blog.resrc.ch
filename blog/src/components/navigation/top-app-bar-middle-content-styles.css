@@ -22,3 +22,46 @@
     transform: translateX(-50%);
     height: 100%;
 }
+
+.blog-title {
+    font-size: 0.66rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+@media (min-width: 233px) {
+    /* sm */
+    .blog-title {
+        font-size: 0.66rem;
+        line-height: 1.22rem;
+    }
+
+    .app-bar-middle-content {
+        padding: 0 var(--fib-5);
+    }
+}
+
+@media (min-width: 411px) {
+    /* md */
+    .blog-title {
+        font-size: 0.89rem;
+        line-height: 1.22rem;
+    }
+
+    .app-bar-middle-content {
+        padding: 0 var(--fib-6);
+    }
+}
+
+@media (min-width: 788px) {
+    /* lg */
+    .blog-title {
+        font-size: 0.89rem;
+        line-height: 1.34rem;
+    }
+
+    .app-bar-middle-content {
+        padding: 0 var(--fib-7);
+    }
+}

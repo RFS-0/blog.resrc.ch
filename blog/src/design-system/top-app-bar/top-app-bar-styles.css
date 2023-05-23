@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 89px;
+    width: var(--fib-11);
     height: 100%;
 }
 
@@ -35,6 +35,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 89px;
+    width: var(--fib-11);
     height: 100%;
+}
+
+@media (min-width: 233px) {
+    .top-app-bar__left {
+        width: var(--fib-10);
+    }
+}
+
+@media (min-width: 411px) {
+}
+
+@media (min-width: 788px) {
 }
