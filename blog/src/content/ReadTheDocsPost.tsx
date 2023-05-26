@@ -62,6 +62,26 @@ export const ReadTheDocsPost: Component<ReadTheDocsPostProps> = (props: ReadTheD
                         ]}
                     />
                 </Section>
+
+                <SectionTitle>Spring</SectionTitle>
+                The Spring framework is a powerful and versatile Java-based platform that simplifies the development of
+                robust, scalable, and flexible enterprise applications through its comprehensive features and modular
+                architecture.
+
+                <Resources
+                    resources={[
+                        {
+                            type: 'link',
+                            title: 'Spring Guides',
+                            description:
+                                'Whatever you\'re building, these guides are designed to get you productive as quickly as possible – using the latest Spring project releases and techniques as recommended by the Spring team.',
+                            index: 1,
+                            data: {
+                                url: 'https://spring.io/guides',
+                            },
+                        },
+                    ]}
+                />
             </Body>
             <Actions
                 onAction={props.onAction}
