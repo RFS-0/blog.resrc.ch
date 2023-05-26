@@ -189,6 +189,27 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                         ]}
                     />
                 </Section>
+
+                <SectionTitle>Computational Intelligence</SectionTitle>
+                <Section>
+                    The following resources are focused on technologies that provide insights into the field of
+                    computational intelligence:
+
+                    <Resources
+                        resources={[
+                            {
+                                type: 'link',
+                                title: 'Wolfram Blog',
+                                description:
+                                    'News, Views & Insights.',
+                                index: 1,
+                                data: {
+                                    url: 'https://blog.wolfram.com/',
+                                },
+                            },
+                        ]}
+                    />
+                </Section>
             </Body>
             <Actions
                 onAction={props.onAction}
