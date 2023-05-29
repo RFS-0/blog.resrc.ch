@@ -154,6 +154,16 @@ export const TechBlogPost: Component<TechBlogPostProps> = (props: TechBlogPostPr
                                 data: {
                                     url: 'https://blog.angular.io',
                                 },
+                            },
+                            {
+                                type: 'link',
+                                title: 'The Vue Point',
+                                description:
+                                    'Updates, tips & opinions from the maintainers of Vue.js.',
+                                index: 4,
+                                data: {
+                                    url: 'https://blog.vuejs.org/',
+                                },
                             }
                         ]}
                     />
